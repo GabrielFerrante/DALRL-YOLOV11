@@ -1,2 +1,2 @@
 # DALRL-YOLOV11
-YOLOV11 with Deep Active and Reinforcement Learning .
+Faster Detection AL - YOLOV11 with based Reinforcement Deep Active Learning .
