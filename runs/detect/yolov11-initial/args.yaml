@@ -1,8 +1,8 @@
 task: detect
 mode: train
-model: yolo11x.pt
+model: yolo11x.yaml
 data: coco.yaml
-epochs: 50
+epochs: 20
 time: null
 patience: 100
 batch: 8
@@ -10,12 +10,12 @@ imgsz: 480
 save: true
 save_period: -1
 cache: false
-device: null
+device: '0'
 workers: 8
 project: null
 name: yolov11-initial
 exist_ok: false
-pretrained: true
+pretrained: false
 optimizer: auto
 verbose: true
 seed: 0
@@ -40,7 +40,7 @@ conf: null
 iou: 0.7
 max_det: 300
 half: false
-dnn: false
+dnn: true
 plots: true
 source: null
 vid_stride: 1
