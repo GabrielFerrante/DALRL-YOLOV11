@@ -1,25 +1,12 @@
-# DALRL-YOLOV11
-Faster Detection AL - YOLOV11 with based Reinforcement Deep Active Learning .
+# DALRL-YOLOV11 (Deep Active Learning with Reinforcement Learning in YOLOV11)
 
-Workflow:
-- Initialization:
+### Novel pipeline for training with few labeled data samples based in average entropy/confiances of bounding boxes.
 
-    - Pre-trains YOLOv11 with a small set of labeled data.
+Step 1 - Train yolo with small set.
+Step 2 - Train learning agent by reinforcement with selection pool data.
+Step 3 - Select the images based on medium entropy and average bounding box confidence.
+Step 4 - Re-training the Yolov11 model
+Step 5 - Evaluate new Yolov11 model
+Step 5 - Re-training the reinforcement learning agent.
 
-    - Loads a large volume of unlabeled data (e.g. COCO dataset).
-
-- Active Training Cycle:
-
-    - Step 1 (Inference): YOLOv11 processes unlabeled images and calculates metrics (e.g. entropy, embeddings).
-
-    - Step 2 (Selection via RL): The RL agent (e.g. PPO, DQN) analyzes the state (embeddings + uncertainty) and chooses the most useful images for labeling.
-
-    - Step 3 (Labeling): The oracle labels the selected images.
-
-    - Step 4 (Model Update): YOLOv11 is retrained with the new labeled data.
-
-    - Step 5 (Reward): The RL agent receives a reward proportional to the improvement in YOLO (e.g. increase in mAP).
-
-- Convergence:
-
-    - The cycle is repeated until the model reaches the desired performance or the labeling resources are exhausted.
+![alt text](image.png)
