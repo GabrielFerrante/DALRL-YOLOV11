@@ -16,7 +16,7 @@ from datetime import datetime
 BUDGET = 9463  # Orçamento de seleção, corresponde 10% do pool (94630 / 100 * 10)
 NUM_ENVS = 4              # Número de ambientes paralelos
 TIMESTEPS = 100000        # Total de passos de treino
-POOL_DIR = "E:/COCO-Dataset/train2017/val/images/"  # Diretório com imagens
+POOL_DIR = "F:/COCO-Dataset/train2017/val/images/"  # Diretório com imagens
 LOG_DIR = "logs" 
 
 class TensorBoardCallback(BaseCallback):
@@ -217,10 +217,6 @@ def main():
     ])
     print(f"Encontradas {len(image_files)} imagens no pool")
 
-    """
-    images_in_pool = [f"E:/COCO-Dataset/train2017/val/images/{f}" for f in os.listdir("E:/COCO-Dataset/train2017/val/images/")]
-    oracle_labels = {img: img.replace(".jpg",".txt").replace("images","labels") for img in images_in_pool}  # Preencher com anotações reais
-    """
 
     from agentTraining import ActiveLearningEnv
     # Criar ambiente

@@ -1,9 +1,5 @@
 from ultralytics import YOLO
-import os
-from pycocotools.coco import COCO
-from sklearn.model_selection import train_test_split
-from tqdm import tqdm
-import shutil
+
 
 
 if __name__ == '__main__':
@@ -23,12 +19,12 @@ if __name__ == '__main__':
 
     # Treinar
     results = model.train(
-        data="coco.yaml",
-        epochs=20,
+        data="cocoClustering.yaml",
+        epochs=25,
         imgsz=480,
         batch=8,
         cache=False,
-        name="yolov11-initial",
+        name="yolov11-initial-WithClusteringSamples",
         pretrained=False,
         workers= 8,
         device = 0,

@@ -10,9 +10,9 @@ import json
 
 # Configurações
 CUDA_DEVICE = "cuda:0"  # Dispositivo CUDA
-PPO_MODEL_PATH = "/logs/active_learning_20250601_042641/best_model/best_model.zip"  # Caminho para o agente PPO treinado
+PPO_MODEL_PATH = "./logs/active_learning_20250605_034345/best_model/best_model"  # Caminho para o agente PPO treinado
 YOLO_MODEL_PATH = "runs/detect/yolov11-initial/weights/best.pt"  # Caminho para o modelo YOLO
-POOL_DIR = "E:/COCO-Dataset/train2017/val/images/"  # Diretório com novas imagens não rotuladas
+POOL_DIR = "F:/COCO-Dataset/train2017/val/images/"  # Diretório com novas imagens não rotuladas
 BUDGET = 9463  # Orçamento de seleção, corresponde 10% do pool (94630 / 100 * 10)
 OUTPUT_DIR = "selected_images"  # Diretório para salvar imagens selecionadas
 LOG_FILE = "selection_log.json"  # Arquivo para registrar seleções

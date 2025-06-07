@@ -1,8 +1,8 @@
 task: detect
 mode: train
 model: yolo11x.yaml
-data: coco.yaml
-epochs: 20
+data: cocoRandomic.yaml
+epochs: 25
 time: null
 patience: 100
 batch: 8
@@ -13,7 +13,7 @@ cache: false
 device: '0'
 workers: 8
 project: null
-name: yolov11-initial
+name: yolov11-initial-WithRandomicSamples
 exist_ok: false
 pretrained: false
 optimizer: auto
@@ -102,4 +102,4 @@ auto_augment: randaugment
 erasing: 0.4
 cfg: null
 tracker: botsort.yaml
-save_dir: runs\detect\yolov11-initial
+save_dir: runs\detect\yolov11-initial-WithRandomicSamples

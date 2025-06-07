@@ -1,7 +1,7 @@
 # coco.yaml
 path: coco
-train: E:/COCO-Dataset/train2017/train/images/  # Usaremos o mesmo diretório para treino inicial
-val: E:/COCO-Dataset/val2017/images/
+train: F:/COCO-Dataset/train2017/clustering/train/images/  # Usaremos o mesmo diretório para treino inicial
+val: F:/COCO-Dataset/val2017/images/
 
 
 nc: 80
