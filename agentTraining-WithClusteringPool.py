@@ -13,11 +13,11 @@ from ultralytics import YOLO
 import time
 from datetime import datetime
 
-BUDGET = 9463  # Orçamento de seleção, corresponde 10% do pool (94630 / 100 * 10)
+BUDGET = 945  # Orçamento de seleção, corresponde 10% do pool (94630 / 100 * 10)
 NUM_ENVS = 4              # Número de ambientes paralelos
 TIMESTEPS = 100000        # Total de passos de treino
-POOL_DIR = "F:/COCO-Dataset/train2017/val/images/"  # Diretório com imagens
-LOG_DIR = "logs" 
+POOL_DIR = "F:/COCO-Dataset/train2017/clustering/pool/images/"  # Diretório com imagens
+LOG_DIR = "logs-clustering" 
 
 class TensorBoardCallback(BaseCallback):
     """Callback personalizado para logar métricas adicionais no TensorBoard"""
@@ -198,7 +198,7 @@ class ActiveLearningEnv(gym.Env):
 def main():
     # Configurações
     DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
-    yolo = YOLO("runs/detect/yolov11-initial/weights/best.pt").to(DEVICE)
+    yolo = YOLO("runs/detect/yolov11-initial-WithClusteringSamples/weights/best.pt").to(DEVICE)
 
     # Criar diretório de logs com timestamp
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -211,14 +211,13 @@ def main():
 
     # Carregar caminhos das imagens
     image_files = sorted([
-        os.path.join("E:/COCO-Dataset/train2017/val/images/", f) 
-        for f in os.listdir("E:/COCO-Dataset/train2017/val/images/") 
+        os.path.join("E:/COCO-Dataset/train2017/clustering/pool/images/", f) 
+        for f in os.listdir("E:/COCO-Dataset/train2017/clustering/pool/images/") 
         if f.endswith(('.jpg', '.png', '.jpeg'))
     ])
     print(f"Encontradas {len(image_files)} imagens no pool")
 
 
-    from agentTraining import ActiveLearningEnv
     # Criar ambiente
     env = make_vec_env(
             lambda: ActiveLearningEnv(yolo, image_files, BUDGET),
@@ -255,7 +254,7 @@ def main():
     # Callbacks
     eval_callback = EvalCallback(
         env,
-        best_model_save_path=os.path.join(log_path, "best_model"),
+        best_model_save_path=os.path.join(log_path, "best_model-ClusteringPool"),
         log_path=log_path,
         eval_freq=5000,
         deterministic=True,
