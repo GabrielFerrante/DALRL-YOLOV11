@@ -24,7 +24,7 @@ if __name__ == '__main__':
         imgsz=480,
         batch=8,
         cache=False,
-        name="yolov11-initial-WithRandomicSamples",
+        name="yolov11-initial-WithRandomSamples",
         pretrained=False,
         workers= 8,
         device = 0,
