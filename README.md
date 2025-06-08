@@ -12,10 +12,14 @@ With the data separated, an initial YoloV11 (Ultralytics version) model is train
 
 With the agents created, the selection stage is carried out on the Pool set, with the limitation of selecting 1% of the images. These images are then moved to the training set. In the next step, a new YoloV11 model is trained and validated on the validation set. If the model outperforms the reference model from the original YoloV11 paper on COCO in the bounding box accuracy metric in the training stage, it is chosen as the best model. If not, the agent is retrained and the cycle starts again.
 
-The aim of the project is to try to achieve an accuracy of the detected bounding boxes equal to or better than the reference model, using less training data.
+The aim of the project is to try to achieve an precision of the detected bounding boxes equal to or better than the reference model, using less training data.
 
 Librarys used: 
-    - 
+    - [Stable_baselines3](https://stable-baselines3.readthedocs.io/en/master/)
+    - [PyTorch](https://pytorch.org)
+    - [Ultralytics](https://github.com/ultralytics/ultralytics)
+    - [Gymnasium](https://gymnasium.farama.org/index.html)
+    - [Sklearn](https://stable-baselines3.readthedocs.io/en/master/)
 
 
 ![alt text](DALRL-YOLOV11.png)
