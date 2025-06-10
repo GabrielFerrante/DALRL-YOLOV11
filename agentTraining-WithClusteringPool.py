@@ -13,7 +13,7 @@ from ultralytics import YOLO
 import time
 from datetime import datetime
 
-BUDGET = 945  # Orçamento de seleção, corresponde 10% do pool (94630 / 100 * 10)
+BUDGET = 945  # Orçamento de seleção, corresponde 1% do pool (94630 / 100 * 1)
 NUM_ENVS = 4              # Número de ambientes paralelos
 TIMESTEPS = 100000        # Total de passos de treino
 POOL_DIR = "F:/COCO-Dataset/train2017/clustering/pool/images/"  # Diretório com imagens
@@ -113,12 +113,12 @@ class ActiveLearningEnv(gym.Env):
         reward = 0.0
         
         # Processar imagem atual com YOLO
-        entropy, avg_confidence = self._process_image(self.indices[self.current_idx])
+        entropy, avg_confidence = self._process_image(self.indices[self.current_idx-1])
 
         
         # Ação de seleção (1) com orçamento disponível
         if action == 1 and self.remaining_budget > 0:
-            self.selected_indices.append(self.indices[self.current_idx])
+            self.selected_indices.append(self.indices[self.current_idx-1])
             self.remaining_budget -= 1
             # Recompensa: combinação de entropia e confiança
             reward = entropy * (1 - avg_confidence)  # Maximiza entropia e minimiza confiança
@@ -131,17 +131,17 @@ class ActiveLearningEnv(gym.Env):
         self.current_idx += 1
         
         # Verifica término do episódio
-        if self.current_idx >= self.num_images or self.remaining_budget <= 0:
+        if self.current_idx-1 >= self.num_images or self.remaining_budget <= 0:
             terminated = True
             # Recompensa final baseada na diversidade de seleção
             if len(self.selected_indices) > 0:
                 reward += 0.1 * len(set(self.selected_indices)) / len(self.selected_indices)
              # Registrar métricas do episódio
             self.episode_rewards.append(self.cumulative_reward)
-            self.episode_lengths.append(self.current_idx)
+            self.episode_lengths.append(self.current_idx-1)
             self.episode_selected.append(len(self.selected_indices))
-            self.episode_entropy.append(self.cumulative_entropy / self.current_idx)
-            self.episode_confidence.append(self.cumulative_confidence / self.current_idx)
+            self.episode_entropy.append(self.cumulative_entropy / self.current_idx-1)
+            self.episode_confidence.append(self.cumulative_confidence / self.current_idx-1)
 
         # Atualizar métricas cumulativas
         self.cumulative_reward = reward if not hasattr(self, 'cumulative_reward') else self.cumulative_reward + reward
@@ -154,7 +154,7 @@ class ActiveLearningEnv(gym.Env):
 
     def _get_obs(self) -> np.ndarray:
         """Retorna a observação atual processando a imagem"""
-        entropy, avg_confidence = self._process_image(self.indices[self.current_idx])
+        entropy, avg_confidence = self._process_image(self.indices[self.current_idx-1])
         return np.array([entropy, avg_confidence, self.remaining_budget], dtype=np.float32)
 
     def _process_image(self, idx: int) -> Tuple[float, float]:
@@ -211,8 +211,8 @@ def main():
 
     # Carregar caminhos das imagens
     image_files = sorted([
-        os.path.join("E:/COCO-Dataset/train2017/clustering/pool/images/", f) 
-        for f in os.listdir("E:/COCO-Dataset/train2017/clustering/pool/images/") 
+        os.path.join("F:/COCO-Dataset/train2017/clustering/pool/images/", f) 
+        for f in os.listdir("F:/COCO-Dataset/train2017/clustering/pool/images/") 
         if f.endswith(('.jpg', '.png', '.jpeg'))
     ])
     print(f"Encontradas {len(image_files)} imagens no pool")
