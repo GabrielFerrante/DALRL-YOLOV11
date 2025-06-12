@@ -7,15 +7,20 @@ from stable_baselines3 import PPO
 from typing import List, Tuple, Dict
 from datetime import datetime
 import json
+import shutil
+
+
 
 # Configurações
 CUDA_DEVICE = "cuda:0"  # Dispositivo CUDA
-PPO_MODEL_PATH = "./logs/active_learning_20250605_034345/best_model/best_model"  # Caminho para o agente PPO treinado
-YOLO_MODEL_PATH = "runs/detect/yolov11-initial/weights/best.pt"  # Caminho para o modelo YOLO
-POOL_DIR = "F:/COCO-Dataset/train2017/val/images/"  # Diretório com novas imagens não rotuladas
-BUDGET = 9463  # Orçamento de seleção, corresponde 10% do pool (94630 / 100 * 10)
-OUTPUT_DIR = "selected_images"  # Diretório para salvar imagens selecionadas
-LOG_FILE = "selection_log.json"  # Arquivo para registrar seleções
+PPO_MODEL_PATH = "./logs-clustering/active_learning_20250609_192355/best_model-ClusteringPool/best_model"  # Caminho para o agente PPO treinado
+YOLO_MODEL_PATH = "runs/detect/yolov11-initial-WithClusteringSamples/weights/best.pt"  # Caminho para o modelo YOLO
+POOL_DIR = "F:/COCO-Dataset/train2017/clustering/pool/images/"  # Diretório com novas imagens não rotuladas
+LABEL_DIR = "F:/COCO-Dataset/train2017/clustering/pool/labels/"
+BUDGET = 945  # Orçamento de seleção, corresponde 10% do pool (94630 / 100 * 10)
+OUTPUT_DIR = "selected_images_clustering/images/"  # Diretório para salvar imagens selecionadas
+OUTPUT_LABEL_DIR = "selected_images_clustering/labels/"
+LOG_FILE = "selection_clusterSamples_log.json"  # Arquivo para registrar seleções
 
 def process_image(yolo_model: YOLO, img_path: str) -> Tuple[float, float]:
     """Processa uma imagem com YOLO e retorna entropia e confiança média"""
@@ -96,15 +101,17 @@ def select_images(ppo_agent, yolo_model, image_paths: List[str], budget: int) ->
     
     return selected_paths, selection_log
 
-def save_selected_images(selected_paths: List[str], output_dir: str):
+def save_selected_images(selected_paths: List[str], output_dir: str, label_dir: str):
     """Copia as imagens selecionadas para o diretório de saída"""
     os.makedirs(output_dir, exist_ok=True)
+    os.makedirs(OUTPUT_LABEL_DIR, exist_ok=True)
     
     for img_path in selected_paths:
         img = cv2.imread(img_path)
         if img is not None:
             output_path = os.path.join(output_dir, os.path.basename(img_path))
             cv2.imwrite(output_path, img)
+            shutil.copyfile(label_dir + os.path.basename(img_path).split('.')[0] + ".txt", OUTPUT_LABEL_DIR + os.path.basename(img_path).split('.')[0] + ".txt")
             print(f"💾 Salvo: {output_path}")
 
 def main():
@@ -139,7 +146,7 @@ def main():
     selected_paths, selection_log = select_images(ppo_agent, yolo_model, image_files, BUDGET)
     
     # Salvar imagens selecionadas
-    save_selected_images(selected_paths, OUTPUT_DIR)
+    save_selected_images(selected_paths, OUTPUT_DIR, LABEL_DIR)
     
     # Salvar log de seleção
     with open(LOG_FILE, "w") as f:

@@ -19,7 +19,7 @@ if __name__ == '__main__':
 
     # Treinar
     results = model.train(
-        data="cocoRandomic.yaml",
+        data="cocoRandom.yaml",
         epochs=25,
         imgsz=480,
         batch=8,

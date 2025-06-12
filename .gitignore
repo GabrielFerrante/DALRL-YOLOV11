@@ -3,4 +3,4 @@ __pycache__
 *.zip
 *.npz
 *.csv
-/selected_images
+*selected_images*
