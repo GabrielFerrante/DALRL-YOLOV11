@@ -9,12 +9,18 @@ from datetime import datetime
 import json
 import shutil
 
+caminhoYolo = "./Yolov11-WithClustersSamples/"  # Diretório atual (substitua pelo caminho desejado)
+itensYolo = os.listdir(caminhoYolo)
 
+caminhoAgents = "./logs-clustering"  # Diretório atual (substitua pelo caminho desejado)
+itensAgents = os.listdir(caminhoAgents)
 
 # Configurações
 CUDA_DEVICE = "cuda:0"  # Dispositivo CUDA
-PPO_MODEL_PATH = "./logs-clustering/active_learning_20250609_192355/best_model-ClusteringPool/best_model"  # Caminho para o agente PPO treinado
-YOLO_MODEL_PATH = "runs/detect/yolov11-initial-WithClusteringSamples/weights/best.pt"  # Caminho para o modelo YOLO
+#PPO_MODEL_PATH = "./logs-clustering/active_learning_20250609_192355/best_model-ClusteringPool/best_model"  # Caminho para o agente PPO treinado
+PPO_MODEL_PATH = f"./logs-clustering/{itensAgents[len(itensAgents)-1]}/best_model-ClusteringPool/best_model"
+#YOLO_MODEL_PATH = "runs/detect/yolov11-initial-WithClusteringSamples/weights/best.pt"  # Caminho para o modelo YOLO
+YOLO_MODEL_PATH = f"Yolov11-WithClustersSamples/{itensYolo[len(itensYolo)-1]}/weights/best.pt"
 POOL_DIR = "F:/COCO-Dataset/train2017/clustering/pool/images/"  # Diretório com novas imagens não rotuladas
 LABEL_DIR = "F:/COCO-Dataset/train2017/clustering/pool/labels/"
 BUDGET = 945  # Orçamento de seleção, corresponde 10% do pool (94630 / 100 * 10)
@@ -110,7 +116,8 @@ def save_selected_images(selected_paths: List[str], output_dir: str, label_dir: 
         img = cv2.imread(img_path)
         if img is not None:
             output_path = os.path.join(output_dir, os.path.basename(img_path))
-            cv2.imwrite(output_path, img)
+            #cv2.imwrite(output_path, img)
+            shutil.move(img_path, output_path)
             shutil.copyfile(label_dir + os.path.basename(img_path).split('.')[0] + ".txt", OUTPUT_LABEL_DIR + os.path.basename(img_path).split('.')[0] + ".txt")
             print(f"💾 Salvo: {output_path}")
 

@@ -24,3 +24,12 @@ Librarys used:
 
 ![alt text](DALRL-YOLOV11.png)
 
+
+## Speed Start
+
+- Executar a preparação de dados (**Files**: PrepareDatas-EmbeddingClustering.ipynb and PrepareDatas-Random.ipynb)
+    - Note: Está setado para o COCO dataset 2017. Avalie e modifique caso necessário para seu dataset.
+
+- Executar o treino inicial dos modelos YoloV11 com cada conjunto iniciais. (**File**: beforeCicle.py)
+
+- Iniciar o ciclo (ajustar o número de ciclos. Default: 10). (**File**: cicle.py)

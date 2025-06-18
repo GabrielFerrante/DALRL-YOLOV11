@@ -9,12 +9,22 @@ from datetime import datetime
 import json
 import shutil
 
+"""
+PARA A PRIMEIRA VEZ, DESCOMENTAR AS LINHAS ABAIXO EM YOLO_MODEL_PATH E PPO_MODEL_PATH
+"""
 
+caminhoYolo = "./Yolov11-WithRandomSamples/"  # Diretório atual (substitua pelo caminho desejado)
+itensYolo = os.listdir(caminhoYolo)
+
+caminhoAgents = "./logs-Random"  # Diretório atual (substitua pelo caminho desejado)
+itensAgents = os.listdir(caminhoAgents)
 
 # Configurações
 CUDA_DEVICE = "cuda:0"  # Dispositivo CUDA
-PPO_MODEL_PATH = "./logs-Random/active_learning_20250609_121724/best_model-RandomPool/best_model"  # Caminho para o agente PPO treinado
-YOLO_MODEL_PATH = "runs/detect/yolov11-initial-WithRandomSamples/weights/best.pt"  # Caminho para o modelo YOLO
+#PPO_MODEL_PATH = "./logs-Random/active_learning_20250609_121724/best_model-RandomPool/best_model"  # Caminho para o agente PPO treinado 
+PPO_MODEL_PATH = f"./logs-Random/{itensAgents[len(itensAgents)-1]}/best_model-RandomPool/best_model"
+#YOLO_MODEL_PATH = "runs/detect/yolov11-initial-WithRandomSamples/weights/best.pt"  # Caminho para o modelo 
+YOLO_MODEL_PATH = f"Yolov11-WithRandomSamples/{itensYolo[len(itensYolo)-1]}/weights/best.pt"
 POOL_DIR = "F:/COCO-Dataset/train2017/pool/images/"  # Diretório com novas imagens não rotuladas
 LABEL_DIR = "F:/COCO-Dataset/train2017/pool/labels/"
 BUDGET = 946  # Orçamento de seleção, corresponde 10% do pool (94630 / 100 * 10)
@@ -110,7 +120,8 @@ def save_selected_images(selected_paths: List[str], output_dir: str, label_dir: 
         img = cv2.imread(img_path)
         if img is not None:
             output_path = os.path.join(output_dir, os.path.basename(img_path))
-            cv2.imwrite(output_path, img)
+            #cv2.imwrite(output_path, img)
+            shutil.move(img_path, output_path)
             shutil.copyfile(label_dir + os.path.basename(img_path).split('.')[0] + ".txt", OUTPUT_LABEL_DIR + os.path.basename(img_path).split('.')[0] + ".txt")
             print(f"💾 Salvo: {output_path}")
 

@@ -197,8 +197,12 @@ class ActiveLearningEnv(gym.Env):
 
 def main():
     # Configurações
+
+    caminho = "./Yolov11-WithClustersSamples/"  # Diretório atual (substitua pelo caminho desejado)
+    itens = os.listdir(caminho)
     DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
-    yolo = YOLO("runs/detect/yolov11-initial-WithClusteringSamples/weights/best.pt").to(DEVICE)
+    #yolo = YOLO("runs/detect/yolov11-WithClusteringSamples/weights/best.pt").to(DEVICE) PARA PRIMEIRA VEZ
+    yolo = YOLO(f"Yolov11-WithClustersSamples/{itens[len(itens)-1]}/weights/best.pt").to(DEVICE)
 
     # Criar diretório de logs com timestamp
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
