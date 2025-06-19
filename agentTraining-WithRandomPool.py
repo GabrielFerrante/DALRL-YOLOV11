@@ -202,7 +202,6 @@ def main():
 
     # Configurações
     DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
-    #yolo = YOLO("runs/detect/yolov11-initial-WithRandomSamples/weights/best.pt").to(DEVICE) PARA A PRIMEIRA VEZ
     yolo = YOLO(f"Yolov11-WithRandomSamples/{itens[len(itens)-1]}/weights/best.pt").to(DEVICE)
 
     # Criar diretório de logs com timestamp
