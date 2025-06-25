@@ -9,6 +9,9 @@ from datetime import datetime
 import json
 import shutil
 
+# Configurar ambiente para UTF-8
+os.environ["PYTHONUTF8"] = "1"
+
 caminhoYolo = "./Yolov11-WithClustersSamples/"  # Diretório atual (substitua pelo caminho desejado)
 itensYolo = os.listdir(caminhoYolo)
 
@@ -18,52 +21,70 @@ itensAgents = os.listdir(caminhoAgents)
 # Configurações
 CUDA_DEVICE = "cuda:0"  # Dispositivo CUDA
 #PPO_MODEL_PATH = "./logs-clustering/active_learning_20250609_192355/best_model-ClusteringPool/best_model"  # Caminho para o agente PPO treinado
-PPO_MODEL_PATH = f"./logs-clustering/{itensAgents[len(itensAgents)-1]}/best_model-ClusteringPool/best_model"
+PPO_MODEL_PATH = os.path.join("./logs-clustering", itensAgents[-1], "best_model-ClusteringPool", "best_model")
 #YOLO_MODEL_PATH = "runs/detect/yolov11-initial-WithClusteringSamples/weights/best.pt"  # Caminho para o modelo YOLO
-YOLO_MODEL_PATH = f"Yolov11-WithClustersSamples/{itensYolo[len(itensYolo)-1]}/weights/best.pt"
+YOLO_MODEL_PATH = os.path.join("Yolov11-WithClustersSamples", itensYolo[-1], "weights", "best.pt")
 POOL_DIR = "F:/COCO-Dataset/train2017/clustering/pool/images/"  # Diretório com novas imagens não rotuladas
 LABEL_DIR = "F:/COCO-Dataset/train2017/clustering/pool/labels/"
-BUDGET = 945  # Orçamento de seleção, corresponde 10% do pool (94630 / 100 * 10)
+BUDGET = 945  # Orçamento de seleção, corresponde 10% do pool (94583 / 100 * 10)
 OUTPUT_DIR = "selected_images_clustering/images/"  # Diretório para salvar imagens selecionadas
 OUTPUT_LABEL_DIR = "selected_images_clustering/labels/"
 LOG_FILE = "selection_clusterSamples_log.json"  # Arquivo para registrar seleções
 
+
+def safe_print(message: str):
+    """Impressão segura que ignora caracteres problemáticos"""
+    try:
+        print(message)
+    except UnicodeEncodeError:
+        # Tentar imprimir ignorando caracteres não ASCII
+        safe_message = message.encode('ascii', 'ignore').decode('ascii')
+        print(f"[SAFE_PRINT]: {safe_message}")
+    except Exception as e:
+        print(f"Erro crítico ao imprimir: {str(e)}")
+
 def process_image(yolo_model: YOLO, img_path: str) -> Tuple[float, float]:
     """Processa uma imagem com YOLO e retorna entropia e confiança média"""
-    img = cv2.imread(img_path)
-    
-    if img is None:
-        print(f"Erro ao carregar imagem: {img_path}")
-        return (0.0, 0.0)
-    
-    # Executar predição com YOLO
-    results = yolo_model(img, verbose=False)
-    
-    confidences = []
-    entropies = []
-    
-    for result in results:
-        if result.boxes is not None:
+    try:
+        # Usar imdecode para lidar melhor com caminhos especiais
+        img_data = np.fromfile(img_path, dtype=np.uint8)
+        img = cv2.imdecode(img_data, cv2.IMREAD_COLOR)
+        
+        if img is None:
+            print(f"Erro ao carregar imagem: {img_path}")
+            return (0.0, 0.0)
+        
+        # Executar predição com YOLO
+        results = yolo_model(img, verbose=False)
+        
+        confidences = []
+        entropies = []
+        
+        for result in results:
+            if result.boxes is not None:
                 # Coletar confianças das bounding boxes
-            confs = result.boxes.conf.cpu().numpy()
-            if 0 in confs:
-                print(f"Erro ao processar imagem: {img_path}")
-                return (0.0, 0.0)
-            else:
-                confidences.extend(confs)
-                for conf in confs:
-                    # Calcular entropia para cada confiança
-                    entropy = -conf * np.log2(conf + 1e-10) - (1-conf) * np.log2(1-conf + 1e-10)
-                    entropies.append(entropy)
+                confs = result.boxes.conf.cpu().numpy()
+                if len(confs) == 0:
+                    print(f"Sem detecções em: {img_path}")
+                    return (0.0, 0.0)
+                else:
+                    confidences.extend(confs)
+                    for conf in confs:
+                        # Calcular entropia para cada confiança
+                        entropy = -conf * np.log2(conf + 1e-10) - (1-conf) * np.log2(1-conf + 1e-10)
+                        entropies.append(entropy)
+            
+        # Calcular entropia média
+        avg_entropy = float(np.mean(entropies)) if entropies else 0.0
+            
+        # Calcular confiança média
+        avg_confidence = float(np.mean(confidences)) if confidences else 0.0
         
-    # Calcular entropia média
-    avg_entropy = float(np.mean(entropies)) if entropies else 0.0
+        return (avg_entropy, avg_confidence)
         
-    # Calcular confiança média
-    avg_confidence = float(np.mean(confidences)) if confidences else 0.0
-    
-    
-    return (avg_entropy, avg_confidence)
+    except Exception as e:
+        print(f"Erro crítico ao processar {img_path}: {str(e)}")
+        return (0.0, 0.0)
 
 def select_images(ppo_agent, yolo_model, image_paths: List[str], budget: int) -> Tuple[List[str], List[Dict]]:
     """Seleciona imagens usando o agente PPO treinado"""
@@ -96,7 +117,13 @@ def select_images(ppo_agent, yolo_model, image_paths: List[str], budget: int) ->
             selected_paths.append(img_path)
             remaining_budget -= 1
             log_entry["selected"] = True
-            print(f"✅ Selecionada: {os.path.basename(img_path)} | Entropia: {entropy:.4f}, Conf: {avg_confidence:.4f}, Orçamento: {remaining_budget}/{budget}")
+            
+            # Impressão segura com tratamento de erros
+            try:
+                safe_print(f" Selecionada: {os.path.basename(img_path)} | Entropia: {entropy:.4f}, Conf: {avg_confidence:.4f}, Orçamento: {remaining_budget}/{budget}")
+            except Exception as e:
+                safe_print(f" Selecionada: [arquivo com caracteres especiais] | Entropia: {entropy:.4f}, Conf: {avg_confidence:.4f}, Orçamento: {remaining_budget}/{budget}")
+                safe_print(f" Erro ao imprimir nome do arquivo: {str(e)}")
         
         selection_log.append(log_entry)
         
@@ -113,32 +140,42 @@ def save_selected_images(selected_paths: List[str], output_dir: str, label_dir: 
     os.makedirs(OUTPUT_LABEL_DIR, exist_ok=True)
     
     for img_path in selected_paths:
-        img = cv2.imread(img_path)
-        if img is not None:
-            output_path = os.path.join(output_dir, os.path.basename(img_path))
-            #cv2.imwrite(output_path, img)
-            shutil.move(img_path, output_path)
-            shutil.copyfile(label_dir + os.path.basename(img_path).split('.')[0] + ".txt", OUTPUT_LABEL_DIR + os.path.basename(img_path).split('.')[0] + ".txt")
-            print(f"💾 Salvo: {output_path}")
+        try:
+            # Usar shutil.copy2 para preservar metadados
+            dst_img = os.path.join(output_dir, os.path.basename(img_path))
+            shutil.move(img_path, dst_img)
+            
+            # Construir caminho do label correspondente
+            label_src = os.path.join(label_dir, os.path.splitext(os.path.basename(img_path))[0] + ".txt")
+            dst_label = os.path.join(OUTPUT_LABEL_DIR, os.path.splitext(os.path.basename(img_path))[0] + ".txt")
+            
+            if os.path.exists(label_src):
+                shutil.move(label_src, dst_label)
+            else:
+                print(f"⚠️ Label não encontrado: {label_src}")
+            
+            print(f"💾 Salvo: {dst_img}")
+        except Exception as e:
+            print(f"Erro ao copiar {img_path}: {str(e)}")
 
 def main():
     # Configurar dispositivo
     device = torch.device(CUDA_DEVICE if torch.cuda.is_available() else "cpu")
-    print(f"Usando dispositivo: {device}")
+    safe_print(f"Usando dispositivo: {device}")
     
     # Carregar agente PPO treinado
-    print("⏳ Carregando agente PPO...")
+    safe_print("⏳ Carregando agente PPO...")
     ppo_agent = PPO.load(PPO_MODEL_PATH, device=device)
-    print("✅ Agente PPO carregado com sucesso!")
+    safe_print("✅ Agente PPO carregado com sucesso!")
     
     # Carregar modelo YOLO
-    print("⏳ Carregando modelo YOLO...")
+    safe_print("⏳ Carregando modelo YOLO...")
     yolo_model = YOLO(YOLO_MODEL_PATH).to(device)
-    print("✅ Modelo YOLO carregado com sucesso!")
+    safe_print("✅ Modelo YOLO carregado com sucesso!")
     
-    # Carregar caminhos das imagens
+    # Carregar caminhos das imagens (usando caminhos normalizados)
     image_files = sorted([
-        os.path.join(POOL_DIR, f) 
+        os.path.normpath(os.path.join(POOL_DIR, f)) 
         for f in os.listdir(POOL_DIR) 
         if f.lower().endswith(('.jpg', '.png', '.jpeg'))
     ])
@@ -146,26 +183,26 @@ def main():
     if not image_files:
         raise ValueError(f"❌ Nenhuma imagem encontrada em {POOL_DIR}")
     
-    print(f"📂 Encontradas {len(image_files)} imagens no pool")
+    safe_print(f"📂 Encontradas {len(image_files)} imagens no pool")
     
     # Selecionar imagens com o agente PPO
-    print("\n🔍 Iniciando processo de seleção...")
+    safe_print("\n🔍 Iniciando processo de seleção...")
     selected_paths, selection_log = select_images(ppo_agent, yolo_model, image_files, BUDGET)
     
     # Salvar imagens selecionadas
     save_selected_images(selected_paths, OUTPUT_DIR, LABEL_DIR)
     
-    # Salvar log de seleção
-    with open(LOG_FILE, "w") as f:
-        json.dump(selection_log, f, indent=2)
+    # Salvar log de seleção com UTF-8
+    with open(LOG_FILE, "w", encoding="utf-8") as f:
+        json.dump(selection_log, f, indent=2, ensure_ascii=False)
     
     # Gerar relatório
-    print("\n📊 Relatório Final:")
-    print(f"- Total de imagens no pool: {len(image_files)}")
-    print(f"- Imagens selecionadas: {len(selected_paths)}")
-    print(f"- Orçamento restante: {BUDGET - len(selected_paths)}")
-    print(f"- Log de seleção salvo em: {LOG_FILE}")
-    print(f"- Imagens selecionadas salvas em: {OUTPUT_DIR}")
+    safe_print("\n📊 Relatório Final:")
+    safe_print(f"- Total de imagens no pool: {len(image_files)}")
+    safe_print(f"- Imagens selecionadas: {len(selected_paths)}")
+    safe_print(f"- Orçamento restante: {BUDGET - len(selected_paths)}")
+    safe_print(f"- Log de seleção salvo em: {LOG_FILE}")
+    safe_print(f"- Imagens selecionadas salvas em: {OUTPUT_DIR}")
     
     # Calcular estatísticas
     entropies = [entry["entropy"] for entry in selection_log]
@@ -173,19 +210,23 @@ def main():
     selected_entropies = [entry["entropy"] for entry in selection_log if entry["selected"]]
     selected_confidences = [entry["avg_confidence"] for entry in selection_log if entry["selected"]]
     
-    print("\n📈 Estatísticas das imagens selecionadas:")
-    print(f"- Entropia média: {np.mean(selected_entropies):.4f} (Pool: {np.mean(entropies):.4f})")
-    print(f"- Confiança média: {np.mean(selected_confidences):.4f} (Pool: {np.mean(confidences):.4f})")
-    #Diversidade = Número de índices únicos selecionados / Total de imagens selecionadas
-    # Quanto menor o valor, maior a repetição de seleções
-    #print(f"- Diversidade: {len(selected_entropies)/len(selected_paths):.2%} de imagens únicas")
+    safe_print("\n📈 Estatísticas das imagens selecionadas:")
+    safe_print(f"- Entropia média: {np.mean(selected_entropies):.4f} (Pool: {np.mean(entropies):.4f})")
+    safe_print(f"- Confiança média: {np.mean(selected_confidences):.4f} (Pool: {np.mean(confidences):.4f})")
 
 if __name__ == "__main__":
     # Registrar tempo de execução
     start_time = datetime.now()
     print(f"⏰ Início do processo: {start_time.strftime('%Y-%m-%d %H:%M:%S')}")
     
-    main()
+    try:
+        main()
+    except Exception as e:
+        print(f"❌ ERRO GRAVE: {str(e)}")
+        # Salvar traceback para análise
+        import traceback
+        with open("error_log.txt", "w", encoding="utf-8") as f:
+            f.write(traceback.format_exc())
     
     end_time = datetime.now()
     duration = end_time - start_time

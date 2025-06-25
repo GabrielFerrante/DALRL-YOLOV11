@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "C:\Repositorios\DALRL-YOLOV11\agentSelection-WithRandomPool.py", line 209, in <module>
+    main()
+    ~~~~^^
+  File "C:\Repositorios\DALRL-YOLOV11\agentSelection-WithRandomPool.py", line 176, in main
+    selected_paths, selection_log = select_images(ppo_agent, yolo_model, image_files, BUDGET)
+                                    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Repositorios\DALRL-YOLOV11\agentSelection-WithRandomPool.py", line 112, in select_images
+    print(f"✅ Selecionada: {img_path} | Entropia: {entropy:.4f}, Conf: {avg_confidence:.4f}, Orcamento: {remaining_budget}/{budget}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 22] Invalid argument
