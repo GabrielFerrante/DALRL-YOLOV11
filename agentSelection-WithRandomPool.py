@@ -26,7 +26,7 @@ itensAgents = os.listdir(caminhoAgents)
 CUDA_DEVICE = "cuda:0"  # Dispositivo CUDA
 #PPO_MODEL_PATH = "./logs-Random/active_learning_20250609_121724/best_model-RandomPool/best_model"  # Caminho para o agente PPO treinado 
 PPO_MODEL_PATH = os.path.join("./logs-Random", itensAgents[-1], "best_model-RandomPool", "best_model")
-
+#YOLO_MODEL_PATH = "runs/detect/yolov11-initial-WithRandomSamples/weights/best.pt"  # Caminho para o modelo 
 YOLO_MODEL_PATH = os.path.join("Yolov11-WithRandomSamples", itensYolo[-1], "weights", "best.pt")
 POOL_DIR = "F:/COCO-Dataset/train2017/pool/images/"  # Diretório com novas imagens não rotuladas
 LABEL_DIR = "F:/COCO-Dataset/train2017/pool/labels/"
@@ -34,17 +34,6 @@ BUDGET = 946  # Orçamento de seleção, corresponde 10% do pool (94630 / 100 * 
 OUTPUT_DIR = "selected_images_random/images/"  # Diretório para salvar imagens selecionadas
 OUTPUT_LABEL_DIR = "selected_images_random/labels/"
 LOG_FILE = "selection_randomSamples_log.json"  # Arquivo para registrar seleções
-
-def safe_print(message: str):
-    """Impressão segura que ignora caracteres problemáticos"""
-    try:
-        print(message)
-    except UnicodeEncodeError:
-        # Tentar imprimir ignorando caracteres não ASCII
-        safe_message = message.encode('ascii', 'ignore').decode('ascii')
-        print(f"[SAFE_PRINT]: {safe_message}")
-    except Exception as e:
-        print(f"Erro crítico ao imprimir: {str(e)}")
 
 def process_image(yolo_model: YOLO, img_path: str) -> Tuple[float, float]:
     """Processa uma imagem com YOLO e retorna entropia e confiança média"""
@@ -120,14 +109,7 @@ def select_images(ppo_agent, yolo_model, image_paths: List[str], budget: int) ->
             selected_paths.append(img_path)
             remaining_budget -= 1
             log_entry["selected"] = True
-
-            # Impressão segura com tratamento de erros
-            try:
-                safe_print(f" Selecionada: {os.path.basename(img_path)} | Entropia: {entropy:.4f}, Conf: {avg_confidence:.4f}, Orçamento: {remaining_budget}/{budget}")
-            except Exception as e:
-                safe_print(f" Selecionada: [arquivo com caracteres especiais] | Entropia: {entropy:.4f}, Conf: {avg_confidence:.4f}, Orçamento: {remaining_budget}/{budget}")
-                safe_print(f" Erro ao imprimir nome do arquivo: {str(e)}")
-            
+            print(f"✅ Selecionada: {os.path.basename(img_path)} | Entropia: {entropy:.4f}, Conf: {avg_confidence:.4f}, Orçamento: {remaining_budget}/{budget}")
         
         selection_log.append(log_entry)
         
@@ -165,17 +147,17 @@ def save_selected_images(selected_paths: List[str], output_dir: str, label_dir: 
 def main():
     # Configurar dispositivo
     device = torch.device(CUDA_DEVICE if torch.cuda.is_available() else "cpu")
-    safe_print(f"Usando dispositivo: {device}")
+    print(f"Usando dispositivo: {device}")
     
     # Carregar agente PPO treinado
-    safe_print("⏳ Carregando agente PPO...")
+    print("⏳ Carregando agente PPO...")
     ppo_agent = PPO.load(PPO_MODEL_PATH, device=device)
-    safe_print("✅ Agente PPO carregado com sucesso!")
+    print("✅ Agente PPO carregado com sucesso!")
     
     # Carregar modelo YOLO
-    safe_print("⏳ Carregando modelo YOLO...")
+    print("⏳ Carregando modelo YOLO...")
     yolo_model = YOLO(YOLO_MODEL_PATH).to(device)
-    safe_print("✅ Modelo YOLO carregado com sucesso!")
+    print("✅ Modelo YOLO carregado com sucesso!")
     
     # Carregar caminhos das imagens (usando caminhos normalizados)
     image_files = sorted([
@@ -187,10 +169,10 @@ def main():
     if not image_files:
         raise ValueError(f"❌ Nenhuma imagem encontrada em {POOL_DIR}")
     
-    safe_print(f"📂 Encontradas {len(image_files)} imagens no pool")
+    print(f"📂 Encontradas {len(image_files)} imagens no pool")
     
     # Selecionar imagens com o agente PPO
-    safe_print("\n🔍 Iniciando processo de seleção...")
+    print("\n🔍 Iniciando processo de seleção...")
     selected_paths, selection_log = select_images(ppo_agent, yolo_model, image_files, BUDGET)
     
     # Salvar imagens selecionadas
@@ -201,12 +183,12 @@ def main():
         json.dump(selection_log, f, indent=2, ensure_ascii=False)
     
     # Gerar relatório
-    safe_print("\n📊 Relatório Final:")
-    safe_print(f"- Total de imagens no pool: {len(image_files)}")
-    safe_print(f"- Imagens selecionadas: {len(selected_paths)}")
-    safe_print(f"- Orçamento restante: {BUDGET - len(selected_paths)}")
-    safe_print(f"- Log de seleção salvo em: {LOG_FILE}")
-    safe_print(f"- Imagens selecionadas salvas em: {OUTPUT_DIR}")
+    print("\n📊 Relatório Final:")
+    print(f"- Total de imagens no pool: {len(image_files)}")
+    print(f"- Imagens selecionadas: {len(selected_paths)}")
+    print(f"- Orçamento restante: {BUDGET - len(selected_paths)}")
+    print(f"- Log de seleção salvo em: {LOG_FILE}")
+    print(f"- Imagens selecionadas salvas em: {OUTPUT_DIR}")
     
     # Calcular estatísticas
     entropies = [entry["entropy"] for entry in selection_log]
@@ -214,9 +196,9 @@ def main():
     selected_entropies = [entry["entropy"] for entry in selection_log if entry["selected"]]
     selected_confidences = [entry["avg_confidence"] for entry in selection_log if entry["selected"]]
     
-    safe_print("\n📈 Estatísticas das imagens selecionadas:")
-    safe_print(f"- Entropia média: {np.mean(selected_entropies):.4f} (Pool: {np.mean(entropies):.4f})")
-    safe_print(f"- Confiança média: {np.mean(selected_confidences):.4f} (Pool: {np.mean(confidences):.4f})")
+    print("\n📈 Estatísticas das imagens selecionadas:")
+    print(f"- Entropia média: {np.mean(selected_entropies):.4f} (Pool: {np.mean(entropies):.4f})")
+    print(f"- Confiança média: {np.mean(selected_confidences):.4f} (Pool: {np.mean(confidences):.4f})")
 
 if __name__ == "__main__":
     # Registrar tempo de execução

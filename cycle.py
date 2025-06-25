@@ -72,11 +72,12 @@ def run_script(script_name, cycle, gpu_id=None):
             stderr=subprocess.STDOUT,
             text=True,
             bufsize=1,
-            universal_newlines=True
+            universal_newlines=True,
+            encoding='utf-8'
         )
         
         # Capturar saída em tempo real
-        with open(log_file, 'w') as log_f:
+        with open(log_file, 'w', encoding='utf-8') as log_f:
             while True:
                 output = process.stdout.readline()
                 if output == '' and process.poll() is not None:
