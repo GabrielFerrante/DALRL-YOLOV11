@@ -96,7 +96,7 @@ class ActiveLearningEnv(gym.Env):
         self.current_idx += 1
         
         # Verifica término do episódio
-        if self.current_idx > self.num_images or self.remaining_budget <= 0:
+        if self.current_idx >= self.num_images or self.remaining_budget <= 0:
             terminated = True
             # Recompensa final baseada na diversidade de seleção
             if len(self.selected_indices) > 0:
@@ -216,7 +216,7 @@ def main():
     # Configurar política do PPO
     policy_kwargs = dict(
         activation_fn=torch.nn.ReLU,
-        net_arch=[dict(pi=[256, 256], vf=[256, 256])]
+        net_arch=(dict(pi=[256, 256], vf=[256, 256]))
     )
         
         # Inicializar agente PPO
@@ -226,11 +226,13 @@ def main():
             policy_kwargs=policy_kwargs,
             verbose=1,
             device=DEVICE,
-            learning_rate=3e-4,
+            learning_rate=1e-4,
             n_steps=512,
             batch_size=16,
+            seed=42,
             n_epochs=10,
             gamma=0.99,
+            max_grad_norm=0.5,
             gae_lambda=0.95,
             clip_range=0.2,
             ent_coef=0.02,
