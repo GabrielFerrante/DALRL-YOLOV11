@@ -179,6 +179,12 @@ class ActiveLearningEnv(gym.Env):
 
 def main():
 
+    # Limpeza do cache da GPU (se disponível)
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+        torch.cuda.reset_peak_memory_stats()
+        print("MEMÓRIA LIMPA")
+
     caminho = "./Yolov11-WithRandomSamples/"  # Diretório atual (substitua pelo caminho desejado)
     itens = os.listdir(caminho)
 

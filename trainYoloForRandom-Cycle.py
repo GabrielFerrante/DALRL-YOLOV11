@@ -1,6 +1,7 @@
 from ultralytics import YOLO
 import os
 import shutil
+import torch
 from tqdm import tqdm  # Para barra de progresso (opcional)
 
 def move_images_and_labels(source_img_dir, source_label_dir, dest_img_dir, dest_label_dir, img_extensions=['.jpg', '.png', '.jpeg'], label_extension='.txt'):
@@ -71,6 +72,13 @@ def move_images_and_labels(source_img_dir, source_label_dir, dest_img_dir, dest_
 
 
 if __name__ == '__main__':
+
+    # Limpeza do cache da GPU (se disponível)
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+        torch.cuda.reset_peak_memory_stats()
+        print("MEMÓRIA LIMPA")
+
     # Configuração do modelo (supondo que 'yolov11x' é a versão completa)
     model = YOLO(model="yolo11x.yaml")  #Sem pre-treinamento
 
@@ -106,6 +114,7 @@ if __name__ == '__main__':
         device = 0,
         dnn = True,
         project = "Yolov11-WithRandomSamples",
-        plots = True
+        plots = True,
+        
         
     )
