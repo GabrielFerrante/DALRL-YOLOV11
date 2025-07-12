@@ -22,6 +22,20 @@ POOL_DIR = "F:/COCO-Dataset/train2017/pool/images/"  # Diretório com imagens
 LOG_DIR = "logs-Random" 
 
 class TensorBoardCallback(BaseCallback):
+    """
+    Custom callback for logging additional metrics to TensorBoard during training.
+    This callback extends the BaseCallback and records custom metrics such as mean entropy,
+    mean confidence, and the number of images selected, if present in the environment's info
+    dictionary. The metrics are logged under the "custom/" namespace for easier tracking in
+    TensorBoard.
+    Args:
+        verbose (int, optional): Verbosity level. Defaults to 0.
+    Methods:
+        _on_step() -> bool:
+            Called at each environment step. Logs custom metrics to TensorBoard if available.
+    Attributes:
+        logger: Logger object used to record metrics.
+    """
     def __init__(self, verbose=0):
         super().__init__(verbose)
 
@@ -36,6 +50,41 @@ class TensorBoardCallback(BaseCallback):
         return True
 
 class ActiveLearningEnv(gym.Env):
+    """
+    ActiveLearningEnv is a custom OpenAI Gym environment for active learning with object detection models (e.g., YOLO).
+    It simulates the process of selecting informative images under a labeling budget, using model uncertainty and confidence
+    to guide selection.
+    Args:
+        yolo_model (YOLO): A YOLO object detection model instance used for inference.
+        image_paths (List[str]): List of file paths to the images available for selection.
+        budget (int): Maximum number of images that can be selected per episode.
+    Observation Space:
+        Box([entropia, confiança_média, orçamento_restante]):
+            - entropia (float): Entropy of the model's predictions for the current image (range: [0, 1]).
+            - confiança_média (float): Average confidence of the model's predictions for the current image (range: [0, 1]).
+            - orçamento_restante (float): Remaining selection budget (range: [0, budget]).
+    Action Space:
+        Discrete(2):
+            - 0: Do not select the current image.
+            - 1: Select the current image (if budget allows).
+    Rewards:
+        - Positive reward for selecting images with high entropy and low confidence.
+        - Penalty for selecting images when the budget is exhausted.
+        - Bonus reward at episode end based on the diversity of selected images.
+    Episode Termination:
+        - When all images have been processed or the selection budget is exhausted.
+    Logging:
+        - Tracks cumulative rewards, episode lengths, number of images selected, mean entropy, and mean confidence per episode.
+    Methods:
+        reset(**kwargs) -> Tuple[np.ndarray, Dict]:
+            Resets the environment for a new episode, shuffling images and resetting counters.
+        step(action: int) -> Tuple[np.ndarray, float, bool, bool, Dict]:
+            Processes the current image, applies the action, updates the budget and metrics, and returns the next observation.
+        _get_obs() -> np.ndarray:
+            Returns the current observation vector.
+        _process_image(idx: int) -> Tuple[float, float]:
+            Processes the image at the given index with YOLO, returning entropy and average confidence.
+    """
     def __init__(self, yolo_model: YOLO, image_paths: List[str], budget: int):
         super().__init__()
         
@@ -71,6 +120,9 @@ class ActiveLearningEnv(gym.Env):
         self.selected_indices = []
         self.current_entropy = 0.0
         self.current_confidence = 0.0
+        self.cumulative_reward = 0.0
+        self.cumulative_entropy = 0.0
+        self.cumulative_confidence = 0.0
         return self._get_obs(), {}
 
     def step(self, action: int) -> Tuple[np.ndarray, float, bool, bool, Dict]:
@@ -127,11 +179,20 @@ class ActiveLearningEnv(gym.Env):
 
     def _get_obs(self) -> np.ndarray:
         """Retorna a observação atual processando a imagem"""
+        
+        if self.current_idx >= self.num_images:
+            # Retorna uma observação padrão quando ultrapassa o limite
+            return np.array([0.0, 0.0, self.remaining_budget], dtype=np.float32)
+    
         entropy, avg_confidence = self._process_image(self.indices[self.current_idx])
         return np.array([entropy, avg_confidence, self.remaining_budget], dtype=np.float32)
 
     def _process_image(self, idx: int) -> Tuple[float, float]:
         """Processa uma imagem com YOLO e retorna entropia e confiança média"""
+
+        if idx >= len(self.image_paths) or idx < 0:
+            return (0.0, 0.0)
+        
         img_path = self.image_paths[idx]
 
         try:
@@ -168,6 +229,8 @@ class ActiveLearningEnv(gym.Env):
             # Calcular confiança média
             avg_confidence = float(np.mean(confidences)) if confidences else 0.0
             
+            #print(f"Processando {img_path}: Entropia = {avg_entropy:.4f}, Confiança = {avg_confidence:.4f}")
+
             return (avg_entropy, avg_confidence)
             
         except Exception as e:
@@ -178,6 +241,22 @@ class ActiveLearningEnv(gym.Env):
 
 
 def main():
+    """
+    Main function to train an active learning agent using PPO and YOLOv11.
+    This function performs the following steps:
+    1. Clears GPU cache if CUDA is available.
+    2. Loads the latest YOLOv11 model from a specified directory.
+    3. Sets up the active learning environment with a pool of images.
+    4. Configures logging directories and logger for experiment tracking.
+    5. Initializes the PPO agent with specified hyperparameters.
+    6. Sets up evaluation and TensorBoard callbacks.
+    7. Trains the agent for a specified number of timesteps.
+    8. Saves the trained agent and prints training statistics.
+    Note:
+    - Requires global variables: LOG_DIR, BUDGET, NUM_ENVS, TIMESTEPS.
+    - Assumes existence of YOLO, ActiveLearningEnv, SubprocVecEnv, VecMonitor, PPO, EvalCallback, and TensorBoardCallback classes.
+    - Image pool directory and YOLO model directory must exist and be accessible.
+    """
 
     # Limpeza do cache da GPU (se disponível)
     if torch.cuda.is_available():
@@ -264,7 +343,7 @@ def main():
     # Treinar o agente
     agent.learn(
         total_timesteps=TIMESTEPS, 
-        progress_bar=True,
+        progress_bar=False, #True para executar somente o script no terminal
         callback=[eval_callback, tb_callback],
         tb_log_name="active_learning"
         )

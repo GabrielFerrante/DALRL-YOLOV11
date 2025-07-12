@@ -34,6 +34,20 @@ LOG_FILE = "selection_clusterSamples_log.json"  # Arquivo para registrar seleç�
 
 
 def process_image(yolo_model: YOLO, img_path: str) -> Tuple[float, float]:
+    """
+    Processes an image using a YOLO model and returns the average entropy and average confidence of detected bounding boxes.
+    Args:
+        yolo_model (YOLO): The YOLO model instance used for object detection.
+        img_path (str): The file path to the image to be processed.
+    Returns:
+        Tuple[float, float]: A tuple containing:
+            - avg_entropy (float): The average entropy calculated from the confidence scores of detected bounding boxes.
+            - avg_confidence (float): The average confidence score of detected bounding boxes.
+    Notes:
+        - If the image cannot be loaded or no detections are found, both values returned will be 0.0.
+        - Entropy is calculated for each confidence score using the binary entropy formula.
+        - Handles exceptions and prints error messages for critical failures.
+    """
     """Processa uma imagem com YOLO e retorna entropia e confiança média"""
     try:
         # Usar imdecode para lidar melhor com caminhos especiais
@@ -77,6 +91,21 @@ def process_image(yolo_model: YOLO, img_path: str) -> Tuple[float, float]:
         return (0.0, 0.0)
 
 def select_images(ppo_agent, yolo_model, image_paths: List[str], budget: int) -> Tuple[List[str], List[Dict]]:
+    """
+    Selects images using a trained PPO agent and a YOLO model within a specified budget.
+    For each image in the provided list, the function processes the image with the YOLO model to obtain entropy and average confidence.
+    These metrics, along with the remaining budget, are used as observations for the PPO agent, which decides whether to select the image.
+    The process continues until the budget is exhausted or all images have been considered.
+    Args:
+        ppo_agent: The trained PPO agent used to make selection decisions.
+        yolo_model: The YOLO model used to process images and extract features.
+        image_paths (List[str]): List of file paths to the images to be considered for selection.
+        budget (int): The maximum number of images that can be selected.
+    Returns:
+        Tuple[List[str], List[Dict]]: 
+            - A list of selected image paths.
+            - A log (list of dictionaries) detailing the selection process for each image, including entropy, average confidence, action taken, remaining budget, and selection status.
+    """
     """Seleciona imagens usando o agente PPO treinado"""
     selected_paths = []
     selection_log = []
@@ -119,6 +148,20 @@ def select_images(ppo_agent, yolo_model, image_paths: List[str], budget: int) ->
     return selected_paths, selection_log
 
 def save_selected_images(selected_paths: List[str], output_dir: str, label_dir: str):
+    """
+    Copies selected images and their corresponding label files to specified output directories.
+    Args:
+        selected_paths (List[str]): List of file paths to the selected images.
+        output_dir (str): Directory where the selected images will be moved.
+        label_dir (str): Directory containing the label files corresponding to the images.
+    Behavior:
+        - Moves each image in `selected_paths` to `output_dir`.
+        - Moves the corresponding label file (with the same base name and `.txt` extension) from `label_dir` to `OUTPUT_LABEL_DIR`.
+        - Creates `output_dir` and `OUTPUT_LABEL_DIR` if they do not exist.
+        - Prints a warning if a label file is not found for an image.
+        - Prints a confirmation message for each successfully moved image.
+        - Prints an error message if an exception occurs during the move operation.
+    """
     """Copia as imagens selecionadas para o diretório de saída"""
     os.makedirs(output_dir, exist_ok=True)
     os.makedirs(OUTPUT_LABEL_DIR, exist_ok=True)

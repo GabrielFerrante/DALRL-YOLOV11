@@ -32,7 +32,7 @@ Librarys used:
 
 - Run the initial training of the YoloV11 models with each initial set. (**File**: beforeCicle.py)
 
-- Change the training hyperparameters of the agents and Yolo if necessary.
+- Change the training hyperparameters (batchs, input dimensions, version (default: X weights)) of the agents and Yolo if necessary.
 
 - Start the cycle (adjust the number of cycles. Default: 10). (**File**: cicle.py)
 

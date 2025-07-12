@@ -52,6 +52,7 @@ def run_script(script_name, cycle, gpu_id=None):
     
     log_file = os.path.join(LOG_DIR, f"cycle_{cycle}_{os.path.splitext(script_name)[0]}.log")
     start_time = time.time()
+
     
     # Mensagem inicial
     print_queue.put(f"\n🚀 [Ciclo {cycle}] Iniciando: {script_name}")
@@ -61,7 +62,7 @@ def run_script(script_name, cycle, gpu_id=None):
     if torch.cuda.is_available():
         torch.cuda.empty_cache()
         torch.cuda.ipc_collect()
-        time.sleep(5)  # Pausa generosa
+        time.sleep(5)  # Pausa
     
     try:
         # Iniciar processo
@@ -73,7 +74,8 @@ def run_script(script_name, cycle, gpu_id=None):
             text=True,
             bufsize=1,
             universal_newlines=True,
-            encoding='utf-8'
+            encoding='utf-8',
+            errors='replace'
         )
         
         # Capturar saída em tempo real
@@ -104,6 +106,8 @@ def run_script(script_name, cycle, gpu_id=None):
     # Liberar recursos
     if torch.cuda.is_available():
         torch.cuda.empty_cache()
+
+    
     
     return {
         "cycle": cycle,
