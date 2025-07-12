@@ -36,7 +36,11 @@ Librarys used:
 
 - Start the cycle (adjust the number of cycles. Default: 10). (**File**: cicle.py)
 
+### Bugs
+
 - In case of an error: Check GPU memory consumption. Modify the checkpoint to restart the cycle from where it stopped. (**File**: active_learning_logs\active_learning_checkpoint.json)
 
 - Avoid running other tasks on the GPU, as this may cause the algorithm to crash.
+
+- If the agents train with stable_baselines3  crashed without errors in logs, save the file active_learning_logs\active_learning_checkpoint.json (change the file if you need) and restart your machine and the cycle.
 
