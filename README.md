@@ -44,3 +44,5 @@ Librarys used:
 
 - If the agents train with stable_baselines3  crashed without errors in logs, save the file active_learning_logs\active_learning_checkpoint.json (change the file if you need) and restart your machine and the cycle.
 
+- In case of interrupt yolo model training, execute the **file:** resumeYoloTraining.py. Modify the last.pt weights path folder in object YOLO instance. Change the projectName if you need.  
+
