@@ -15,7 +15,7 @@ if __name__ == '__main__':
         print("MEMÓRIA LIMPA")
 
     # Adição do ultimo peso do modelo que parou
-    model = YOLO(model="Yolov11-WithRandomSamples/train7/weights/last.pt")  
+    model = YOLO(model="Yolov11-WithRandomSamples/train9/weights/last.pt")  
 
 
     # Treinar
@@ -32,7 +32,7 @@ if __name__ == '__main__':
         workers= 8,
         device = 0,
         dnn = True,
-        project = "Yolov11-WithRandomSamples",
+        project = "Yolov11-WithRandomSamples", #Alterar para o nome do projeto
         plots = True,
         resume=True,  # Continuar treinamento
         

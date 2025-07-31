@@ -1,0 +1,1943 @@
+C:\Users\Gabriel\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\on_policy_algorithm.py:150: UserWarning: You are trying to run PPO on the GPU, but it is primarily intended to run on the CPU when not using a CNN policy (you are using ActorCriticPolicy which should be a MlpPolicy). See https://github.com/DLR-RM/stable-baselines3/issues/1245 for more info. You can pass `device='cpu'` or `export CUDA_VISIBLE_DEVICES=` to force using the CPU.Note: The model will train, but the GPU utilization will be poor and the training might take longer than on CPU.
+  warnings.warn(
+⏰ Início do processo: 2025-07-25 18:02:53
+Usando dispositivo: cuda:0
+⏳ Carregando agente PPO...
+✅ Agente PPO carregado com sucesso!
+⏳ Carregando modelo YOLO...
+✅ Modelo YOLO carregado com sucesso!
+📂 Encontradas 87969 imagens no pool
+
+🔍 Iniciando processo de seleção...
+✅ Selecionada: 000000040878.jpg | Entropia: 0.3152, Conf: 0.9430, Orçamento: 944/945
+✅ Selecionada: 000000040881.jpg | Entropia: 0.9219, Conf: 0.3482, Orçamento: 943/945
+✅ Selecionada: 000000040886.jpg | Entropia: 0.7833, Conf: 0.6736, Orçamento: 942/945
+✅ Selecionada: 000000040890.jpg | Entropia: 0.7768, Conf: 0.6089, Orçamento: 941/945
+✅ Selecionada: 000000040891.jpg | Entropia: 0.6232, Conf: 0.7242, Orçamento: 940/945
+✅ Selecionada: 000000040902.jpg | Entropia: 0.8062, Conf: 0.4325, Orçamento: 939/945
+✅ Selecionada: 000000040905.jpg | Entropia: 0.3333, Conf: 0.9385, Orçamento: 938/945
+✅ Selecionada: 000000040906.jpg | Entropia: 0.7707, Conf: 0.6789, Orçamento: 937/945
+✅ Selecionada: 000000040911.jpg | Entropia: 0.7554, Conf: 0.5986, Orçamento: 936/945
+✅ Selecionada: 000000040923.jpg | Entropia: 0.6519, Conf: 0.8259, Orçamento: 935/945
+✅ Selecionada: 000000040924.jpg | Entropia: 0.8753, Conf: 0.5480, Orçamento: 934/945
+Sem detecções em: F:\COCO-Dataset\train2017\clustering\pool\images\000000040926.jpg
+✅ Selecionada: 000000040926.jpg | Entropia: 0.0000, Conf: 0.0000, Orçamento: 933/945
+✅ Selecionada: 000000040930.jpg | Entropia: 0.8124, Conf: 0.7349, Orçamento: 932/945
+✅ Selecionada: 000000040931.jpg | Entropia: 0.9093, Conf: 0.3269, Orçamento: 931/945
+✅ Selecionada: 000000040934.jpg | Entropia: 0.9982, Conf: 0.5253, Orçamento: 930/945
+✅ Selecionada: 000000040937.jpg | Entropia: 0.9251, Conf: 0.3488, Orçamento: 929/945
+✅ Selecionada: 000000040938.jpg | Entropia: 0.8511, Conf: 0.5328, Orçamento: 928/945
+✅ Selecionada: 000000040940.jpg | Entropia: 0.8157, Conf: 0.6190, Orçamento: 927/945
+✅ Selecionada: 000000040946.jpg | Entropia: 0.7998, Conf: 0.6660, Orçamento: 926/945
+✅ Selecionada: 000000040957.jpg | Entropia: 0.6159, Conf: 0.7180, Orçamento: 925/945
+✅ Selecionada: 000000040961.jpg | Entropia: 0.9035, Conf: 0.4517, Orçamento: 924/945
+✅ Selecionada: 000000040966.jpg | Entropia: 0.9475, Conf: 0.6341, Orçamento: 923/945
+✅ Selecionada: 000000040971.jpg | Entropia: 0.3798, Conf: 0.9262, Orçamento: 922/945
+✅ Selecionada: 000000040986.jpg | Entropia: 0.7474, Conf: 0.7237, Orçamento: 921/945
+✅ Selecionada: 000000040987.jpg | Entropia: 0.8508, Conf: 0.6108, Orçamento: 920/945
+✅ Selecionada: 000000040988.jpg | Entropia: 0.8914, Conf: 0.3516, Orçamento: 919/945
+✅ Selecionada: 000000040989.jpg | Entropia: 0.7417, Conf: 0.6794, Orçamento: 918/945
+✅ Selecionada: 000000040995.jpg | Entropia: 0.7025, Conf: 0.7645, Orçamento: 917/945
+✅ Selecionada: 000000040998.jpg | Entropia: 0.7946, Conf: 0.6548, Orçamento: 916/945
+✅ Selecionada: 000000041001.jpg | Entropia: 0.5448, Conf: 0.8711, Orçamento: 915/945
+✅ Selecionada: 000000041005.jpg | Entropia: 0.6333, Conf: 0.6687, Orçamento: 914/945
+✅ Selecionada: 000000041008.jpg | Entropia: 0.7374, Conf: 0.6254, Orçamento: 913/945
+✅ Selecionada: 000000041011.jpg | Entropia: 0.5665, Conf: 0.8602, Orçamento: 912/945
+✅ Selecionada: 000000041014.jpg | Entropia: 0.3873, Conf: 0.9242, Orçamento: 911/945
+✅ Selecionada: 000000041018.jpg | Entropia: 0.7600, Conf: 0.7742, Orçamento: 910/945
+✅ Selecionada: 000000041020.jpg | Entropia: 0.8048, Conf: 0.6347, Orçamento: 909/945
+✅ Selecionada: 000000041022.jpg | Entropia: 0.9281, Conf: 0.4348, Orçamento: 908/945
+✅ Selecionada: 000000041041.jpg | Entropia: 0.9028, Conf: 0.4446, Orçamento: 907/945
+✅ Selecionada: 000000041054.jpg | Entropia: 0.8897, Conf: 0.6895, Orçamento: 906/945
+✅ Selecionada: 000000041056.jpg | Entropia: 0.6151, Conf: 0.8479, Orçamento: 905/945
+✅ Selecionada: 000000041074.jpg | Entropia: 0.8278, Conf: 0.7393, Orçamento: 904/945
+✅ Selecionada: 000000041079.jpg | Entropia: 0.9212, Conf: 0.3879, Orçamento: 903/945
+✅ Selecionada: 000000041082.jpg | Entropia: 0.9264, Conf: 0.5901, Orçamento: 902/945
+✅ Selecionada: 000000041085.jpg | Entropia: 0.8948, Conf: 0.5494, Orçamento: 901/945
+✅ Selecionada: 000000041087.jpg | Entropia: 0.7940, Conf: 0.6537, Orçamento: 900/945
+✅ Selecionada: 000000041097.jpg | Entropia: 0.5925, Conf: 0.6306, Orçamento: 899/945
+✅ Selecionada: 000000041103.jpg | Entropia: 0.4164, Conf: 0.9158, Orçamento: 898/945
+✅ Selecionada: 000000041110.jpg | Entropia: 0.7002, Conf: 0.7141, Orçamento: 897/945
+✅ Selecionada: 000000041123.jpg | Entropia: 0.6752, Conf: 0.6719, Orçamento: 896/945
+✅ Selecionada: 000000041128.jpg | Entropia: 0.8717, Conf: 0.5973, Orçamento: 895/945
+✅ Selecionada: 000000041138.jpg | Entropia: 0.9366, Conf: 0.4908, Orçamento: 894/945
+✅ Selecionada: 000000041147.jpg | Entropia: 0.7851, Conf: 0.5671, Orçamento: 893/945
+✅ Selecionada: 000000041152.jpg | Entropia: 0.7095, Conf: 0.6592, Orçamento: 892/945
+✅ Selecionada: 000000041155.jpg | Entropia: 0.8169, Conf: 0.4773, Orçamento: 891/945
+✅ Selecionada: 000000041174.jpg | Entropia: 0.9267, Conf: 0.5318, Orçamento: 890/945
+✅ Selecionada: 000000041180.jpg | Entropia: 0.9361, Conf: 0.5273, Orçamento: 889/945
+✅ Selecionada: 000000041183.jpg | Entropia: 0.7655, Conf: 0.7618, Orçamento: 888/945
+✅ Selecionada: 000000041186.jpg | Entropia: 0.7233, Conf: 0.5226, Orçamento: 887/945
+✅ Selecionada: 000000041199.jpg | Entropia: 0.9290, Conf: 0.3588, Orçamento: 886/945
+✅ Selecionada: 000000041200.jpg | Entropia: 0.8462, Conf: 0.2733, Orçamento: 885/945
+✅ Selecionada: 000000041226.jpg | Entropia: 0.8386, Conf: 0.7320, Orçamento: 884/945
+✅ Selecionada: 000000041231.jpg | Entropia: 0.7243, Conf: 0.6790, Orçamento: 883/945
+✅ Selecionada: 000000041233.jpg | Entropia: 0.8962, Conf: 0.5921, Orçamento: 882/945
+✅ Selecionada: 000000041246.jpg | Entropia: 0.6810, Conf: 0.7153, Orçamento: 881/945
+✅ Selecionada: 000000041252.jpg | Entropia: 0.7235, Conf: 0.6239, Orçamento: 880/945
+✅ Selecionada: 000000041257.jpg | Entropia: 0.9061, Conf: 0.4791, Orçamento: 879/945
+✅ Selecionada: 000000041272.jpg | Entropia: 0.8180, Conf: 0.5450, Orçamento: 878/945
+✅ Selecionada: 000000041273.jpg | Entropia: 0.8447, Conf: 0.6417, Orçamento: 877/945
+✅ Selecionada: 000000041276.jpg | Entropia: 0.4349, Conf: 0.9105, Orçamento: 876/945
+✅ Selecionada: 000000041279.jpg | Entropia: 0.7176, Conf: 0.6259, Orçamento: 875/945
+✅ Selecionada: 000000041284.jpg | Entropia: 0.7844, Conf: 0.5276, Orçamento: 874/945
+✅ Selecionada: 000000041288.jpg | Entropia: 0.8833, Conf: 0.4957, Orçamento: 873/945
+Sem detecções em: F:\COCO-Dataset\train2017\clustering\pool\images\000000041293.jpg
+✅ Selecionada: 000000041293.jpg | Entropia: 0.0000, Conf: 0.0000, Orçamento: 872/945
+✅ Selecionada: 000000041300.jpg | Entropia: 0.8543, Conf: 0.7208, Orçamento: 871/945
+✅ Selecionada: 000000041305.jpg | Entropia: 0.8526, Conf: 0.5610, Orçamento: 870/945
+✅ Selecionada: 000000041311.jpg | Entropia: 0.8754, Conf: 0.5081, Orçamento: 869/945
+✅ Selecionada: 000000041319.jpg | Entropia: 0.6070, Conf: 0.8206, Orçamento: 868/945
+✅ Selecionada: 000000041322.jpg | Entropia: 0.9259, Conf: 0.4687, Orçamento: 867/945
+✅ Selecionada: 000000041331.jpg | Entropia: 0.8989, Conf: 0.6448, Orçamento: 866/945
+✅ Selecionada: 000000041342.jpg | Entropia: 0.8857, Conf: 0.6004, Orçamento: 865/945
+✅ Selecionada: 000000041343.jpg | Entropia: 0.5166, Conf: 0.8839, Orçamento: 864/945
+✅ Selecionada: 000000041345.jpg | Entropia: 0.8507, Conf: 0.5566, Orçamento: 863/945
+✅ Selecionada: 000000041351.jpg | Entropia: 0.7672, Conf: 0.4968, Orçamento: 862/945
+✅ Selecionada: 000000041356.jpg | Entropia: 0.8596, Conf: 0.6470, Orçamento: 861/945
+✅ Selecionada: 000000041357.jpg | Entropia: 0.6847, Conf: 0.7116, Orçamento: 860/945
+✅ Selecionada: 000000041366.jpg | Entropia: 0.5852, Conf: 0.8596, Orçamento: 859/945
+✅ Selecionada: 000000041369.jpg | Entropia: 0.8486, Conf: 0.4255, Orçamento: 858/945
+✅ Selecionada: 000000041377.jpg | Entropia: 0.7851, Conf: 0.6416, Orçamento: 857/945
+✅ Selecionada: 000000041389.jpg | Entropia: 0.8142, Conf: 0.6224, Orçamento: 856/945
+✅ Selecionada: 000000041392.jpg | Entropia: 0.8432, Conf: 0.4684, Orçamento: 855/945
+✅ Selecionada: 000000041397.jpg | Entropia: 0.8650, Conf: 0.5618, Orçamento: 854/945
+✅ Selecionada: 000000041398.jpg | Entropia: 0.7169, Conf: 0.5996, Orçamento: 853/945
+✅ Selecionada: 000000041433.jpg | Entropia: 0.3102, Conf: 0.9436, Orçamento: 852/945
+✅ Selecionada: 000000041434.jpg | Entropia: 0.9274, Conf: 0.3613, Orçamento: 851/945
+✅ Selecionada: 000000041437.jpg | Entropia: 0.9990, Conf: 0.4824, Orçamento: 850/945
+✅ Selecionada: 000000041442.jpg | Entropia: 0.9068, Conf: 0.5188, Orçamento: 849/945
+✅ Selecionada: 000000041449.jpg | Entropia: 0.4979, Conf: 0.8881, Orçamento: 848/945
+✅ Selecionada: 000000041453.jpg | Entropia: 0.8177, Conf: 0.5529, Orçamento: 847/945
+✅ Selecionada: 000000041455.jpg | Entropia: 0.8366, Conf: 0.4860, Orçamento: 846/945
+✅ Selecionada: 000000041456.jpg | Entropia: 0.8598, Conf: 0.7168, Orçamento: 845/945
+✅ Selecionada: 000000041458.jpg | Entropia: 0.7104, Conf: 0.6916, Orçamento: 844/945
+✅ Selecionada: 000000041459.jpg | Entropia: 0.8532, Conf: 0.5389, Orçamento: 843/945
+✅ Selecionada: 000000041461.jpg | Entropia: 0.6933, Conf: 0.6534, Orçamento: 842/945
+✅ Selecionada: 000000041475.jpg | Entropia: 0.6039, Conf: 0.6499, Orçamento: 841/945
+✅ Selecionada: 000000041482.jpg | Entropia: 0.8958, Conf: 0.4536, Orçamento: 840/945
+✅ Selecionada: 000000041489.jpg | Entropia: 0.8264, Conf: 0.7174, Orçamento: 839/945
+✅ Selecionada: 000000041505.jpg | Entropia: 0.8242, Conf: 0.6140, Orçamento: 838/945
+✅ Selecionada: 000000041507.jpg | Entropia: 0.8918, Conf: 0.5286, Orçamento: 837/945
+✅ Selecionada: 000000041516.jpg | Entropia: 0.7155, Conf: 0.7598, Orçamento: 836/945
+✅ Selecionada: 000000041528.jpg | Entropia: 0.8431, Conf: 0.5907, Orçamento: 835/945
+✅ Selecionada: 000000041547.jpg | Entropia: 0.3075, Conf: 0.9450, Orçamento: 834/945
+✅ Selecionada: 000000041549.jpg | Entropia: 0.7967, Conf: 0.7345, Orçamento: 833/945
+✅ Selecionada: 000000041552.jpg | Entropia: 0.9407, Conf: 0.3809, Orçamento: 832/945
+✅ Selecionada: 000000041561.jpg | Entropia: 0.9830, Conf: 0.5766, Orçamento: 831/945
+✅ Selecionada: 000000041565.jpg | Entropia: 0.5977, Conf: 0.8548, Orçamento: 830/945
+✅ Selecionada: 000000041570.jpg | Entropia: 0.8789, Conf: 0.5286, Orçamento: 829/945
+✅ Selecionada: 000000041572.jpg | Entropia: 0.6790, Conf: 0.7278, Orçamento: 828/945
+✅ Selecionada: 000000041574.jpg | Entropia: 0.8647, Conf: 0.6803, Orçamento: 827/945
+✅ Selecionada: 000000041575.jpg | Entropia: 0.9048, Conf: 0.4449, Orçamento: 826/945
+✅ Selecionada: 000000041577.jpg | Entropia: 0.8450, Conf: 0.5202, Orçamento: 825/945
+✅ Selecionada: 000000041588.jpg | Entropia: 0.8018, Conf: 0.4442, Orçamento: 824/945
+✅ Selecionada: 000000041597.jpg | Entropia: 0.4830, Conf: 0.8955, Orçamento: 823/945
+✅ Selecionada: 000000041603.jpg | Entropia: 0.8874, Conf: 0.5535, Orçamento: 822/945
+✅ Selecionada: 000000041606.jpg | Entropia: 0.8690, Conf: 0.6071, Orçamento: 821/945
+✅ Selecionada: 000000041616.jpg | Entropia: 0.5755, Conf: 0.8628, Orçamento: 820/945
+✅ Selecionada: 000000041625.jpg | Entropia: 0.8881, Conf: 0.3061, Orçamento: 819/945
+✅ Selecionada: 000000041630.jpg | Entropia: 0.6694, Conf: 0.6199, Orçamento: 818/945
+✅ Selecionada: 000000041638.jpg | Entropia: 0.8124, Conf: 0.4711, Orçamento: 817/945
+✅ Selecionada: 000000041649.jpg | Entropia: 0.6623, Conf: 0.6992, Orçamento: 816/945
+✅ Selecionada: 000000041666.jpg | Entropia: 0.8020, Conf: 0.6103, Orçamento: 815/945
+✅ Selecionada: 000000041673.jpg | Entropia: 0.7641, Conf: 0.7601, Orçamento: 814/945
+✅ Selecionada: 000000041687.jpg | Entropia: 0.6102, Conf: 0.6754, Orçamento: 813/945
+✅ Selecionada: 000000041688.jpg | Entropia: 0.9172, Conf: 0.4538, Orçamento: 812/945
+✅ Selecionada: 000000041700.jpg | Entropia: 0.8080, Conf: 0.5993, Orçamento: 811/945
+✅ Selecionada: 000000041708.jpg | Entropia: 0.9530, Conf: 0.5392, Orçamento: 810/945
+✅ Selecionada: 000000041710.jpg | Entropia: 0.7074, Conf: 0.7033, Orçamento: 809/945
+✅ Selecionada: 000000041711.jpg | Entropia: 0.8718, Conf: 0.4638, Orçamento: 808/945
+✅ Selecionada: 000000041713.jpg | Entropia: 0.9621, Conf: 0.6121, Orçamento: 807/945
+✅ Selecionada: 000000041728.jpg | Entropia: 0.9323, Conf: 0.3481, Orçamento: 806/945
+✅ Selecionada: 000000041729.jpg | Entropia: 0.8862, Conf: 0.6638, Orçamento: 805/945
+✅ Selecionada: 000000041730.jpg | Entropia: 0.7857, Conf: 0.6399, Orçamento: 804/945
+✅ Selecionada: 000000041737.jpg | Entropia: 0.9604, Conf: 0.5948, Orçamento: 803/945
+✅ Selecionada: 000000041740.jpg | Entropia: 0.8092, Conf: 0.5171, Orçamento: 802/945
+✅ Selecionada: 000000041742.jpg | Entropia: 0.9202, Conf: 0.5135, Orçamento: 801/945
+✅ Selecionada: 000000041745.jpg | Entropia: 0.8578, Conf: 0.5208, Orçamento: 800/945
+✅ Selecionada: 000000041753.jpg | Entropia: 0.7441, Conf: 0.6786, Orçamento: 799/945
+✅ Selecionada: 000000041756.jpg | Entropia: 0.8397, Conf: 0.6258, Orçamento: 798/945
+✅ Selecionada: 000000041763.jpg | Entropia: 0.8019, Conf: 0.7128, Orçamento: 797/945
+✅ Selecionada: 000000041770.jpg | Entropia: 0.7429, Conf: 0.6963, Orçamento: 796/945
+✅ Selecionada: 000000041771.jpg | Entropia: 0.4264, Conf: 0.9081, Orçamento: 795/945
+✅ Selecionada: 000000041772.jpg | Entropia: 0.9402, Conf: 0.4456, Orçamento: 794/945
+Sem detecções em: F:\COCO-Dataset\train2017\clustering\pool\images\000000041773.jpg
+✅ Selecionada: 000000041773.jpg | Entropia: 0.0000, Conf: 0.0000, Orçamento: 793/945
+✅ Selecionada: 000000041785.jpg | Entropia: 0.2928, Conf: 0.9465, Orçamento: 792/945
+✅ Selecionada: 000000041796.jpg | Entropia: 0.7115, Conf: 0.7642, Orçamento: 791/945
+✅ Selecionada: 000000041802.jpg | Entropia: 0.3470, Conf: 0.9350, Orçamento: 790/945
+✅ Selecionada: 000000041818.jpg | Entropia: 0.7859, Conf: 0.5720, Orçamento: 789/945
+✅ Selecionada: 000000041826.jpg | Entropia: 0.9512, Conf: 0.4106, Orçamento: 788/945
+✅ Selecionada: 000000041831.jpg | Entropia: 0.8222, Conf: 0.5167, Orçamento: 787/945
+✅ Selecionada: 000000041832.jpg | Entropia: 0.5685, Conf: 0.8624, Orçamento: 786/945
+✅ Selecionada: 000000041837.jpg | Entropia: 0.9434, Conf: 0.4337, Orçamento: 785/945
+✅ Selecionada: 000000041838.jpg | Entropia: 0.2502, Conf: 0.9583, Orçamento: 784/945
+✅ Selecionada: 000000041839.jpg | Entropia: 0.9566, Conf: 0.4187, Orçamento: 783/945
+✅ Selecionada: 000000041840.jpg | Entropia: 0.8000, Conf: 0.5734, Orçamento: 782/945
+Sem detecções em: F:\COCO-Dataset\train2017\clustering\pool\images\000000041842.jpg
+✅ Selecionada: 000000041842.jpg | Entropia: 0.0000, Conf: 0.0000, Orçamento: 781/945
+✅ Selecionada: 000000041843.jpg | Entropia: 0.7077, Conf: 0.8070, Orçamento: 780/945
+✅ Selecionada: 000000041846.jpg | Entropia: 0.7559, Conf: 0.7069, Orçamento: 779/945
+✅ Selecionada: 000000041848.jpg | Entropia: 0.7098, Conf: 0.7557, Orçamento: 778/945
+✅ Selecionada: 000000041854.jpg | Entropia: 0.5092, Conf: 0.8869, Orçamento: 777/945
+✅ Selecionada: 000000041859.jpg | Entropia: 0.8804, Conf: 0.2993, Orçamento: 776/945
+✅ Selecionada: 000000041867.jpg | Entropia: 0.4210, Conf: 0.9146, Orçamento: 775/945
+✅ Selecionada: 000000041875.jpg | Entropia: 0.7866, Conf: 0.5137, Orçamento: 774/945
+✅ Selecionada: 000000041887.jpg | Entropia: 0.6565, Conf: 0.6600, Orçamento: 773/945
+✅ Selecionada: 000000041890.jpg | Entropia: 0.8790, Conf: 0.5194, Orçamento: 772/945
+✅ Selecionada: 000000041895.jpg | Entropia: 0.6344, Conf: 0.8276, Orçamento: 771/945
+✅ Selecionada: 000000041899.jpg | Entropia: 0.5752, Conf: 0.8634, Orçamento: 770/945
+✅ Selecionada: 000000041908.jpg | Entropia: 0.3199, Conf: 0.9415, Orçamento: 769/945
+✅ Selecionada: 000000041913.jpg | Entropia: 0.9098, Conf: 0.3988, Orçamento: 768/945
+✅ Selecionada: 000000041918.jpg | Entropia: 0.6069, Conf: 0.8504, Orçamento: 767/945
+✅ Selecionada: 000000041920.jpg | Entropia: 0.7868, Conf: 0.4521, Orçamento: 766/945
+✅ Selecionada: 000000041924.jpg | Entropia: 0.8861, Conf: 0.3739, Orçamento: 765/945
+✅ Selecionada: 000000041938.jpg | Entropia: 0.9431, Conf: 0.5213, Orçamento: 764/945
+✅ Selecionada: 000000041939.jpg | Entropia: 0.7800, Conf: 0.6672, Orçamento: 763/945
+✅ Selecionada: 000000041940.jpg | Entropia: 0.6200, Conf: 0.6964, Orçamento: 762/945
+✅ Selecionada: 000000041945.jpg | Entropia: 0.9385, Conf: 0.4984, Orçamento: 761/945
+✅ Selecionada: 000000041952.jpg | Entropia: 0.9365, Conf: 0.6472, Orçamento: 760/945
+✅ Selecionada: 000000041959.jpg | Entropia: 0.9453, Conf: 0.4195, Orçamento: 759/945
+✅ Selecionada: 000000041962.jpg | Entropia: 0.5874, Conf: 0.8530, Orçamento: 758/945
+✅ Selecionada: 000000041984.jpg | Entropia: 0.6307, Conf: 0.8049, Orçamento: 757/945
+✅ Selecionada: 000000041988.jpg | Entropia: 0.9029, Conf: 0.3758, Orçamento: 756/945
+✅ Selecionada: 000000041993.jpg | Entropia: 0.4189, Conf: 0.9151, Orçamento: 755/945
+✅ Selecionada: 000000041997.jpg | Entropia: 0.9134, Conf: 0.4550, Orçamento: 754/945
+✅ Selecionada: 000000041998.jpg | Entropia: 0.8905, Conf: 0.4526, Orçamento: 753/945
+✅ Selecionada: 000000042003.jpg | Entropia: 0.9358, Conf: 0.4305, Orçamento: 752/945
+✅ Selecionada: 000000042010.jpg | Entropia: 0.8557, Conf: 0.2802, Orçamento: 751/945
+✅ Selecionada: 000000042042.jpg | Entropia: 0.7109, Conf: 0.5581, Orçamento: 750/945
+✅ Selecionada: 000000042044.jpg | Entropia: 0.7671, Conf: 0.6183, Orçamento: 749/945
+✅ Selecionada: 000000042050.jpg | Entropia: 0.7710, Conf: 0.4319, Orçamento: 748/945
+✅ Selecionada: 000000042055.jpg | Entropia: 0.8498, Conf: 0.5062, Orçamento: 747/945
+✅ Selecionada: 000000042057.jpg | Entropia: 0.8109, Conf: 0.5314, Orçamento: 746/945
+✅ Selecionada: 000000042060.jpg | Entropia: 0.9431, Conf: 0.6395, Orçamento: 745/945
+✅ Selecionada: 000000042069.jpg | Entropia: 0.9125, Conf: 0.3278, Orçamento: 744/945
+✅ Selecionada: 000000042079.jpg | Entropia: 0.7014, Conf: 0.7810, Orçamento: 743/945
+✅ Selecionada: 000000042081.jpg | Entropia: 0.6409, Conf: 0.7872, Orçamento: 742/945
+✅ Selecionada: 000000042085.jpg | Entropia: 0.7099, Conf: 0.5738, Orçamento: 741/945
+✅ Selecionada: 000000042086.jpg | Entropia: 0.9365, Conf: 0.4392, Orçamento: 740/945
+✅ Selecionada: 000000042091.jpg | Entropia: 0.6980, Conf: 0.4808, Orçamento: 739/945
+✅ Selecionada: 000000042105.jpg | Entropia: 0.8017, Conf: 0.6123, Orçamento: 738/945
+✅ Selecionada: 000000042109.jpg | Entropia: 0.8326, Conf: 0.6229, Orçamento: 737/945
+✅ Selecionada: 000000042122.jpg | Entropia: 0.4811, Conf: 0.8954, Orçamento: 736/945
+✅ Selecionada: 000000042124.jpg | Entropia: 0.7155, Conf: 0.8032, Orçamento: 735/945
+✅ Selecionada: 000000042137.jpg | Entropia: 0.7349, Conf: 0.7934, Orçamento: 734/945
+Sem detecções em: F:\COCO-Dataset\train2017\clustering\pool\images\000000042144.jpg
+✅ Selecionada: 000000042144.jpg | Entropia: 0.0000, Conf: 0.0000, Orçamento: 733/945
+✅ Selecionada: 000000042147.jpg | Entropia: 0.6315, Conf: 0.8412, Orçamento: 732/945
+✅ Selecionada: 000000042156.jpg | Entropia: 0.6185, Conf: 0.7521, Orçamento: 731/945
+✅ Selecionada: 000000042161.jpg | Entropia: 0.7528, Conf: 0.5432, Orçamento: 730/945
+✅ Selecionada: 000000042165.jpg | Entropia: 0.9333, Conf: 0.3911, Orçamento: 729/945
+✅ Selecionada: 000000042166.jpg | Entropia: 0.8621, Conf: 0.6475, Orçamento: 728/945
+✅ Selecionada: 000000042173.jpg | Entropia: 0.8157, Conf: 0.5263, Orçamento: 727/945
+✅ Selecionada: 000000042182.jpg | Entropia: 0.8943, Conf: 0.5410, Orçamento: 726/945
+✅ Selecionada: 000000042196.jpg | Entropia: 0.7008, Conf: 0.8103, Orçamento: 725/945
+✅ Selecionada: 000000042201.jpg | Entropia: 0.8191, Conf: 0.5834, Orçamento: 724/945
+✅ Selecionada: 000000042204.jpg | Entropia: 0.8477, Conf: 0.5272, Orçamento: 723/945
+✅ Selecionada: 000000042209.jpg | Entropia: 0.8530, Conf: 0.5955, Orçamento: 722/945
+✅ Selecionada: 000000042215.jpg | Entropia: 0.8999, Conf: 0.5374, Orçamento: 721/945
+✅ Selecionada: 000000042222.jpg | Entropia: 0.7392, Conf: 0.6974, Orçamento: 720/945
+✅ Selecionada: 000000042225.jpg | Entropia: 0.7469, Conf: 0.6961, Orçamento: 719/945
+✅ Selecionada: 000000042228.jpg | Entropia: 0.9002, Conf: 0.6838, Orçamento: 718/945
+✅ Selecionada: 000000042245.jpg | Entropia: 0.4467, Conf: 0.8962, Orçamento: 717/945
+✅ Selecionada: 000000042260.jpg | Entropia: 0.8422, Conf: 0.5468, Orçamento: 716/945
+✅ Selecionada: 000000042267.jpg | Entropia: 0.6735, Conf: 0.6958, Orçamento: 715/945
+✅ Selecionada: 000000042277.jpg | Entropia: 0.8834, Conf: 0.4908, Orçamento: 714/945
+✅ Selecionada: 000000042278.jpg | Entropia: 0.7878, Conf: 0.6324, Orçamento: 713/945
+✅ Selecionada: 000000042288.jpg | Entropia: 0.8576, Conf: 0.5469, Orçamento: 712/945
+✅ Selecionada: 000000042308.jpg | Entropia: 0.7966, Conf: 0.6648, Orçamento: 711/945
+✅ Selecionada: 000000042312.jpg | Entropia: 0.6013, Conf: 0.7486, Orçamento: 710/945
+✅ Selecionada: 000000042314.jpg | Entropia: 0.6337, Conf: 0.5945, Orçamento: 709/945
+✅ Selecionada: 000000042320.jpg | Entropia: 0.8321, Conf: 0.5447, Orçamento: 708/945
+✅ Selecionada: 000000042321.jpg | Entropia: 0.7397, Conf: 0.5622, Orçamento: 707/945
+✅ Selecionada: 000000042333.jpg | Entropia: 0.8823, Conf: 0.5741, Orçamento: 706/945
+✅ Selecionada: 000000042336.jpg | Entropia: 0.4542, Conf: 0.8967, Orçamento: 705/945
+✅ Selecionada: 000000042339.jpg | Entropia: 0.7720, Conf: 0.6225, Orçamento: 704/945
+✅ Selecionada: 000000042341.jpg | Entropia: 0.8981, Conf: 0.3834, Orçamento: 703/945
+✅ Selecionada: 000000042342.jpg | Entropia: 0.8214, Conf: 0.6754, Orçamento: 702/945
+Sem detecções em: F:\COCO-Dataset\train2017\clustering\pool\images\000000042345.jpg
+✅ Selecionada: 000000042345.jpg | Entropia: 0.0000, Conf: 0.0000, Orçamento: 701/945
+✅ Selecionada: 000000042347.jpg | Entropia: 0.7505, Conf: 0.6405, Orçamento: 700/945
+✅ Selecionada: 000000042349.jpg | Entropia: 0.8574, Conf: 0.5715, Orçamento: 699/945
+✅ Selecionada: 000000042355.jpg | Entropia: 0.6662, Conf: 0.7742, Orçamento: 698/945
+✅ Selecionada: 000000042366.jpg | Entropia: 0.3337, Conf: 0.9384, Orçamento: 697/945
+✅ Selecionada: 000000042383.jpg | Entropia: 0.5077, Conf: 0.8874, Orçamento: 696/945
+✅ Selecionada: 000000042384.jpg | Entropia: 0.9198, Conf: 0.4575, Orçamento: 695/945
+✅ Selecionada: 000000042385.jpg | Entropia: 0.7913, Conf: 0.5615, Orçamento: 694/945
+✅ Selecionada: 000000042387.jpg | Entropia: 0.9156, Conf: 0.3307, Orçamento: 693/945
+✅ Selecionada: 000000042399.jpg | Entropia: 0.6535, Conf: 0.7962, Orçamento: 692/945
+✅ Selecionada: 000000042406.jpg | Entropia: 0.9676, Conf: 0.4929, Orçamento: 691/945
+✅ Selecionada: 000000042407.jpg | Entropia: 0.9012, Conf: 0.5651, Orçamento: 690/945
+✅ Selecionada: 000000042408.jpg | Entropia: 0.7645, Conf: 0.6001, Orçamento: 689/945
+✅ Selecionada: 000000042413.jpg | Entropia: 0.6403, Conf: 0.8348, Orçamento: 688/945
+✅ Selecionada: 000000042415.jpg | Entropia: 0.3744, Conf: 0.9277, Orçamento: 687/945
+✅ Selecionada: 000000042418.jpg | Entropia: 0.7564, Conf: 0.6363, Orçamento: 686/945
+✅ Selecionada: 000000042421.jpg | Entropia: 0.8650, Conf: 0.6335, Orçamento: 685/945
+✅ Selecionada: 000000042422.jpg | Entropia: 0.9570, Conf: 0.3827, Orçamento: 684/945
+✅ Selecionada: 000000042427.jpg | Entropia: 0.9093, Conf: 0.4436, Orçamento: 683/945
+✅ Selecionada: 000000042429.jpg | Entropia: 0.6249, Conf: 0.7709, Orçamento: 682/945
+✅ Selecionada: 000000042433.jpg | Entropia: 0.8543, Conf: 0.2792, Orçamento: 681/945
+✅ Selecionada: 000000042439.jpg | Entropia: 0.8342, Conf: 0.6512, Orçamento: 680/945
+✅ Selecionada: 000000042441.jpg | Entropia: 0.8530, Conf: 0.5951, Orçamento: 679/945
+✅ Selecionada: 000000042453.jpg | Entropia: 0.2086, Conf: 0.9671, Orçamento: 678/945
+✅ Selecionada: 000000042463.jpg | Entropia: 0.8271, Conf: 0.5806, Orçamento: 677/945
+✅ Selecionada: 000000042469.jpg | Entropia: 0.9929, Conf: 0.5217, Orçamento: 676/945
+✅ Selecionada: 000000042471.jpg | Entropia: 0.4303, Conf: 0.9110, Orçamento: 675/945
+✅ Selecionada: 000000042472.jpg | Entropia: 0.8374, Conf: 0.4900, Orçamento: 674/945
+✅ Selecionada: 000000042476.jpg | Entropia: 0.9866, Conf: 0.5680, Orçamento: 673/945
+✅ Selecionada: 000000042482.jpg | Entropia: 0.6711, Conf: 0.6222, Orçamento: 672/945
+✅ Selecionada: 000000042493.jpg | Entropia: 0.7904, Conf: 0.7298, Orçamento: 671/945
+✅ Selecionada: 000000042499.jpg | Entropia: 0.1941, Conf: 0.9701, Orçamento: 670/945
+✅ Selecionada: 000000042501.jpg | Entropia: 0.8686, Conf: 0.5423, Orçamento: 669/945
+✅ Selecionada: 000000042513.jpg | Entropia: 0.9531, Conf: 0.3924, Orçamento: 668/945
+✅ Selecionada: 000000042529.jpg | Entropia: 0.8406, Conf: 0.5207, Orçamento: 667/945
+✅ Selecionada: 000000042534.jpg | Entropia: 0.6367, Conf: 0.8331, Orçamento: 666/945
+✅ Selecionada: 000000042540.jpg | Entropia: 0.9619, Conf: 0.4326, Orçamento: 665/945
+Sem detecções em: F:\COCO-Dataset\train2017\clustering\pool\images\000000042541.jpg
+✅ Selecionada: 000000042541.jpg | Entropia: 0.0000, Conf: 0.0000, Orçamento: 664/945
+✅ Selecionada: 000000042551.jpg | Entropia: 0.6579, Conf: 0.7004, Orçamento: 663/945
+✅ Selecionada: 000000042553.jpg | Entropia: 0.8344, Conf: 0.6688, Orçamento: 662/945
+✅ Selecionada: 000000042568.jpg | Entropia: 0.8353, Conf: 0.5666, Orçamento: 661/945
+✅ Selecionada: 000000042576.jpg | Entropia: 0.9948, Conf: 0.4892, Orçamento: 660/945
+✅ Selecionada: 000000042578.jpg | Entropia: 0.7849, Conf: 0.6160, Orçamento: 659/945
+✅ Selecionada: 000000042585.jpg | Entropia: 0.9324, Conf: 0.4645, Orçamento: 658/945
+✅ Selecionada: 000000042591.jpg | Entropia: 0.9017, Conf: 0.6049, Orçamento: 657/945
+✅ Selecionada: 000000042614.jpg | Entropia: 0.6019, Conf: 0.8457, Orçamento: 656/945
+✅ Selecionada: 000000042619.jpg | Entropia: 0.8831, Conf: 0.5864, Orçamento: 655/945
+✅ Selecionada: 000000042620.jpg | Entropia: 0.7579, Conf: 0.6950, Orçamento: 654/945
+✅ Selecionada: 000000042622.jpg | Entropia: 0.9245, Conf: 0.4487, Orçamento: 653/945
+✅ Selecionada: 000000042634.jpg | Entropia: 0.8757, Conf: 0.5450, Orçamento: 652/945
+✅ Selecionada: 000000042641.jpg | Entropia: 0.7730, Conf: 0.5506, Orçamento: 651/945
+✅ Selecionada: 000000042659.jpg | Entropia: 0.5627, Conf: 0.8681, Orçamento: 650/945
+✅ Selecionada: 000000042661.jpg | Entropia: 0.6558, Conf: 0.7280, Orçamento: 649/945
+✅ Selecionada: 000000042667.jpg | Entropia: 0.8286, Conf: 0.4421, Orçamento: 648/945
+✅ Selecionada: 000000042671.jpg | Entropia: 0.6884, Conf: 0.7842, Orçamento: 647/945
+✅ Selecionada: 000000042675.jpg | Entropia: 0.8101, Conf: 0.6056, Orçamento: 646/945
+✅ Selecionada: 000000042680.jpg | Entropia: 0.6444, Conf: 0.8327, Orçamento: 645/945
+Sem detecções em: F:\COCO-Dataset\train2017\clustering\pool\images\000000042682.jpg
+✅ Selecionada: 000000042682.jpg | Entropia: 0.0000, Conf: 0.0000, Orçamento: 644/945
+✅ Selecionada: 000000042683.jpg | Entropia: 0.7731, Conf: 0.5811, Orçamento: 643/945
+✅ Selecionada: 000000042690.jpg | Entropia: 0.6701, Conf: 0.8004, Orçamento: 642/945
+✅ Selecionada: 000000042694.jpg | Entropia: 0.6451, Conf: 0.7131, Orçamento: 641/945
+✅ Selecionada: 000000042696.jpg | Entropia: 0.5405, Conf: 0.8718, Orçamento: 640/945
+✅ Selecionada: 000000042697.jpg | Entropia: 0.7558, Conf: 0.6519, Orçamento: 639/945
+✅ Selecionada: 000000042698.jpg | Entropia: 0.9123, Conf: 0.4616, Orçamento: 638/945
+✅ Selecionada: 000000042700.jpg | Entropia: 0.9437, Conf: 0.3841, Orçamento: 637/945
+✅ Selecionada: 000000042701.jpg | Entropia: 0.8733, Conf: 0.7064, Orçamento: 636/945
+✅ Selecionada: 000000042704.jpg | Entropia: 0.5858, Conf: 0.8376, Orçamento: 635/945
+✅ Selecionada: 000000042711.jpg | Entropia: 0.3416, Conf: 0.9364, Orçamento: 634/945
+✅ Selecionada: 000000042725.jpg | Entropia: 0.7201, Conf: 0.6986, Orçamento: 633/945
+✅ Selecionada: 000000042735.jpg | Entropia: 0.9676, Conf: 0.3944, Orçamento: 632/945
+✅ Selecionada: 000000042740.jpg | Entropia: 0.8726, Conf: 0.5594, Orçamento: 631/945
+✅ Selecionada: 000000042741.jpg | Entropia: 0.9023, Conf: 0.5690, Orçamento: 630/945
+✅ Selecionada: 000000042748.jpg | Entropia: 0.7296, Conf: 0.4852, Orçamento: 629/945
+✅ Selecionada: 000000042752.jpg | Entropia: 0.8054, Conf: 0.6134, Orçamento: 628/945
+✅ Selecionada: 000000042756.jpg | Entropia: 0.4268, Conf: 0.9126, Orçamento: 627/945
+✅ Selecionada: 000000042760.jpg | Entropia: 0.5734, Conf: 0.7259, Orçamento: 626/945
+✅ Selecionada: 000000042763.jpg | Entropia: 0.7144, Conf: 0.8009, Orçamento: 625/945
+✅ Selecionada: 000000042785.jpg | Entropia: 0.6779, Conf: 0.7416, Orçamento: 624/945
+✅ Selecionada: 000000042790.jpg | Entropia: 0.8635, Conf: 0.4651, Orçamento: 623/945
+✅ Selecionada: 000000042793.jpg | Entropia: 0.8314, Conf: 0.4614, Orçamento: 622/945
+✅ Selecionada: 000000042799.jpg | Entropia: 0.8032, Conf: 0.4950, Orçamento: 621/945
+✅ Selecionada: 000000042800.jpg | Entropia: 0.3267, Conf: 0.9402, Orçamento: 620/945
+✅ Selecionada: 000000042804.jpg | Entropia: 0.8857, Conf: 0.4761, Orçamento: 619/945
+✅ Selecionada: 000000042805.jpg | Entropia: 0.9243, Conf: 0.5082, Orçamento: 618/945
+✅ Selecionada: 000000042808.jpg | Entropia: 0.9419, Conf: 0.4680, Orçamento: 617/945
+✅ Selecionada: 000000042810.jpg | Entropia: 0.6680, Conf: 0.6970, Orçamento: 616/945
+✅ Selecionada: 000000042818.jpg | Entropia: 0.7908, Conf: 0.6025, Orçamento: 615/945
+✅ Selecionada: 000000042819.jpg | Entropia: 0.8806, Conf: 0.5342, Orçamento: 614/945
+✅ Selecionada: 000000042820.jpg | Entropia: 0.5540, Conf: 0.8592, Orçamento: 613/945
+✅ Selecionada: 000000042828.jpg | Entropia: 0.8824, Conf: 0.6137, Orçamento: 612/945
+✅ Selecionada: 000000042834.jpg | Entropia: 0.7222, Conf: 0.6189, Orçamento: 611/945
+✅ Selecionada: 000000042837.jpg | Entropia: 0.7465, Conf: 0.7382, Orçamento: 610/945
+✅ Selecionada: 000000042844.jpg | Entropia: 0.8699, Conf: 0.5532, Orçamento: 609/945
+✅ Selecionada: 000000042849.jpg | Entropia: 0.8787, Conf: 0.5965, Orçamento: 608/945
+✅ Selecionada: 000000042853.jpg | Entropia: 0.9026, Conf: 0.3836, Orçamento: 607/945
+✅ Selecionada: 000000042855.jpg | Entropia: 0.7914, Conf: 0.6448, Orçamento: 606/945
+✅ Selecionada: 000000042858.jpg | Entropia: 0.8225, Conf: 0.5825, Orçamento: 605/945
+✅ Selecionada: 000000042862.jpg | Entropia: 0.8512, Conf: 0.6099, Orçamento: 604/945
+✅ Selecionada: 000000042867.jpg | Entropia: 0.7881, Conf: 0.5338, Orçamento: 603/945
+✅ Selecionada: 000000042868.jpg | Entropia: 0.8840, Conf: 0.5096, Orçamento: 602/945
+Sem detecções em: F:\COCO-Dataset\train2017\clustering\pool\images\000000042871.jpg
+✅ Selecionada: 000000042871.jpg | Entropia: 0.0000, Conf: 0.0000, Orçamento: 601/945
+✅ Selecionada: 000000042876.jpg | Entropia: 0.6933, Conf: 0.8139, Orçamento: 600/945
+✅ Selecionada: 000000042893.jpg | Entropia: 0.7882, Conf: 0.7641, Orçamento: 599/945
+✅ Selecionada: 000000042919.jpg | Entropia: 0.8982, Conf: 0.5039, Orçamento: 598/945
+✅ Selecionada: 000000042921.jpg | Entropia: 0.7888, Conf: 0.6173, Orçamento: 597/945
+✅ Selecionada: 000000042929.jpg | Entropia: 0.2950, Conf: 0.9480, Orçamento: 596/945
+✅ Selecionada: 000000042931.jpg | Entropia: 0.4621, Conf: 0.9013, Orçamento: 595/945
+✅ Selecionada: 000000042944.jpg | Entropia: 0.5177, Conf: 0.8832, Orçamento: 594/945
+✅ Selecionada: 000000042947.jpg | Entropia: 0.8826, Conf: 0.5500, Orçamento: 593/945
+✅ Selecionada: 000000042953.jpg | Entropia: 0.8402, Conf: 0.6451, Orçamento: 592/945
+✅ Selecionada: 000000042956.jpg | Entropia: 0.9842, Conf: 0.5738, Orçamento: 591/945
+✅ Selecionada: 000000042960.jpg | Entropia: 0.8760, Conf: 0.6606, Orçamento: 590/945
+✅ Selecionada: 000000042967.jpg | Entropia: 0.2590, Conf: 0.9557, Orçamento: 589/945
+✅ Selecionada: 000000042968.jpg | Entropia: 0.7839, Conf: 0.5376, Orçamento: 588/945
+✅ Selecionada: 000000042970.jpg | Entropia: 0.8546, Conf: 0.5158, Orçamento: 587/945
+✅ Selecionada: 000000042972.jpg | Entropia: 0.7534, Conf: 0.6796, Orçamento: 586/945
+✅ Selecionada: 000000042975.jpg | Entropia: 0.7673, Conf: 0.5864, Orçamento: 585/945
+✅ Selecionada: 000000042977.jpg | Entropia: 0.8932, Conf: 0.4353, Orçamento: 584/945
+✅ Selecionada: 000000042979.jpg | Entropia: 0.8284, Conf: 0.6398, Orçamento: 583/945
+✅ Selecionada: 000000043001.jpg | Entropia: 0.8741, Conf: 0.5795, Orçamento: 582/945
+✅ Selecionada: 000000043007.jpg | Entropia: 0.8858, Conf: 0.6709, Orçamento: 581/945
+✅ Selecionada: 000000043016.jpg | Entropia: 0.5807, Conf: 0.8614, Orçamento: 580/945
+✅ Selecionada: 000000043024.jpg | Entropia: 0.7609, Conf: 0.5748, Orçamento: 579/945
+✅ Selecionada: 000000043049.jpg | Entropia: 0.9407, Conf: 0.4774, Orçamento: 578/945
+✅ Selecionada: 000000043071.jpg | Entropia: 0.6510, Conf: 0.7590, Orçamento: 577/945
+✅ Selecionada: 000000043073.jpg | Entropia: 0.8815, Conf: 0.5922, Orçamento: 576/945
+✅ Selecionada: 000000043077.jpg | Entropia: 0.8923, Conf: 0.3199, Orçamento: 575/945
+✅ Selecionada: 000000043092.jpg | Entropia: 0.8952, Conf: 0.5101, Orçamento: 574/945
+✅ Selecionada: 000000043093.jpg | Entropia: 0.8174, Conf: 0.5963, Orçamento: 573/945
+✅ Selecionada: 000000043098.jpg | Entropia: 0.6763, Conf: 0.8059, Orçamento: 572/945
+✅ Selecionada: 000000043099.jpg | Entropia: 0.5364, Conf: 0.8776, Orçamento: 571/945
+✅ Selecionada: 000000043110.jpg | Entropia: 0.6997, Conf: 0.7562, Orçamento: 570/945
+✅ Selecionada: 000000043128.jpg | Entropia: 0.4119, Conf: 0.9172, Orçamento: 569/945
+✅ Selecionada: 000000043133.jpg | Entropia: 0.9504, Conf: 0.5710, Orçamento: 568/945
+✅ Selecionada: 000000043150.jpg | Entropia: 0.8934, Conf: 0.5286, Orçamento: 567/945
+✅ Selecionada: 000000043161.jpg | Entropia: 0.7084, Conf: 0.5130, Orçamento: 566/945
+✅ Selecionada: 000000043163.jpg | Entropia: 0.5102, Conf: 0.8727, Orçamento: 565/945
+✅ Selecionada: 000000043165.jpg | Entropia: 0.3054, Conf: 0.9445, Orçamento: 564/945
+✅ Selecionada: 000000043170.jpg | Entropia: 0.7696, Conf: 0.6434, Orçamento: 563/945
+✅ Selecionada: 000000043171.jpg | Entropia: 0.8325, Conf: 0.5029, Orçamento: 562/945
+✅ Selecionada: 000000043176.jpg | Entropia: 0.6233, Conf: 0.8445, Orçamento: 561/945
+✅ Selecionada: 000000043193.jpg | Entropia: 0.8241, Conf: 0.6994, Orçamento: 560/945
+✅ Selecionada: 000000043202.jpg | Entropia: 0.9289, Conf: 0.5168, Orçamento: 559/945
+✅ Selecionada: 000000043203.jpg | Entropia: 0.3765, Conf: 0.9261, Orçamento: 558/945
+✅ Selecionada: 000000043206.jpg | Entropia: 0.7299, Conf: 0.6636, Orçamento: 557/945
+✅ Selecionada: 000000043210.jpg | Entropia: 0.9432, Conf: 0.3615, Orçamento: 556/945
+✅ Selecionada: 000000043220.jpg | Entropia: 0.9857, Conf: 0.5704, Orçamento: 555/945
+✅ Selecionada: 000000043226.jpg | Entropia: 0.8551, Conf: 0.5653, Orçamento: 554/945
+✅ Selecionada: 000000043227.jpg | Entropia: 0.8248, Conf: 0.6958, Orçamento: 553/945
+✅ Selecionada: 000000043232.jpg | Entropia: 0.7650, Conf: 0.6418, Orçamento: 552/945
+✅ Selecionada: 000000043243.jpg | Entropia: 0.8531, Conf: 0.6310, Orçamento: 551/945
+✅ Selecionada: 000000043248.jpg | Entropia: 0.6955, Conf: 0.7024, Orçamento: 550/945
+✅ Selecionada: 000000043251.jpg | Entropia: 0.8620, Conf: 0.5237, Orçamento: 549/945
+✅ Selecionada: 000000043256.jpg | Entropia: 0.8885, Conf: 0.4992, Orçamento: 548/945
+✅ Selecionada: 000000043261.jpg | Entropia: 0.8345, Conf: 0.6486, Orçamento: 547/945
+✅ Selecionada: 000000043264.jpg | Entropia: 0.8108, Conf: 0.5738, Orçamento: 546/945
+✅ Selecionada: 000000043266.jpg | Entropia: 0.3386, Conf: 0.9356, Orçamento: 545/945
+✅ Selecionada: 000000043269.jpg | Entropia: 0.8765, Conf: 0.4804, Orçamento: 544/945
+✅ Selecionada: 000000043270.jpg | Entropia: 0.8305, Conf: 0.5419, Orçamento: 543/945
+Sem detecções em: F:\COCO-Dataset\train2017\clustering\pool\images\000000043279.jpg
+✅ Selecionada: 000000043279.jpg | Entropia: 0.0000, Conf: 0.0000, Orçamento: 542/945
+✅ Selecionada: 000000043286.jpg | Entropia: 0.7632, Conf: 0.6931, Orçamento: 541/945
+✅ Selecionada: 000000043288.jpg | Entropia: 0.8378, Conf: 0.7260, Orçamento: 540/945
+✅ Selecionada: 000000043289.jpg | Entropia: 0.6513, Conf: 0.6824, Orçamento: 539/945
+✅ Selecionada: 000000043305.jpg | Entropia: 0.7803, Conf: 0.6791, Orçamento: 538/945
+✅ Selecionada: 000000043308.jpg | Entropia: 0.4518, Conf: 0.8978, Orçamento: 537/945
+✅ Selecionada: 000000043324.jpg | Entropia: 0.7279, Conf: 0.6769, Orçamento: 536/945
+✅ Selecionada: 000000043331.jpg | Entropia: 0.9520, Conf: 0.5052, Orçamento: 535/945
+✅ Selecionada: 000000043333.jpg | Entropia: 0.9114, Conf: 0.5092, Orçamento: 534/945
+✅ Selecionada: 000000043338.jpg | Entropia: 0.8619, Conf: 0.5194, Orçamento: 533/945
+✅ Selecionada: 000000043340.jpg | Entropia: 0.4277, Conf: 0.9126, Orçamento: 532/945
+✅ Selecionada: 000000043344.jpg | Entropia: 0.7031, Conf: 0.6613, Orçamento: 531/945
+✅ Selecionada: 000000043345.jpg | Entropia: 0.9965, Conf: 0.4653, Orçamento: 530/945
+✅ Selecionada: 000000043347.jpg | Entropia: 0.8170, Conf: 0.2536, Orçamento: 529/945
+✅ Selecionada: 000000043350.jpg | Entropia: 0.8546, Conf: 0.5188, Orçamento: 528/945
+✅ Selecionada: 000000043353.jpg | Entropia: 0.2431, Conf: 0.9598, Orçamento: 527/945
+✅ Selecionada: 000000043354.jpg | Entropia: 0.9232, Conf: 0.4656, Orçamento: 526/945
+✅ Selecionada: 000000043367.jpg | Entropia: 0.8463, Conf: 0.7266, Orçamento: 525/945
+✅ Selecionada: 000000043376.jpg | Entropia: 0.8387, Conf: 0.7319, Orçamento: 524/945
+✅ Selecionada: 000000043383.jpg | Entropia: 0.7798, Conf: 0.6180, Orçamento: 523/945
+✅ Selecionada: 000000043388.jpg | Entropia: 0.9251, Conf: 0.4582, Orçamento: 522/945
+✅ Selecionada: 000000043392.jpg | Entropia: 0.6602, Conf: 0.5897, Orçamento: 521/945
+✅ Selecionada: 000000043393.jpg | Entropia: 0.9181, Conf: 0.4102, Orçamento: 520/945
+✅ Selecionada: 000000043404.jpg | Entropia: 0.8744, Conf: 0.6701, Orçamento: 519/945
+✅ Selecionada: 000000043407.jpg | Entropia: 0.5561, Conf: 0.8612, Orçamento: 518/945
+✅ Selecionada: 000000043411.jpg | Entropia: 0.8767, Conf: 0.4980, Orçamento: 517/945
+Sem detecções em: F:\COCO-Dataset\train2017\clustering\pool\images\000000043417.jpg
+✅ Selecionada: 000000043417.jpg | Entropia: 0.0000, Conf: 0.0000, Orçamento: 516/945
+✅ Selecionada: 000000043431.jpg | Entropia: 0.9281, Conf: 0.5052, Orçamento: 515/945
+✅ Selecionada: 000000043433.jpg | Entropia: 0.3542, Conf: 0.9311, Orçamento: 514/945
+✅ Selecionada: 000000043438.jpg | Entropia: 0.8545, Conf: 0.2803, Orçamento: 513/945
+Sem detecções em: F:\COCO-Dataset\train2017\clustering\pool\images\000000043439.jpg
+✅ Selecionada: 000000043439.jpg | Entropia: 0.0000, Conf: 0.0000, Orçamento: 512/945
+✅ Selecionada: 000000043444.jpg | Entropia: 0.3975, Conf: 0.9213, Orçamento: 511/945
+✅ Selecionada: 000000043448.jpg | Entropia: 0.3658, Conf: 0.9286, Orçamento: 510/945
+✅ Selecionada: 000000043451.jpg | Entropia: 0.2683, Conf: 0.9515, Orçamento: 509/945
+✅ Selecionada: 000000043455.jpg | Entropia: 0.7199, Conf: 0.5191, Orçamento: 508/945
+✅ Selecionada: 000000043464.jpg | Entropia: 0.6297, Conf: 0.6840, Orçamento: 507/945
+✅ Selecionada: 000000043477.jpg | Entropia: 0.9364, Conf: 0.4083, Orçamento: 506/945
+✅ Selecionada: 000000043479.jpg | Entropia: 0.3737, Conf: 0.9279, Orçamento: 505/945
+✅ Selecionada: 000000043486.jpg | Entropia: 0.9497, Conf: 0.3711, Orçamento: 504/945
+✅ Selecionada: 000000043494.jpg | Entropia: 0.9338, Conf: 0.3679, Orçamento: 503/945
+✅ Selecionada: 000000043510.jpg | Entropia: 0.8976, Conf: 0.5178, Orçamento: 502/945
+✅ Selecionada: 000000043511.jpg | Entropia: 0.4507, Conf: 0.9051, Orçamento: 501/945
+✅ Selecionada: 000000043513.jpg | Entropia: 0.8081, Conf: 0.6035, Orçamento: 500/945
+✅ Selecionada: 000000043522.jpg | Entropia: 0.7750, Conf: 0.4797, Orçamento: 499/945
+✅ Selecionada: 000000043530.jpg | Entropia: 0.9207, Conf: 0.4391, Orçamento: 498/945
+✅ Selecionada: 000000043535.jpg | Entropia: 0.4817, Conf: 0.8948, Orçamento: 497/945
+✅ Selecionada: 000000043545.jpg | Entropia: 0.6448, Conf: 0.5965, Orçamento: 496/945
+✅ Selecionada: 000000043560.jpg | Entropia: 0.9287, Conf: 0.4434, Orçamento: 495/945
+✅ Selecionada: 000000043561.jpg | Entropia: 0.8638, Conf: 0.5420, Orçamento: 494/945
+✅ Selecionada: 000000043576.jpg | Entropia: 0.9965, Conf: 0.4654, Orçamento: 493/945
+✅ Selecionada: 000000043579.jpg | Entropia: 0.9407, Conf: 0.5936, Orçamento: 492/945
+✅ Selecionada: 000000043580.jpg | Entropia: 0.9216, Conf: 0.3568, Orçamento: 491/945
+✅ Selecionada: 000000043583.jpg | Entropia: 0.6202, Conf: 0.8458, Orçamento: 490/945
+✅ Selecionada: 000000043585.jpg | Entropia: 0.8849, Conf: 0.3030, Orçamento: 489/945
+Sem detecções em: F:\COCO-Dataset\train2017\clustering\pool\images\000000043601.jpg
+✅ Selecionada: 000000043601.jpg | Entropia: 0.0000, Conf: 0.0000, Orçamento: 488/945
+✅ Selecionada: 000000043605.jpg | Entropia: 0.5981, Conf: 0.8526, Orçamento: 487/945
+✅ Selecionada: 000000043606.jpg | Entropia: 0.6205, Conf: 0.8430, Orçamento: 486/945
+✅ Selecionada: 000000043609.jpg | Entropia: 0.8494, Conf: 0.7244, Orçamento: 485/945
+✅ Selecionada: 000000043610.jpg | Entropia: 0.5374, Conf: 0.8772, Orçamento: 484/945
+✅ Selecionada: 000000043614.jpg | Entropia: 0.8820, Conf: 0.4723, Orçamento: 483/945
+✅ Selecionada: 000000043625.jpg | Entropia: 0.8270, Conf: 0.5743, Orçamento: 482/945
+✅ Selecionada: 000000043629.jpg | Entropia: 0.6355, Conf: 0.8085, Orçamento: 481/945
+✅ Selecionada: 000000043645.jpg | Entropia: 0.8776, Conf: 0.4831, Orçamento: 480/945
+✅ Selecionada: 000000043655.jpg | Entropia: 0.9232, Conf: 0.4039, Orçamento: 479/945
+✅ Selecionada: 000000043670.jpg | Entropia: 0.7672, Conf: 0.5743, Orçamento: 478/945
+✅ Selecionada: 000000043673.jpg | Entropia: 0.8501, Conf: 0.4643, Orçamento: 477/945
+✅ Selecionada: 000000043678.jpg | Entropia: 0.4627, Conf: 0.9020, Orçamento: 476/945
+✅ Selecionada: 000000043680.jpg | Entropia: 0.9100, Conf: 0.6144, Orçamento: 475/945
+✅ Selecionada: 000000043683.jpg | Entropia: 0.8134, Conf: 0.7243, Orçamento: 474/945
+✅ Selecionada: 000000043693.jpg | Entropia: 0.7233, Conf: 0.6180, Orçamento: 473/945
+✅ Selecionada: 000000043697.jpg | Entropia: 0.9887, Conf: 0.4494, Orçamento: 472/945
+✅ Selecionada: 000000043704.jpg | Entropia: 0.9187, Conf: 0.4976, Orçamento: 471/945
+✅ Selecionada: 000000043712.jpg | Entropia: 0.9230, Conf: 0.3765, Orçamento: 470/945
+✅ Selecionada: 000000043719.jpg | Entropia: 0.7745, Conf: 0.6113, Orçamento: 469/945
+✅ Selecionada: 000000043724.jpg | Entropia: 0.8429, Conf: 0.5413, Orçamento: 468/945
+✅ Selecionada: 000000043739.jpg | Entropia: 0.7647, Conf: 0.6992, Orçamento: 467/945
+✅ Selecionada: 000000043742.jpg | Entropia: 0.7904, Conf: 0.7211, Orçamento: 466/945
+✅ Selecionada: 000000043750.jpg | Entropia: 0.8820, Conf: 0.4862, Orçamento: 465/945
+✅ Selecionada: 000000043753.jpg | Entropia: 0.8598, Conf: 0.5297, Orçamento: 464/945
+✅ Selecionada: 000000043758.jpg | Entropia: 0.5865, Conf: 0.8189, Orçamento: 463/945
+✅ Selecionada: 000000043764.jpg | Entropia: 0.9236, Conf: 0.4469, Orçamento: 462/945
+✅ Selecionada: 000000043771.jpg | Entropia: 0.5219, Conf: 0.8542, Orçamento: 461/945
+✅ Selecionada: 000000043773.jpg | Entropia: 0.6895, Conf: 0.5841, Orçamento: 460/945
+✅ Selecionada: 000000043776.jpg | Entropia: 0.3777, Conf: 0.9268, Orçamento: 459/945
+✅ Selecionada: 000000043780.jpg | Entropia: 0.8828, Conf: 0.6740, Orçamento: 458/945
+✅ Selecionada: 000000043795.jpg | Entropia: 0.8541, Conf: 0.5050, Orçamento: 457/945
+✅ Selecionada: 000000043806.jpg | Entropia: 0.6555, Conf: 0.7501, Orçamento: 456/945
+✅ Selecionada: 000000043809.jpg | Entropia: 0.7084, Conf: 0.6805, Orçamento: 455/945
+✅ Selecionada: 000000043813.jpg | Entropia: 0.6371, Conf: 0.8033, Orçamento: 454/945
+✅ Selecionada: 000000043815.jpg | Entropia: 0.9533, Conf: 0.4648, Orçamento: 453/945
+✅ Selecionada: 000000043838.jpg | Entropia: 0.9872, Conf: 0.4597, Orçamento: 452/945
+✅ Selecionada: 000000043850.jpg | Entropia: 0.7004, Conf: 0.6372, Orçamento: 451/945
+✅ Selecionada: 000000043851.jpg | Entropia: 0.8061, Conf: 0.4579, Orçamento: 450/945
+✅ Selecionada: 000000043854.jpg | Entropia: 0.9147, Conf: 0.4055, Orçamento: 449/945
+✅ Selecionada: 000000043856.jpg | Entropia: 0.7414, Conf: 0.7793, Orçamento: 448/945
+✅ Selecionada: 000000043873.jpg | Entropia: 0.4247, Conf: 0.9135, Orçamento: 447/945
+✅ Selecionada: 000000043876.jpg | Entropia: 0.9298, Conf: 0.4021, Orçamento: 446/945
+✅ Selecionada: 000000043882.jpg | Entropia: 0.9403, Conf: 0.4639, Orçamento: 445/945
+✅ Selecionada: 000000043883.jpg | Entropia: 0.8605, Conf: 0.5895, Orçamento: 444/945
+✅ Selecionada: 000000043892.jpg | Entropia: 0.9008, Conf: 0.4010, Orçamento: 443/945
+✅ Selecionada: 000000043893.jpg | Entropia: 0.6588, Conf: 0.6246, Orçamento: 442/945
+✅ Selecionada: 000000043895.jpg | Entropia: 0.9094, Conf: 0.5136, Orçamento: 441/945
+✅ Selecionada: 000000043912.jpg | Entropia: 0.8858, Conf: 0.5073, Orçamento: 440/945
+✅ Selecionada: 000000043917.jpg | Entropia: 0.8546, Conf: 0.6281, Orçamento: 439/945
+✅ Selecionada: 000000043919.jpg | Entropia: 0.8883, Conf: 0.6941, Orçamento: 438/945
+✅ Selecionada: 000000043921.jpg | Entropia: 0.8885, Conf: 0.6307, Orçamento: 437/945
+✅ Selecionada: 000000043922.jpg | Entropia: 0.8793, Conf: 0.5809, Orçamento: 436/945
+✅ Selecionada: 000000043931.jpg | Entropia: 0.9956, Conf: 0.5271, Orçamento: 435/945
+✅ Selecionada: 000000043933.jpg | Entropia: 0.9152, Conf: 0.6196, Orçamento: 434/945
+✅ Selecionada: 000000043939.jpg | Entropia: 0.8339, Conf: 0.6957, Orçamento: 433/945
+✅ Selecionada: 000000043944.jpg | Entropia: 0.9583, Conf: 0.4859, Orçamento: 432/945
+Sem detecções em: F:\COCO-Dataset\train2017\clustering\pool\images\000000043947.jpg
+✅ Selecionada: 000000043947.jpg | Entropia: 0.0000, Conf: 0.0000, Orçamento: 431/945
+✅ Selecionada: 000000043961.jpg | Entropia: 0.7456, Conf: 0.6474, Orçamento: 430/945
+✅ Selecionada: 000000043966.jpg | Entropia: 0.9098, Conf: 0.6220, Orçamento: 429/945
+✅ Selecionada: 000000043968.jpg | Entropia: 0.6019, Conf: 0.5982, Orçamento: 428/945
+✅ Selecionada: 000000043971.jpg | Entropia: 0.9378, Conf: 0.4499, Orçamento: 427/945
+✅ Selecionada: 000000043979.jpg | Entropia: 0.7675, Conf: 0.5679, Orçamento: 426/945
+✅ Selecionada: 000000043998.jpg | Entropia: 0.8749, Conf: 0.5266, Orçamento: 425/945
+✅ Selecionada: 000000044003.jpg | Entropia: 0.6693, Conf: 0.8249, Orçamento: 424/945
+✅ Selecionada: 000000044017.jpg | Entropia: 0.9403, Conf: 0.4576, Orçamento: 423/945
+✅ Selecionada: 000000044029.jpg | Entropia: 0.7094, Conf: 0.7037, Orçamento: 422/945
+✅ Selecionada: 000000044038.jpg | Entropia: 0.3875, Conf: 0.9241, Orçamento: 421/945
+✅ Selecionada: 000000044039.jpg | Entropia: 0.4548, Conf: 0.8995, Orçamento: 420/945
+✅ Selecionada: 000000044040.jpg | Entropia: 0.7300, Conf: 0.7959, Orçamento: 419/945
+✅ Selecionada: 000000044054.jpg | Entropia: 0.8440, Conf: 0.6570, Orçamento: 418/945
+✅ Selecionada: 000000044057.jpg | Entropia: 0.7841, Conf: 0.7233, Orçamento: 417/945
+✅ Selecionada: 000000044060.jpg | Entropia: 0.6262, Conf: 0.7927, Orçamento: 416/945
+✅ Selecionada: 000000044061.jpg | Entropia: 0.4460, Conf: 0.9071, Orçamento: 415/945
+✅ Selecionada: 000000044065.jpg | Entropia: 0.8376, Conf: 0.6540, Orçamento: 414/945
+✅ Selecionada: 000000044075.jpg | Entropia: 0.7053, Conf: 0.8081, Orçamento: 413/945
+✅ Selecionada: 000000044080.jpg | Entropia: 0.8391, Conf: 0.4974, Orçamento: 412/945
+✅ Selecionada: 000000044081.jpg | Entropia: 0.4936, Conf: 0.8696, Orçamento: 411/945
+✅ Selecionada: 000000044083.jpg | Entropia: 0.8284, Conf: 0.5254, Orçamento: 410/945
+✅ Selecionada: 000000044093.jpg | Entropia: 0.7467, Conf: 0.6693, Orçamento: 409/945
+✅ Selecionada: 000000044112.jpg | Entropia: 0.8947, Conf: 0.4562, Orçamento: 408/945
+✅ Selecionada: 000000044117.jpg | Entropia: 0.7424, Conf: 0.6552, Orçamento: 407/945
+✅ Selecionada: 000000044123.jpg | Entropia: 0.9732, Conf: 0.4062, Orçamento: 406/945
+✅ Selecionada: 000000044129.jpg | Entropia: 0.8521, Conf: 0.5646, Orçamento: 405/945
+✅ Selecionada: 000000044132.jpg | Entropia: 0.9199, Conf: 0.3837, Orçamento: 404/945
+✅ Selecionada: 000000044135.jpg | Entropia: 0.4125, Conf: 0.9156, Orçamento: 403/945
+✅ Selecionada: 000000044136.jpg | Entropia: 0.8516, Conf: 0.4812, Orçamento: 402/945
+✅ Selecionada: 000000044138.jpg | Entropia: 0.6793, Conf: 0.6606, Orçamento: 401/945
+✅ Selecionada: 000000044147.jpg | Entropia: 0.3970, Conf: 0.9194, Orçamento: 400/945
+✅ Selecionada: 000000044151.jpg | Entropia: 0.8755, Conf: 0.6217, Orçamento: 399/945
+✅ Selecionada: 000000044160.jpg | Entropia: 0.7327, Conf: 0.6482, Orçamento: 398/945
+✅ Selecionada: 000000044165.jpg | Entropia: 0.8799, Conf: 0.5689, Orçamento: 397/945
+✅ Selecionada: 000000044167.jpg | Entropia: 0.6883, Conf: 0.7158, Orçamento: 396/945
+✅ Selecionada: 000000044170.jpg | Entropia: 0.7131, Conf: 0.7222, Orçamento: 395/945
+✅ Selecionada: 000000044171.jpg | Entropia: 0.8434, Conf: 0.4638, Orçamento: 394/945
+✅ Selecionada: 000000044178.jpg | Entropia: 0.8142, Conf: 0.6711, Orçamento: 393/945
+✅ Selecionada: 000000044204.jpg | Entropia: 0.6172, Conf: 0.8062, Orçamento: 392/945
+✅ Selecionada: 000000044215.jpg | Entropia: 0.9317, Conf: 0.5451, Orçamento: 391/945
+✅ Selecionada: 000000044220.jpg | Entropia: 0.7392, Conf: 0.7500, Orçamento: 390/945
+✅ Selecionada: 000000044227.jpg | Entropia: 0.9968, Conf: 0.5333, Orçamento: 389/945
+✅ Selecionada: 000000044228.jpg | Entropia: 0.8585, Conf: 0.7178, Orçamento: 388/945
+✅ Selecionada: 000000044240.jpg | Entropia: 0.5784, Conf: 0.8622, Orçamento: 387/945
+✅ Selecionada: 000000044244.jpg | Entropia: 0.7970, Conf: 0.5944, Orçamento: 386/945
+✅ Selecionada: 000000044247.jpg | Entropia: 0.8864, Conf: 0.6192, Orçamento: 385/945
+✅ Selecionada: 000000044250.jpg | Entropia: 0.9926, Conf: 0.5506, Orçamento: 384/945
+✅ Selecionada: 000000044251.jpg | Entropia: 0.9052, Conf: 0.6793, Orçamento: 383/945
+✅ Selecionada: 000000044261.jpg | Entropia: 0.8783, Conf: 0.5164, Orçamento: 382/945
+✅ Selecionada: 000000044267.jpg | Entropia: 0.9464, Conf: 0.6354, Orçamento: 381/945
+✅ Selecionada: 000000044277.jpg | Entropia: 0.9178, Conf: 0.3330, Orçamento: 380/945
+✅ Selecionada: 000000044291.jpg | Entropia: 0.8719, Conf: 0.5283, Orçamento: 379/945
+✅ Selecionada: 000000044294.jpg | Entropia: 0.9285, Conf: 0.4716, Orçamento: 378/945
+✅ Selecionada: 000000044298.jpg | Entropia: 0.8164, Conf: 0.5982, Orçamento: 377/945
+✅ Selecionada: 000000044309.jpg | Entropia: 0.9432, Conf: 0.3990, Orçamento: 376/945
+✅ Selecionada: 000000044312.jpg | Entropia: 0.8145, Conf: 0.6397, Orçamento: 375/945
+✅ Selecionada: 000000044327.jpg | Entropia: 0.8781, Conf: 0.4802, Orçamento: 374/945
+✅ Selecionada: 000000044328.jpg | Entropia: 0.7831, Conf: 0.5875, Orçamento: 373/945
+✅ Selecionada: 000000044332.jpg | Entropia: 0.9957, Conf: 0.4631, Orçamento: 372/945
+✅ Selecionada: 000000044341.jpg | Entropia: 0.7361, Conf: 0.7188, Orçamento: 371/945
+✅ Selecionada: 000000044347.jpg | Entropia: 0.7306, Conf: 0.7143, Orçamento: 370/945
+✅ Selecionada: 000000044352.jpg | Entropia: 0.4179, Conf: 0.9155, Orçamento: 369/945
+✅ Selecionada: 000000044353.jpg | Entropia: 0.5502, Conf: 0.8719, Orçamento: 368/945
+✅ Selecionada: 000000044358.jpg | Entropia: 0.6523, Conf: 0.8323, Orçamento: 367/945
+✅ Selecionada: 000000044360.jpg | Entropia: 0.8619, Conf: 0.6014, Orçamento: 366/945
+✅ Selecionada: 000000044372.jpg | Entropia: 0.8323, Conf: 0.5605, Orçamento: 365/945
+✅ Selecionada: 000000044385.jpg | Entropia: 0.5142, Conf: 0.8837, Orçamento: 364/945
+✅ Selecionada: 000000044389.jpg | Entropia: 0.9372, Conf: 0.4190, Orçamento: 363/945
+✅ Selecionada: 000000044404.jpg | Entropia: 0.6877, Conf: 0.5539, Orçamento: 362/945
+✅ Selecionada: 000000044414.jpg | Entropia: 0.2622, Conf: 0.9556, Orçamento: 361/945
+✅ Selecionada: 000000044420.jpg | Entropia: 0.8365, Conf: 0.6342, Orçamento: 360/945
+✅ Selecionada: 000000044421.jpg | Entropia: 0.6131, Conf: 0.8226, Orçamento: 359/945
+✅ Selecionada: 000000044432.jpg | Entropia: 0.8211, Conf: 0.6414, Orçamento: 358/945
+✅ Selecionada: 000000044436.jpg | Entropia: 0.8900, Conf: 0.3627, Orçamento: 357/945
+✅ Selecionada: 000000044446.jpg | Entropia: 0.8780, Conf: 0.5794, Orçamento: 356/945
+✅ Selecionada: 000000044454.jpg | Entropia: 0.6175, Conf: 0.7286, Orçamento: 355/945
+✅ Selecionada: 000000044463.jpg | Entropia: 0.8792, Conf: 0.5031, Orçamento: 354/945
+✅ Selecionada: 000000044464.jpg | Entropia: 0.7897, Conf: 0.6275, Orçamento: 353/945
+✅ Selecionada: 000000044471.jpg | Entropia: 0.8049, Conf: 0.6311, Orçamento: 352/945
+✅ Selecionada: 000000044472.jpg | Entropia: 0.9860, Conf: 0.4305, Orçamento: 351/945
+✅ Selecionada: 000000044476.jpg | Entropia: 0.7762, Conf: 0.5968, Orçamento: 350/945
+✅ Selecionada: 000000044478.jpg | Entropia: 0.9188, Conf: 0.5214, Orçamento: 349/945
+✅ Selecionada: 000000044483.jpg | Entropia: 0.8900, Conf: 0.4208, Orçamento: 348/945
+✅ Selecionada: 000000044488.jpg | Entropia: 0.8577, Conf: 0.5784, Orçamento: 347/945
+✅ Selecionada: 000000044491.jpg | Entropia: 0.9811, Conf: 0.4936, Orçamento: 346/945
+✅ Selecionada: 000000044500.jpg | Entropia: 0.7184, Conf: 0.7598, Orçamento: 345/945
+Sem detecções em: F:\COCO-Dataset\train2017\clustering\pool\images\000000044504.jpg
+✅ Selecionada: 000000044504.jpg | Entropia: 0.0000, Conf: 0.0000, Orçamento: 344/945
+✅ Selecionada: 000000044508.jpg | Entropia: 0.9650, Conf: 0.4966, Orçamento: 343/945
+✅ Selecionada: 000000044509.jpg | Entropia: 0.6421, Conf: 0.6721, Orçamento: 342/945
+✅ Selecionada: 000000044520.jpg | Entropia: 0.2059, Conf: 0.9677, Orçamento: 341/945
+✅ Selecionada: 000000044524.jpg | Entropia: 0.5807, Conf: 0.8298, Orçamento: 340/945
+✅ Selecionada: 000000044540.jpg | Entropia: 0.8206, Conf: 0.5897, Orçamento: 339/945
+✅ Selecionada: 000000044544.jpg | Entropia: 0.5534, Conf: 0.8709, Orçamento: 338/945
+✅ Selecionada: 000000044545.jpg | Entropia: 0.9643, Conf: 0.5779, Orçamento: 337/945
+✅ Selecionada: 000000044559.jpg | Entropia: 0.5528, Conf: 0.8717, Orçamento: 336/945
+✅ Selecionada: 000000044569.jpg | Entropia: 0.8589, Conf: 0.6346, Orçamento: 335/945
+✅ Selecionada: 000000044575.jpg | Entropia: 0.7461, Conf: 0.6760, Orçamento: 334/945
+✅ Selecionada: 000000044580.jpg | Entropia: 0.3234, Conf: 0.9402, Orçamento: 333/945
+✅ Selecionada: 000000044583.jpg | Entropia: 0.8181, Conf: 0.7456, Orçamento: 332/945
+✅ Selecionada: 000000044592.jpg | Entropia: 0.9135, Conf: 0.4152, Orçamento: 331/945
+✅ Selecionada: 000000044594.jpg | Entropia: 0.8551, Conf: 0.5831, Orçamento: 330/945
+✅ Selecionada: 000000044600.jpg | Entropia: 0.8571, Conf: 0.5777, Orçamento: 329/945
+✅ Selecionada: 000000044603.jpg | Entropia: 0.8441, Conf: 0.2722, Orçamento: 328/945
+✅ Selecionada: 000000044604.jpg | Entropia: 0.9224, Conf: 0.5479, Orçamento: 327/945
+✅ Selecionada: 000000044606.jpg | Entropia: 0.9494, Conf: 0.4432, Orçamento: 326/945
+✅ Selecionada: 000000044609.jpg | Entropia: 0.9894, Conf: 0.4395, Orçamento: 325/945
+✅ Selecionada: 000000044611.jpg | Entropia: 0.8945, Conf: 0.5597, Orçamento: 324/945
+✅ Selecionada: 000000044612.jpg | Entropia: 0.7706, Conf: 0.6979, Orçamento: 323/945
+✅ Selecionada: 000000044613.jpg | Entropia: 0.9799, Conf: 0.4430, Orçamento: 322/945
+✅ Selecionada: 000000044616.jpg | Entropia: 0.7270, Conf: 0.7726, Orçamento: 321/945
+✅ Selecionada: 000000044621.jpg | Entropia: 0.7894, Conf: 0.7483, Orçamento: 320/945
+✅ Selecionada: 000000044625.jpg | Entropia: 0.8411, Conf: 0.5636, Orçamento: 319/945
+✅ Selecionada: 000000044627.jpg | Entropia: 0.8775, Conf: 0.5156, Orçamento: 318/945
+✅ Selecionada: 000000044637.jpg | Entropia: 0.7484, Conf: 0.7228, Orçamento: 317/945
+✅ Selecionada: 000000044642.jpg | Entropia: 0.8685, Conf: 0.5100, Orçamento: 316/945
+✅ Selecionada: 000000044644.jpg | Entropia: 0.9249, Conf: 0.5497, Orçamento: 315/945
+✅ Selecionada: 000000044663.jpg | Entropia: 0.9476, Conf: 0.6340, Orçamento: 314/945
+✅ Selecionada: 000000044668.jpg | Entropia: 0.5266, Conf: 0.8700, Orçamento: 313/945
+✅ Selecionada: 000000044670.jpg | Entropia: 0.8366, Conf: 0.5484, Orçamento: 312/945
+✅ Selecionada: 000000044671.jpg | Entropia: 0.7273, Conf: 0.5893, Orçamento: 311/945
+✅ Selecionada: 000000044672.jpg | Entropia: 0.8103, Conf: 0.6207, Orçamento: 310/945
+✅ Selecionada: 000000044675.jpg | Entropia: 0.8277, Conf: 0.5231, Orçamento: 309/945
+✅ Selecionada: 000000044679.jpg | Entropia: 0.8575, Conf: 0.5129, Orçamento: 308/945
+✅ Selecionada: 000000044682.jpg | Entropia: 0.7755, Conf: 0.6500, Orçamento: 307/945
+✅ Selecionada: 000000044702.jpg | Entropia: 0.5913, Conf: 0.8573, Orçamento: 306/945
+Sem detecções em: F:\COCO-Dataset\train2017\clustering\pool\images\000000044704.jpg
+✅ Selecionada: 000000044704.jpg | Entropia: 0.0000, Conf: 0.0000, Orçamento: 305/945
+✅ Selecionada: 000000044718.jpg | Entropia: 0.4421, Conf: 0.8999, Orçamento: 304/945
+✅ Selecionada: 000000044719.jpg | Entropia: 0.9743, Conf: 0.5001, Orçamento: 303/945
+✅ Selecionada: 000000044723.jpg | Entropia: 0.7281, Conf: 0.7883, Orçamento: 302/945
+✅ Selecionada: 000000044732.jpg | Entropia: 0.9877, Conf: 0.4349, Orçamento: 301/945
+✅ Selecionada: 000000044734.jpg | Entropia: 0.8003, Conf: 0.6939, Orçamento: 300/945
+✅ Selecionada: 000000044739.jpg | Entropia: 0.8078, Conf: 0.7000, Orçamento: 299/945
+✅ Selecionada: 000000044741.jpg | Entropia: 0.9222, Conf: 0.5408, Orçamento: 298/945
+✅ Selecionada: 000000044743.jpg | Entropia: 0.8033, Conf: 0.6243, Orçamento: 297/945
+✅ Selecionada: 000000044749.jpg | Entropia: 0.9301, Conf: 0.4580, Orçamento: 296/945
+✅ Selecionada: 000000044751.jpg | Entropia: 0.7352, Conf: 0.6610, Orçamento: 295/945
+✅ Selecionada: 000000044767.jpg | Entropia: 0.9083, Conf: 0.3985, Orçamento: 294/945
+✅ Selecionada: 000000044774.jpg | Entropia: 0.8442, Conf: 0.4804, Orçamento: 293/945
+✅ Selecionada: 000000044776.jpg | Entropia: 0.8553, Conf: 0.5026, Orçamento: 292/945
+✅ Selecionada: 000000044780.jpg | Entropia: 0.7199, Conf: 0.6423, Orçamento: 291/945
+✅ Selecionada: 000000044781.jpg | Entropia: 0.8346, Conf: 0.5789, Orçamento: 290/945
+✅ Selecionada: 000000044782.jpg | Entropia: 0.9109, Conf: 0.4568, Orçamento: 289/945
+✅ Selecionada: 000000044788.jpg | Entropia: 0.8420, Conf: 0.5199, Orçamento: 288/945
+✅ Selecionada: 000000044792.jpg | Entropia: 0.6979, Conf: 0.7691, Orçamento: 287/945
+✅ Selecionada: 000000044795.jpg | Entropia: 0.8558, Conf: 0.5291, Orçamento: 286/945
+✅ Selecionada: 000000044800.jpg | Entropia: 0.9200, Conf: 0.5135, Orçamento: 285/945
+✅ Selecionada: 000000044801.jpg | Entropia: 0.8543, Conf: 0.5689, Orçamento: 284/945
+✅ Selecionada: 000000044810.jpg | Entropia: 0.7342, Conf: 0.5830, Orçamento: 283/945
+✅ Selecionada: 000000044813.jpg | Entropia: 0.7240, Conf: 0.4909, Orçamento: 282/945
+✅ Selecionada: 000000044814.jpg | Entropia: 0.7948, Conf: 0.7394, Orçamento: 281/945
+✅ Selecionada: 000000044815.jpg | Entropia: 0.9495, Conf: 0.4257, Orçamento: 280/945
+✅ Selecionada: 000000044816.jpg | Entropia: 0.7688, Conf: 0.5854, Orçamento: 279/945
+✅ Selecionada: 000000044818.jpg | Entropia: 0.4593, Conf: 0.8077, Orçamento: 278/945
+✅ Selecionada: 000000044820.jpg | Entropia: 0.8360, Conf: 0.5541, Orçamento: 277/945
+✅ Selecionada: 000000044823.jpg | Entropia: 0.9628, Conf: 0.3869, Orçamento: 276/945
+✅ Selecionada: 000000044825.jpg | Entropia: 0.9052, Conf: 0.3267, Orçamento: 275/945
+✅ Selecionada: 000000044827.jpg | Entropia: 0.8020, Conf: 0.6229, Orçamento: 274/945
+✅ Selecionada: 000000044831.jpg | Entropia: 0.9242, Conf: 0.5398, Orçamento: 273/945
+✅ Selecionada: 000000044839.jpg | Entropia: 0.6723, Conf: 0.7335, Orçamento: 272/945
+✅ Selecionada: 000000044840.jpg | Entropia: 0.9645, Conf: 0.4622, Orçamento: 271/945
+✅ Selecionada: 000000044842.jpg | Entropia: 0.7585, Conf: 0.5701, Orçamento: 270/945
+✅ Selecionada: 000000044856.jpg | Entropia: 0.5805, Conf: 0.8589, Orçamento: 269/945
+✅ Selecionada: 000000044858.jpg | Entropia: 0.9792, Conf: 0.4152, Orçamento: 268/945
+✅ Selecionada: 000000044860.jpg | Entropia: 0.5555, Conf: 0.7640, Orçamento: 267/945
+✅ Selecionada: 000000044878.jpg | Entropia: 0.7539, Conf: 0.6874, Orçamento: 266/945
+✅ Selecionada: 000000044910.jpg | Entropia: 0.9629, Conf: 0.4085, Orçamento: 265/945
+✅ Selecionada: 000000044913.jpg | Entropia: 0.7256, Conf: 0.6299, Orçamento: 264/945
+✅ Selecionada: 000000044922.jpg | Entropia: 0.9039, Conf: 0.5588, Orçamento: 263/945
+Sem detecções em: F:\COCO-Dataset\train2017\clustering\pool\images\000000044923.jpg
+✅ Selecionada: 000000044923.jpg | Entropia: 0.0000, Conf: 0.0000, Orçamento: 262/945
+Sem detecções em: F:\COCO-Dataset\train2017\clustering\pool\images\000000044928.jpg
+✅ Selecionada: 000000044928.jpg | Entropia: 0.0000, Conf: 0.0000, Orçamento: 261/945
+✅ Selecionada: 000000044934.jpg | Entropia: 0.9469, Conf: 0.4783, Orçamento: 260/945
+Sem detecções em: F:\COCO-Dataset\train2017\clustering\pool\images\000000044937.jpg
+✅ Selecionada: 000000044937.jpg | Entropia: 0.0000, Conf: 0.0000, Orçamento: 259/945
+✅ Selecionada: 000000044943.jpg | Entropia: 0.9031, Conf: 0.3188, Orçamento: 258/945
+✅ Selecionada: 000000044946.jpg | Entropia: 0.7680, Conf: 0.5817, Orçamento: 257/945
+✅ Selecionada: 000000044950.jpg | Entropia: 0.9475, Conf: 0.4384, Orçamento: 256/945
+✅ Selecionada: 000000044952.jpg | Entropia: 0.8062, Conf: 0.6136, Orçamento: 255/945
+✅ Selecionada: 000000044953.jpg | Entropia: 0.4947, Conf: 0.6467, Orçamento: 254/945
+✅ Selecionada: 000000044954.jpg | Entropia: 0.8109, Conf: 0.5003, Orçamento: 253/945
+✅ Selecionada: 000000044958.jpg | Entropia: 0.8291, Conf: 0.5264, Orçamento: 252/945
+✅ Selecionada: 000000044962.jpg | Entropia: 0.9924, Conf: 0.4567, Orçamento: 251/945
+✅ Selecionada: 000000044964.jpg | Entropia: 0.8376, Conf: 0.5279, Orçamento: 250/945
+✅ Selecionada: 000000044989.jpg | Entropia: 0.9884, Conf: 0.4727, Orçamento: 249/945
+✅ Selecionada: 000000044993.jpg | Entropia: 0.9297, Conf: 0.3485, Orçamento: 248/945
+✅ Selecionada: 000000044995.jpg | Entropia: 0.3039, Conf: 0.9458, Orçamento: 247/945
+✅ Selecionada: 000000044996.jpg | Entropia: 0.9460, Conf: 0.3641, Orçamento: 246/945
+✅ Selecionada: 000000044998.jpg | Entropia: 0.9003, Conf: 0.5175, Orçamento: 245/945
+✅ Selecionada: 000000045004.jpg | Entropia: 0.4945, Conf: 0.8918, Orçamento: 244/945
+✅ Selecionada: 000000045007.jpg | Entropia: 0.6914, Conf: 0.7292, Orçamento: 243/945
+✅ Selecionada: 000000045016.jpg | Entropia: 0.9707, Conf: 0.5371, Orçamento: 242/945
+✅ Selecionada: 000000045031.jpg | Entropia: 0.9715, Conf: 0.5911, Orçamento: 241/945
+✅ Selecionada: 000000045040.jpg | Entropia: 0.9769, Conf: 0.4114, Orçamento: 240/945
+✅ Selecionada: 000000045049.jpg | Entropia: 0.7327, Conf: 0.6905, Orçamento: 239/945
+✅ Selecionada: 000000045057.jpg | Entropia: 0.9898, Conf: 0.4702, Orçamento: 238/945
+✅ Selecionada: 000000045058.jpg | Entropia: 0.6597, Conf: 0.6318, Orçamento: 237/945
+✅ Selecionada: 000000045063.jpg | Entropia: 0.8261, Conf: 0.5489, Orçamento: 236/945
+✅ Selecionada: 000000045071.jpg | Entropia: 0.8205, Conf: 0.7441, Orçamento: 235/945
+Sem detecções em: F:\COCO-Dataset\train2017\clustering\pool\images\000000045075.jpg
+✅ Selecionada: 000000045075.jpg | Entropia: 0.0000, Conf: 0.0000, Orçamento: 234/945
+✅ Selecionada: 000000045084.jpg | Entropia: 0.7234, Conf: 0.7486, Orçamento: 233/945
+✅ Selecionada: 000000045094.jpg | Entropia: 0.7805, Conf: 0.6899, Orçamento: 232/945
+✅ Selecionada: 000000045097.jpg | Entropia: 0.8311, Conf: 0.6629, Orçamento: 231/945
+✅ Selecionada: 000000045099.jpg | Entropia: 0.8905, Conf: 0.5056, Orçamento: 230/945
+✅ Selecionada: 000000045105.jpg | Entropia: 0.9325, Conf: 0.4476, Orçamento: 229/945
+✅ Selecionada: 000000045108.jpg | Entropia: 0.8302, Conf: 0.5156, Orçamento: 228/945
+✅ Selecionada: 000000045110.jpg | Entropia: 0.7605, Conf: 0.7547, Orçamento: 227/945
+✅ Selecionada: 000000045124.jpg | Entropia: 0.9327, Conf: 0.5131, Orçamento: 226/945
+✅ Selecionada: 000000045128.jpg | Entropia: 0.6126, Conf: 0.8488, Orçamento: 225/945
+✅ Selecionada: 000000045131.jpg | Entropia: 0.7176, Conf: 0.6229, Orçamento: 224/945
+✅ Selecionada: 000000045138.jpg | Entropia: 0.9173, Conf: 0.4962, Orçamento: 223/945
+✅ Selecionada: 000000045146.jpg | Entropia: 0.6343, Conf: 0.6963, Orçamento: 222/945
+✅ Selecionada: 000000045148.jpg | Entropia: 0.7903, Conf: 0.4918, Orçamento: 221/945
+✅ Selecionada: 000000045165.jpg | Entropia: 0.5440, Conf: 0.7589, Orçamento: 220/945
+Sem detecções em: F:\COCO-Dataset\train2017\clustering\pool\images\000000045173.jpg
+✅ Selecionada: 000000045173.jpg | Entropia: 0.0000, Conf: 0.0000, Orçamento: 219/945
+✅ Selecionada: 000000045175.jpg | Entropia: 0.7231, Conf: 0.7678, Orçamento: 218/945
+✅ Selecionada: 000000045176.jpg | Entropia: 0.8978, Conf: 0.6621, Orçamento: 217/945
+✅ Selecionada: 000000045180.jpg | Entropia: 0.9748, Conf: 0.4069, Orçamento: 216/945
+✅ Selecionada: 000000045181.jpg | Entropia: 0.9464, Conf: 0.5808, Orçamento: 215/945
+✅ Selecionada: 000000045186.jpg | Entropia: 0.7516, Conf: 0.7846, Orçamento: 214/945
+✅ Selecionada: 000000045193.jpg | Entropia: 0.8347, Conf: 0.6619, Orçamento: 213/945
+✅ Selecionada: 000000045195.jpg | Entropia: 0.8216, Conf: 0.5816, Orçamento: 212/945
+✅ Selecionada: 000000045197.jpg | Entropia: 0.9393, Conf: 0.6089, Orçamento: 211/945
+✅ Selecionada: 000000045204.jpg | Entropia: 0.8453, Conf: 0.5354, Orçamento: 210/945
+✅ Selecionada: 000000045215.jpg | Entropia: 0.9373, Conf: 0.5830, Orçamento: 209/945
+✅ Selecionada: 000000045222.jpg | Entropia: 0.9451, Conf: 0.4893, Orçamento: 208/945
+✅ Selecionada: 000000045226.jpg | Entropia: 0.8062, Conf: 0.5994, Orçamento: 207/945
+✅ Selecionada: 000000045230.jpg | Entropia: 0.9132, Conf: 0.3938, Orçamento: 206/945
+✅ Selecionada: 000000045237.jpg | Entropia: 0.8562, Conf: 0.5509, Orçamento: 205/945
+✅ Selecionada: 000000045240.jpg | Entropia: 0.8095, Conf: 0.6053, Orçamento: 204/945
+✅ Selecionada: 000000045247.jpg | Entropia: 0.3271, Conf: 0.9399, Orçamento: 203/945
+✅ Selecionada: 000000045248.jpg | Entropia: 0.8215, Conf: 0.7115, Orçamento: 202/945
+✅ Selecionada: 000000045259.jpg | Entropia: 0.5473, Conf: 0.8737, Orçamento: 201/945
+✅ Selecionada: 000000045270.jpg | Entropia: 0.8601, Conf: 0.5140, Orçamento: 200/945
+✅ Selecionada: 000000045280.jpg | Entropia: 0.3569, Conf: 0.9324, Orçamento: 199/945
+✅ Selecionada: 000000045281.jpg | Entropia: 0.6640, Conf: 0.6874, Orçamento: 198/945
+✅ Selecionada: 000000045282.jpg | Entropia: 0.9621, Conf: 0.4290, Orçamento: 197/945
+✅ Selecionada: 000000045283.jpg | Entropia: 0.8479, Conf: 0.2746, Orçamento: 196/945
+✅ Selecionada: 000000045284.jpg | Entropia: 0.7237, Conf: 0.6419, Orçamento: 195/945
+✅ Selecionada: 000000045292.jpg | Entropia: 0.8831, Conf: 0.5598, Orçamento: 194/945
+✅ Selecionada: 000000045299.jpg | Entropia: 0.7921, Conf: 0.7295, Orçamento: 193/945
+✅ Selecionada: 000000045306.jpg | Entropia: 0.8391, Conf: 0.5820, Orçamento: 192/945
+✅ Selecionada: 000000045314.jpg | Entropia: 0.9758, Conf: 0.4796, Orçamento: 191/945
+✅ Selecionada: 000000045325.jpg | Entropia: 0.8701, Conf: 0.4703, Orçamento: 190/945
+Sem detecções em: F:\COCO-Dataset\train2017\clustering\pool\images\000000045335.jpg
+✅ Selecionada: 000000045335.jpg | Entropia: 0.0000, Conf: 0.0000, Orçamento: 189/945
+✅ Selecionada: 000000045339.jpg | Entropia: 0.7644, Conf: 0.5583, Orçamento: 188/945
+✅ Selecionada: 000000045343.jpg | Entropia: 0.7370, Conf: 0.6922, Orçamento: 187/945
+✅ Selecionada: 000000045351.jpg | Entropia: 0.3986, Conf: 0.9210, Orçamento: 186/945
+✅ Selecionada: 000000045356.jpg | Entropia: 0.8744, Conf: 0.5975, Orçamento: 185/945
+✅ Selecionada: 000000045359.jpg | Entropia: 0.7509, Conf: 0.5373, Orçamento: 184/945
+✅ Selecionada: 000000045360.jpg | Entropia: 0.0524, Conf: 0.9941, Orçamento: 183/945
+✅ Selecionada: 000000045361.jpg | Entropia: 0.9283, Conf: 0.3876, Orçamento: 182/945
+✅ Selecionada: 000000045366.jpg | Entropia: 0.9302, Conf: 0.5239, Orçamento: 181/945
+✅ Selecionada: 000000045374.jpg | Entropia: 0.8898, Conf: 0.5141, Orçamento: 180/945
+✅ Selecionada: 000000045383.jpg | Entropia: 0.9313, Conf: 0.5295, Orçamento: 179/945
+✅ Selecionada: 000000045387.jpg | Entropia: 0.9820, Conf: 0.5788, Orçamento: 178/945
+✅ Selecionada: 000000045388.jpg | Entropia: 0.4307, Conf: 0.9117, Orçamento: 177/945
+✅ Selecionada: 000000045392.jpg | Entropia: 0.3545, Conf: 0.9326, Orçamento: 176/945
+✅ Selecionada: 000000045396.jpg | Entropia: 0.7940, Conf: 0.7606, Orçamento: 175/945
+✅ Selecionada: 000000045404.jpg | Entropia: 0.7218, Conf: 0.7969, Orçamento: 174/945
+✅ Selecionada: 000000045406.jpg | Entropia: 0.7523, Conf: 0.5555, Orçamento: 173/945
+✅ Selecionada: 000000045419.jpg | Entropia: 0.4954, Conf: 0.8914, Orçamento: 172/945
+✅ Selecionada: 000000045422.jpg | Entropia: 0.8972, Conf: 0.5691, Orçamento: 171/945
+✅ Selecionada: 000000045425.jpg | Entropia: 0.9393, Conf: 0.4603, Orçamento: 170/945
+✅ Selecionada: 000000045433.jpg | Entropia: 0.7640, Conf: 0.7585, Orçamento: 169/945
+✅ Selecionada: 000000045434.jpg | Entropia: 0.7334, Conf: 0.7290, Orçamento: 168/945
+✅ Selecionada: 000000045435.jpg | Entropia: 0.8411, Conf: 0.7303, Orçamento: 167/945
+✅ Selecionada: 000000045437.jpg | Entropia: 0.5207, Conf: 0.8829, Orçamento: 166/945
+✅ Selecionada: 000000045446.jpg | Entropia: 0.8783, Conf: 0.5446, Orçamento: 165/945
+✅ Selecionada: 000000045455.jpg | Entropia: 0.7087, Conf: 0.6157, Orçamento: 164/945
+✅ Selecionada: 000000045459.jpg | Entropia: 0.9006, Conf: 0.5051, Orçamento: 163/945
+✅ Selecionada: 000000045463.jpg | Entropia: 0.8474, Conf: 0.5700, Orçamento: 162/945
+✅ Selecionada: 000000045464.jpg | Entropia: 0.5801, Conf: 0.8579, Orçamento: 161/945
+✅ Selecionada: 000000045467.jpg | Entropia: 0.8986, Conf: 0.5926, Orçamento: 160/945
+✅ Selecionada: 000000045468.jpg | Entropia: 0.7300, Conf: 0.7338, Orçamento: 159/945
+✅ Selecionada: 000000045471.jpg | Entropia: 0.0943, Conf: 0.9879, Orçamento: 158/945
+✅ Selecionada: 000000045475.jpg | Entropia: 0.6735, Conf: 0.6206, Orçamento: 157/945
+✅ Selecionada: 000000045478.jpg | Entropia: 0.4357, Conf: 0.9102, Orçamento: 156/945
+✅ Selecionada: 000000045479.jpg | Entropia: 0.5431, Conf: 0.8491, Orçamento: 155/945
+✅ Selecionada: 000000045481.jpg | Entropia: 0.8275, Conf: 0.4758, Orçamento: 154/945
+✅ Selecionada: 000000045487.jpg | Entropia: 0.7274, Conf: 0.7622, Orçamento: 153/945
+✅ Selecionada: 000000045490.jpg | Entropia: 0.5776, Conf: 0.8485, Orçamento: 152/945
+✅ Selecionada: 000000045494.jpg | Entropia: 0.8763, Conf: 0.6182, Orçamento: 151/945
+✅ Selecionada: 000000045496.jpg | Entropia: 0.6093, Conf: 0.6951, Orçamento: 150/945
+✅ Selecionada: 000000045516.jpg | Entropia: 0.8638, Conf: 0.6682, Orçamento: 149/945
+✅ Selecionada: 000000045524.jpg | Entropia: 0.7165, Conf: 0.7296, Orçamento: 148/945
+✅ Selecionada: 000000045526.jpg | Entropia: 0.7047, Conf: 0.8049, Orçamento: 147/945
+✅ Selecionada: 000000045528.jpg | Entropia: 0.6968, Conf: 0.6362, Orçamento: 146/945
+✅ Selecionada: 000000045535.jpg | Entropia: 0.3002, Conf: 0.9467, Orçamento: 145/945
+✅ Selecionada: 000000045536.jpg | Entropia: 0.8358, Conf: 0.2661, Orçamento: 144/945
+✅ Selecionada: 000000045537.jpg | Entropia: 0.8895, Conf: 0.5892, Orçamento: 143/945
+✅ Selecionada: 000000045543.jpg | Entropia: 0.4516, Conf: 0.9054, Orçamento: 142/945
+✅ Selecionada: 000000045552.jpg | Entropia: 0.8052, Conf: 0.6128, Orçamento: 141/945
+✅ Selecionada: 000000045554.jpg | Entropia: 0.4599, Conf: 0.9001, Orçamento: 140/945
+Sem detecções em: F:\COCO-Dataset\train2017\clustering\pool\images\000000045564.jpg
+✅ Selecionada: 000000045564.jpg | Entropia: 0.0000, Conf: 0.0000, Orçamento: 139/945
+✅ Selecionada: 000000045573.jpg | Entropia: 0.9162, Conf: 0.3990, Orçamento: 138/945
+✅ Selecionada: 000000045574.jpg | Entropia: 0.9217, Conf: 0.4033, Orçamento: 137/945
+✅ Selecionada: 000000045580.jpg | Entropia: 0.9859, Conf: 0.4819, Orçamento: 136/945
+✅ Selecionada: 000000045582.jpg | Entropia: 0.9478, Conf: 0.3664, Orçamento: 135/945
+✅ Selecionada: 000000045586.jpg | Entropia: 0.6572, Conf: 0.8302, Orçamento: 134/945
+✅ Selecionada: 000000045587.jpg | Entropia: 0.8862, Conf: 0.5585, Orçamento: 133/945
+✅ Selecionada: 000000045594.jpg | Entropia: 0.8180, Conf: 0.6180, Orçamento: 132/945
+✅ Selecionada: 000000045599.jpg | Entropia: 0.3146, Conf: 0.9432, Orçamento: 131/945
+✅ Selecionada: 000000045600.jpg | Entropia: 0.3330, Conf: 0.9386, Orçamento: 130/945
+✅ Selecionada: 000000045621.jpg | Entropia: 0.7820, Conf: 0.6002, Orçamento: 129/945
+✅ Selecionada: 000000045622.jpg | Entropia: 0.7719, Conf: 0.5666, Orçamento: 128/945
+✅ Selecionada: 000000045624.jpg | Entropia: 0.8627, Conf: 0.5819, Orçamento: 127/945
+✅ Selecionada: 000000045625.jpg | Entropia: 0.8812, Conf: 0.5412, Orçamento: 126/945
+✅ Selecionada: 000000045626.jpg | Entropia: 0.7817, Conf: 0.5216, Orçamento: 125/945
+✅ Selecionada: 000000045627.jpg | Entropia: 0.6973, Conf: 0.8120, Orçamento: 124/945
+✅ Selecionada: 000000045633.jpg | Entropia: 0.9674, Conf: 0.6058, Orçamento: 123/945
+✅ Selecionada: 000000045634.jpg | Entropia: 0.7767, Conf: 0.7708, Orçamento: 122/945
+✅ Selecionada: 000000045644.jpg | Entropia: 0.9444, Conf: 0.4068, Orçamento: 121/945
+Sem detecções em: F:\COCO-Dataset\train2017\clustering\pool\images\000000045648.jpg
+✅ Selecionada: 000000045648.jpg | Entropia: 0.0000, Conf: 0.0000, Orçamento: 120/945
+✅ Selecionada: 000000045653.jpg | Entropia: 0.7586, Conf: 0.7809, Orçamento: 119/945
+✅ Selecionada: 000000045655.jpg | Entropia: 0.9498, Conf: 0.4248, Orçamento: 118/945
+✅ Selecionada: 000000045659.jpg | Entropia: 0.6536, Conf: 0.7501, Orçamento: 117/945
+✅ Selecionada: 000000045663.jpg | Entropia: 0.9769, Conf: 0.4109, Orçamento: 116/945
+Sem detecções em: F:\COCO-Dataset\train2017\clustering\pool\images\000000045668.jpg
+✅ Selecionada: 000000045668.jpg | Entropia: 0.0000, Conf: 0.0000, Orçamento: 115/945
+✅ Selecionada: 000000045672.jpg | Entropia: 0.8321, Conf: 0.5213, Orçamento: 114/945
+✅ Selecionada: 000000045677.jpg | Entropia: 0.7801, Conf: 0.7688, Orçamento: 113/945
+✅ Selecionada: 000000045678.jpg | Entropia: 0.8672, Conf: 0.6025, Orçamento: 112/945
+✅ Selecionada: 000000045680.jpg | Entropia: 0.8810, Conf: 0.5527, Orçamento: 111/945
+✅ Selecionada: 000000045685.jpg | Entropia: 0.6530, Conf: 0.8189, Orçamento: 110/945
+✅ Selecionada: 000000045687.jpg | Entropia: 0.8325, Conf: 0.6443, Orçamento: 109/945
+✅ Selecionada: 000000045693.jpg | Entropia: 0.4406, Conf: 0.9088, Orçamento: 108/945
+✅ Selecionada: 000000045701.jpg | Entropia: 0.4866, Conf: 0.8825, Orçamento: 107/945
+✅ Selecionada: 000000045729.jpg | Entropia: 0.9268, Conf: 0.3539, Orçamento: 106/945
+✅ Selecionada: 000000045741.jpg | Entropia: 0.7313, Conf: 0.5900, Orçamento: 105/945
+✅ Selecionada: 000000045746.jpg | Entropia: 0.7948, Conf: 0.7098, Orçamento: 104/945
+✅ Selecionada: 000000045770.jpg | Entropia: 0.7240, Conf: 0.6472, Orçamento: 103/945
+✅ Selecionada: 000000045771.jpg | Entropia: 0.9364, Conf: 0.4978, Orçamento: 102/945
+✅ Selecionada: 000000045808.jpg | Entropia: 0.8078, Conf: 0.5476, Orçamento: 101/945
+✅ Selecionada: 000000045809.jpg | Entropia: 0.7346, Conf: 0.7576, Orçamento: 100/945
+✅ Selecionada: 000000045828.jpg | Entropia: 0.4927, Conf: 0.8513, Orçamento: 99/945
+✅ Selecionada: 000000045829.jpg | Entropia: 0.8212, Conf: 0.5893, Orçamento: 98/945
+✅ Selecionada: 000000045830.jpg | Entropia: 0.8099, Conf: 0.7509, Orçamento: 97/945
+✅ Selecionada: 000000045835.jpg | Entropia: 0.7534, Conf: 0.5353, Orçamento: 96/945
+✅ Selecionada: 000000045836.jpg | Entropia: 0.5329, Conf: 0.7777, Orçamento: 95/945
+✅ Selecionada: 000000045840.jpg | Entropia: 0.7205, Conf: 0.7917, Orçamento: 94/945
+✅ Selecionada: 000000045842.jpg | Entropia: 0.7134, Conf: 0.6063, Orçamento: 93/945
+✅ Selecionada: 000000045844.jpg | Entropia: 0.8888, Conf: 0.5099, Orçamento: 92/945
+✅ Selecionada: 000000045854.jpg | Entropia: 0.8256, Conf: 0.5530, Orçamento: 91/945
+✅ Selecionada: 000000045859.jpg | Entropia: 0.8111, Conf: 0.5775, Orçamento: 90/945
+✅ Selecionada: 000000045864.jpg | Entropia: 0.6668, Conf: 0.7762, Orçamento: 89/945
+✅ Selecionada: 000000045882.jpg | Entropia: 0.8809, Conf: 0.5675, Orçamento: 88/945
+✅ Selecionada: 000000045885.jpg | Entropia: 0.6896, Conf: 0.7225, Orçamento: 87/945
+✅ Selecionada: 000000045912.jpg | Entropia: 0.8161, Conf: 0.4729, Orçamento: 86/945
+✅ Selecionada: 000000045920.jpg | Entropia: 0.7148, Conf: 0.6824, Orçamento: 85/945
+✅ Selecionada: 000000045926.jpg | Entropia: 0.8455, Conf: 0.6263, Orçamento: 84/945
+✅ Selecionada: 000000045942.jpg | Entropia: 0.7571, Conf: 0.7079, Orçamento: 83/945
+✅ Selecionada: 000000045949.jpg | Entropia: 0.7565, Conf: 0.6423, Orçamento: 82/945
+✅ Selecionada: 000000045954.jpg | Entropia: 0.6667, Conf: 0.6138, Orçamento: 81/945
+✅ Selecionada: 000000045959.jpg | Entropia: 0.8145, Conf: 0.6172, Orçamento: 80/945
+✅ Selecionada: 000000045962.jpg | Entropia: 0.9586, Conf: 0.4534, Orçamento: 79/945
+✅ Selecionada: 000000045966.jpg | Entropia: 0.5391, Conf: 0.8766, Orçamento: 78/945
+✅ Selecionada: 000000045974.jpg | Entropia: 0.9882, Conf: 0.5639, Orçamento: 77/945
+✅ Selecionada: 000000045989.jpg | Entropia: 0.5065, Conf: 0.8784, Orçamento: 76/945
+✅ Selecionada: 000000045994.jpg | Entropia: 0.8789, Conf: 0.4696, Orçamento: 75/945
+✅ Selecionada: 000000045999.jpg | Entropia: 0.9035, Conf: 0.4275, Orçamento: 74/945
+✅ Selecionada: 000000046002.jpg | Entropia: 0.8890, Conf: 0.4013, Orçamento: 73/945
+✅ Selecionada: 000000046003.jpg | Entropia: 0.9848, Conf: 0.4604, Orçamento: 72/945
+✅ Selecionada: 000000046004.jpg | Entropia: 0.9306, Conf: 0.4559, Orçamento: 71/945
+✅ Selecionada: 000000046009.jpg | Entropia: 0.6443, Conf: 0.5231, Orçamento: 70/945
+✅ Selecionada: 000000046013.jpg | Entropia: 0.6578, Conf: 0.6820, Orçamento: 69/945
+✅ Selecionada: 000000046014.jpg | Entropia: 0.8486, Conf: 0.5942, Orçamento: 68/945
+✅ Selecionada: 000000046024.jpg | Entropia: 0.7028, Conf: 0.5613, Orçamento: 67/945
+✅ Selecionada: 000000046025.jpg | Entropia: 0.9446, Conf: 0.5583, Orçamento: 66/945
+✅ Selecionada: 000000046029.jpg | Entropia: 0.8914, Conf: 0.3150, Orçamento: 65/945
+✅ Selecionada: 000000046038.jpg | Entropia: 0.3897, Conf: 0.9235, Orçamento: 64/945
+✅ Selecionada: 000000046042.jpg | Entropia: 0.7563, Conf: 0.7821, Orçamento: 63/945
+✅ Selecionada: 000000046056.jpg | Entropia: 0.9873, Conf: 0.4621, Orçamento: 62/945
+✅ Selecionada: 000000046059.jpg | Entropia: 0.6533, Conf: 0.7084, Orçamento: 61/945
+✅ Selecionada: 000000046065.jpg | Entropia: 0.9358, Conf: 0.5098, Orçamento: 60/945
+✅ Selecionada: 000000046071.jpg | Entropia: 0.6924, Conf: 0.6728, Orçamento: 59/945
+✅ Selecionada: 000000046077.jpg | Entropia: 0.8650, Conf: 0.4478, Orçamento: 58/945
+✅ Selecionada: 000000046078.jpg | Entropia: 0.9969, Conf: 0.5327, Orçamento: 57/945
+✅ Selecionada: 000000046085.jpg | Entropia: 0.9976, Conf: 0.5286, Orçamento: 56/945
+✅ Selecionada: 000000046090.jpg | Entropia: 0.7638, Conf: 0.6427, Orçamento: 55/945
+✅ Selecionada: 000000046099.jpg | Entropia: 0.6316, Conf: 0.8324, Orçamento: 54/945
+✅ Selecionada: 000000046101.jpg | Entropia: 0.8962, Conf: 0.4274, Orçamento: 53/945
+✅ Selecionada: 000000046114.jpg | Entropia: 0.5227, Conf: 0.7932, Orçamento: 52/945
+✅ Selecionada: 000000046118.jpg | Entropia: 0.8856, Conf: 0.5370, Orçamento: 51/945
+✅ Selecionada: 000000046149.jpg | Entropia: 0.8807, Conf: 0.6478, Orçamento: 50/945
+✅ Selecionada: 000000046152.jpg | Entropia: 0.6090, Conf: 0.6880, Orçamento: 49/945
+✅ Selecionada: 000000046155.jpg | Entropia: 0.7736, Conf: 0.5969, Orçamento: 48/945
+✅ Selecionada: 000000046162.jpg | Entropia: 0.5361, Conf: 0.6158, Orçamento: 47/945
+✅ Selecionada: 000000046168.jpg | Entropia: 0.9508, Conf: 0.3702, Orçamento: 46/945
+✅ Selecionada: 000000046169.jpg | Entropia: 0.8909, Conf: 0.4331, Orçamento: 45/945
+✅ Selecionada: 000000046170.jpg | Entropia: 0.8083, Conf: 0.5698, Orçamento: 44/945
+✅ Selecionada: 000000046171.jpg | Entropia: 0.5675, Conf: 0.6158, Orçamento: 43/945
+✅ Selecionada: 000000046173.jpg | Entropia: 0.8978, Conf: 0.5249, Orçamento: 42/945
+✅ Selecionada: 000000046185.jpg | Entropia: 0.3710, Conf: 0.9286, Orçamento: 41/945
+✅ Selecionada: 000000046189.jpg | Entropia: 0.8544, Conf: 0.5316, Orçamento: 40/945
+✅ Selecionada: 000000046207.jpg | Entropia: 0.8668, Conf: 0.6614, Orçamento: 39/945
+✅ Selecionada: 000000046211.jpg | Entropia: 0.8434, Conf: 0.5972, Orçamento: 38/945
+✅ Selecionada: 000000046212.jpg | Entropia: 0.7473, Conf: 0.7870, Orçamento: 37/945
+✅ Selecionada: 000000046223.jpg | Entropia: 0.8360, Conf: 0.5069, Orçamento: 36/945
+✅ Selecionada: 000000046230.jpg | Entropia: 0.9723, Conf: 0.5016, Orçamento: 35/945
+✅ Selecionada: 000000046245.jpg | Entropia: 0.9329, Conf: 0.6513, Orçamento: 34/945
+✅ Selecionada: 000000046250.jpg | Entropia: 0.9043, Conf: 0.5505, Orçamento: 33/945
+✅ Selecionada: 000000046255.jpg | Entropia: 0.9317, Conf: 0.3837, Orçamento: 32/945
+✅ Selecionada: 000000046258.jpg | Entropia: 0.7096, Conf: 0.6745, Orçamento: 31/945
+✅ Selecionada: 000000046260.jpg | Entropia: 0.8539, Conf: 0.4977, Orçamento: 30/945
+✅ Selecionada: 000000046263.jpg | Entropia: 0.8277, Conf: 0.6806, Orçamento: 29/945
+✅ Selecionada: 000000046265.jpg | Entropia: 0.9532, Conf: 0.6267, Orçamento: 28/945
+✅ Selecionada: 000000046276.jpg | Entropia: 0.9931, Conf: 0.5488, Orçamento: 27/945
+✅ Selecionada: 000000046298.jpg | Entropia: 0.8900, Conf: 0.6355, Orçamento: 26/945
+✅ Selecionada: 000000046303.jpg | Entropia: 0.4267, Conf: 0.9115, Orçamento: 25/945
+✅ Selecionada: 000000046306.jpg | Entropia: 0.7753, Conf: 0.5974, Orçamento: 24/945
+✅ Selecionada: 000000046310.jpg | Entropia: 0.8658, Conf: 0.5296, Orçamento: 23/945
+✅ Selecionada: 000000046323.jpg | Entropia: 0.6983, Conf: 0.5613, Orçamento: 22/945
+✅ Selecionada: 000000046327.jpg | Entropia: 0.7650, Conf: 0.7751, Orçamento: 21/945
+✅ Selecionada: 000000046329.jpg | Entropia: 0.9036, Conf: 0.4710, Orçamento: 20/945
+✅ Selecionada: 000000046331.jpg | Entropia: 0.8312, Conf: 0.5647, Orçamento: 19/945
+✅ Selecionada: 000000046339.jpg | Entropia: 0.6742, Conf: 0.7755, Orçamento: 18/945
+✅ Selecionada: 000000046345.jpg | Entropia: 0.6973, Conf: 0.8120, Orçamento: 17/945
+✅ Selecionada: 000000046349.jpg | Entropia: 0.6799, Conf: 0.7275, Orçamento: 16/945
+✅ Selecionada: 000000046356.jpg | Entropia: 0.8662, Conf: 0.2907, Orçamento: 15/945
+✅ Selecionada: 000000046359.jpg | Entropia: 0.9140, Conf: 0.5193, Orçamento: 14/945
+✅ Selecionada: 000000046372.jpg | Entropia: 0.9099, Conf: 0.5979, Orçamento: 13/945
+✅ Selecionada: 000000046373.jpg | Entropia: 0.5069, Conf: 0.8877, Orçamento: 12/945
+✅ Selecionada: 000000046382.jpg | Entropia: 0.9253, Conf: 0.4702, Orçamento: 11/945
+✅ Selecionada: 000000046385.jpg | Entropia: 0.8021, Conf: 0.6480, Orçamento: 10/945
+✅ Selecionada: 000000046405.jpg | Entropia: 0.6464, Conf: 0.6817, Orçamento: 9/945
+✅ Selecionada: 000000046408.jpg | Entropia: 0.9453, Conf: 0.5895, Orçamento: 8/945
+✅ Selecionada: 000000046418.jpg | Entropia: 0.4027, Conf: 0.8345, Orçamento: 7/945
+✅ Selecionada: 000000046419.jpg | Entropia: 0.7681, Conf: 0.6099, Orçamento: 6/945
+✅ Selecionada: 000000046422.jpg | Entropia: 0.8259, Conf: 0.2595, Orçamento: 5/945
+✅ Selecionada: 000000046426.jpg | Entropia: 0.9153, Conf: 0.4403, Orçamento: 4/945
+Sem detecções em: F:\COCO-Dataset\train2017\clustering\pool\images\000000046428.jpg
+✅ Selecionada: 000000046428.jpg | Entropia: 0.0000, Conf: 0.0000, Orçamento: 3/945
+✅ Selecionada: 000000046429.jpg | Entropia: 0.9363, Conf: 0.6474, Orçamento: 2/945
+Sem detecções em: F:\COCO-Dataset\train2017\clustering\pool\images\000000046506.jpg
+✅ Selecionada: 000000046506.jpg | Entropia: 0.0000, Conf: 0.0000, Orçamento: 1/945
+Sem detecções em: F:\COCO-Dataset\train2017\clustering\pool\images\000000046571.jpg
+✅ Selecionada: 000000046571.jpg | Entropia: 0.0000, Conf: 0.0000, Orçamento: 0/945
+🚫 Orçamento esgotado!
+💾 Salvo: selected_images_clustering/images/000000040878.jpg
+💾 Salvo: selected_images_clustering/images/000000040881.jpg
+💾 Salvo: selected_images_clustering/images/000000040886.jpg
+💾 Salvo: selected_images_clustering/images/000000040890.jpg
+💾 Salvo: selected_images_clustering/images/000000040891.jpg
+💾 Salvo: selected_images_clustering/images/000000040902.jpg
+💾 Salvo: selected_images_clustering/images/000000040905.jpg
+💾 Salvo: selected_images_clustering/images/000000040906.jpg
+💾 Salvo: selected_images_clustering/images/000000040911.jpg
+💾 Salvo: selected_images_clustering/images/000000040923.jpg
+💾 Salvo: selected_images_clustering/images/000000040924.jpg
+💾 Salvo: selected_images_clustering/images/000000040926.jpg
+💾 Salvo: selected_images_clustering/images/000000040930.jpg
+💾 Salvo: selected_images_clustering/images/000000040931.jpg
+💾 Salvo: selected_images_clustering/images/000000040934.jpg
+💾 Salvo: selected_images_clustering/images/000000040937.jpg
+💾 Salvo: selected_images_clustering/images/000000040938.jpg
+💾 Salvo: selected_images_clustering/images/000000040940.jpg
+💾 Salvo: selected_images_clustering/images/000000040946.jpg
+💾 Salvo: selected_images_clustering/images/000000040957.jpg
+💾 Salvo: selected_images_clustering/images/000000040961.jpg
+💾 Salvo: selected_images_clustering/images/000000040966.jpg
+💾 Salvo: selected_images_clustering/images/000000040971.jpg
+💾 Salvo: selected_images_clustering/images/000000040986.jpg
+💾 Salvo: selected_images_clustering/images/000000040987.jpg
+💾 Salvo: selected_images_clustering/images/000000040988.jpg
+💾 Salvo: selected_images_clustering/images/000000040989.jpg
+💾 Salvo: selected_images_clustering/images/000000040995.jpg
+💾 Salvo: selected_images_clustering/images/000000040998.jpg
+💾 Salvo: selected_images_clustering/images/000000041001.jpg
+💾 Salvo: selected_images_clustering/images/000000041005.jpg
+💾 Salvo: selected_images_clustering/images/000000041008.jpg
+💾 Salvo: selected_images_clustering/images/000000041011.jpg
+💾 Salvo: selected_images_clustering/images/000000041014.jpg
+💾 Salvo: selected_images_clustering/images/000000041018.jpg
+💾 Salvo: selected_images_clustering/images/000000041020.jpg
+💾 Salvo: selected_images_clustering/images/000000041022.jpg
+💾 Salvo: selected_images_clustering/images/000000041041.jpg
+💾 Salvo: selected_images_clustering/images/000000041054.jpg
+💾 Salvo: selected_images_clustering/images/000000041056.jpg
+💾 Salvo: selected_images_clustering/images/000000041074.jpg
+💾 Salvo: selected_images_clustering/images/000000041079.jpg
+💾 Salvo: selected_images_clustering/images/000000041082.jpg
+💾 Salvo: selected_images_clustering/images/000000041085.jpg
+💾 Salvo: selected_images_clustering/images/000000041087.jpg
+💾 Salvo: selected_images_clustering/images/000000041097.jpg
+💾 Salvo: selected_images_clustering/images/000000041103.jpg
+💾 Salvo: selected_images_clustering/images/000000041110.jpg
+💾 Salvo: selected_images_clustering/images/000000041123.jpg
+💾 Salvo: selected_images_clustering/images/000000041128.jpg
+💾 Salvo: selected_images_clustering/images/000000041138.jpg
+💾 Salvo: selected_images_clustering/images/000000041147.jpg
+💾 Salvo: selected_images_clustering/images/000000041152.jpg
+💾 Salvo: selected_images_clustering/images/000000041155.jpg
+💾 Salvo: selected_images_clustering/images/000000041174.jpg
+💾 Salvo: selected_images_clustering/images/000000041180.jpg
+💾 Salvo: selected_images_clustering/images/000000041183.jpg
+💾 Salvo: selected_images_clustering/images/000000041186.jpg
+💾 Salvo: selected_images_clustering/images/000000041199.jpg
+💾 Salvo: selected_images_clustering/images/000000041200.jpg
+💾 Salvo: selected_images_clustering/images/000000041226.jpg
+💾 Salvo: selected_images_clustering/images/000000041231.jpg
+💾 Salvo: selected_images_clustering/images/000000041233.jpg
+💾 Salvo: selected_images_clustering/images/000000041246.jpg
+💾 Salvo: selected_images_clustering/images/000000041252.jpg
+💾 Salvo: selected_images_clustering/images/000000041257.jpg
+💾 Salvo: selected_images_clustering/images/000000041272.jpg
+💾 Salvo: selected_images_clustering/images/000000041273.jpg
+💾 Salvo: selected_images_clustering/images/000000041276.jpg
+💾 Salvo: selected_images_clustering/images/000000041279.jpg
+💾 Salvo: selected_images_clustering/images/000000041284.jpg
+💾 Salvo: selected_images_clustering/images/000000041288.jpg
+💾 Salvo: selected_images_clustering/images/000000041293.jpg
+💾 Salvo: selected_images_clustering/images/000000041300.jpg
+💾 Salvo: selected_images_clustering/images/000000041305.jpg
+💾 Salvo: selected_images_clustering/images/000000041311.jpg
+💾 Salvo: selected_images_clustering/images/000000041319.jpg
+💾 Salvo: selected_images_clustering/images/000000041322.jpg
+💾 Salvo: selected_images_clustering/images/000000041331.jpg
+💾 Salvo: selected_images_clustering/images/000000041342.jpg
+💾 Salvo: selected_images_clustering/images/000000041343.jpg
+💾 Salvo: selected_images_clustering/images/000000041345.jpg
+💾 Salvo: selected_images_clustering/images/000000041351.jpg
+💾 Salvo: selected_images_clustering/images/000000041356.jpg
+💾 Salvo: selected_images_clustering/images/000000041357.jpg
+💾 Salvo: selected_images_clustering/images/000000041366.jpg
+💾 Salvo: selected_images_clustering/images/000000041369.jpg
+💾 Salvo: selected_images_clustering/images/000000041377.jpg
+💾 Salvo: selected_images_clustering/images/000000041389.jpg
+💾 Salvo: selected_images_clustering/images/000000041392.jpg
+💾 Salvo: selected_images_clustering/images/000000041397.jpg
+💾 Salvo: selected_images_clustering/images/000000041398.jpg
+💾 Salvo: selected_images_clustering/images/000000041433.jpg
+💾 Salvo: selected_images_clustering/images/000000041434.jpg
+💾 Salvo: selected_images_clustering/images/000000041437.jpg
+💾 Salvo: selected_images_clustering/images/000000041442.jpg
+💾 Salvo: selected_images_clustering/images/000000041449.jpg
+💾 Salvo: selected_images_clustering/images/000000041453.jpg
+💾 Salvo: selected_images_clustering/images/000000041455.jpg
+💾 Salvo: selected_images_clustering/images/000000041456.jpg
+💾 Salvo: selected_images_clustering/images/000000041458.jpg
+💾 Salvo: selected_images_clustering/images/000000041459.jpg
+💾 Salvo: selected_images_clustering/images/000000041461.jpg
+💾 Salvo: selected_images_clustering/images/000000041475.jpg
+💾 Salvo: selected_images_clustering/images/000000041482.jpg
+💾 Salvo: selected_images_clustering/images/000000041489.jpg
+💾 Salvo: selected_images_clustering/images/000000041505.jpg
+💾 Salvo: selected_images_clustering/images/000000041507.jpg
+💾 Salvo: selected_images_clustering/images/000000041516.jpg
+💾 Salvo: selected_images_clustering/images/000000041528.jpg
+💾 Salvo: selected_images_clustering/images/000000041547.jpg
+💾 Salvo: selected_images_clustering/images/000000041549.jpg
+💾 Salvo: selected_images_clustering/images/000000041552.jpg
+💾 Salvo: selected_images_clustering/images/000000041561.jpg
+💾 Salvo: selected_images_clustering/images/000000041565.jpg
+💾 Salvo: selected_images_clustering/images/000000041570.jpg
+💾 Salvo: selected_images_clustering/images/000000041572.jpg
+💾 Salvo: selected_images_clustering/images/000000041574.jpg
+💾 Salvo: selected_images_clustering/images/000000041575.jpg
+💾 Salvo: selected_images_clustering/images/000000041577.jpg
+💾 Salvo: selected_images_clustering/images/000000041588.jpg
+💾 Salvo: selected_images_clustering/images/000000041597.jpg
+💾 Salvo: selected_images_clustering/images/000000041603.jpg
+💾 Salvo: selected_images_clustering/images/000000041606.jpg
+💾 Salvo: selected_images_clustering/images/000000041616.jpg
+💾 Salvo: selected_images_clustering/images/000000041625.jpg
+💾 Salvo: selected_images_clustering/images/000000041630.jpg
+💾 Salvo: selected_images_clustering/images/000000041638.jpg
+💾 Salvo: selected_images_clustering/images/000000041649.jpg
+💾 Salvo: selected_images_clustering/images/000000041666.jpg
+💾 Salvo: selected_images_clustering/images/000000041673.jpg
+💾 Salvo: selected_images_clustering/images/000000041687.jpg
+💾 Salvo: selected_images_clustering/images/000000041688.jpg
+💾 Salvo: selected_images_clustering/images/000000041700.jpg
+💾 Salvo: selected_images_clustering/images/000000041708.jpg
+💾 Salvo: selected_images_clustering/images/000000041710.jpg
+💾 Salvo: selected_images_clustering/images/000000041711.jpg
+💾 Salvo: selected_images_clustering/images/000000041713.jpg
+💾 Salvo: selected_images_clustering/images/000000041728.jpg
+💾 Salvo: selected_images_clustering/images/000000041729.jpg
+💾 Salvo: selected_images_clustering/images/000000041730.jpg
+💾 Salvo: selected_images_clustering/images/000000041737.jpg
+💾 Salvo: selected_images_clustering/images/000000041740.jpg
+💾 Salvo: selected_images_clustering/images/000000041742.jpg
+💾 Salvo: selected_images_clustering/images/000000041745.jpg
+💾 Salvo: selected_images_clustering/images/000000041753.jpg
+💾 Salvo: selected_images_clustering/images/000000041756.jpg
+💾 Salvo: selected_images_clustering/images/000000041763.jpg
+💾 Salvo: selected_images_clustering/images/000000041770.jpg
+💾 Salvo: selected_images_clustering/images/000000041771.jpg
+💾 Salvo: selected_images_clustering/images/000000041772.jpg
+💾 Salvo: selected_images_clustering/images/000000041773.jpg
+💾 Salvo: selected_images_clustering/images/000000041785.jpg
+💾 Salvo: selected_images_clustering/images/000000041796.jpg
+💾 Salvo: selected_images_clustering/images/000000041802.jpg
+💾 Salvo: selected_images_clustering/images/000000041818.jpg
+💾 Salvo: selected_images_clustering/images/000000041826.jpg
+💾 Salvo: selected_images_clustering/images/000000041831.jpg
+💾 Salvo: selected_images_clustering/images/000000041832.jpg
+💾 Salvo: selected_images_clustering/images/000000041837.jpg
+💾 Salvo: selected_images_clustering/images/000000041838.jpg
+💾 Salvo: selected_images_clustering/images/000000041839.jpg
+💾 Salvo: selected_images_clustering/images/000000041840.jpg
+💾 Salvo: selected_images_clustering/images/000000041842.jpg
+💾 Salvo: selected_images_clustering/images/000000041843.jpg
+💾 Salvo: selected_images_clustering/images/000000041846.jpg
+💾 Salvo: selected_images_clustering/images/000000041848.jpg
+💾 Salvo: selected_images_clustering/images/000000041854.jpg
+💾 Salvo: selected_images_clustering/images/000000041859.jpg
+💾 Salvo: selected_images_clustering/images/000000041867.jpg
+💾 Salvo: selected_images_clustering/images/000000041875.jpg
+💾 Salvo: selected_images_clustering/images/000000041887.jpg
+💾 Salvo: selected_images_clustering/images/000000041890.jpg
+💾 Salvo: selected_images_clustering/images/000000041895.jpg
+💾 Salvo: selected_images_clustering/images/000000041899.jpg
+💾 Salvo: selected_images_clustering/images/000000041908.jpg
+💾 Salvo: selected_images_clustering/images/000000041913.jpg
+💾 Salvo: selected_images_clustering/images/000000041918.jpg
+💾 Salvo: selected_images_clustering/images/000000041920.jpg
+💾 Salvo: selected_images_clustering/images/000000041924.jpg
+💾 Salvo: selected_images_clustering/images/000000041938.jpg
+💾 Salvo: selected_images_clustering/images/000000041939.jpg
+💾 Salvo: selected_images_clustering/images/000000041940.jpg
+💾 Salvo: selected_images_clustering/images/000000041945.jpg
+💾 Salvo: selected_images_clustering/images/000000041952.jpg
+💾 Salvo: selected_images_clustering/images/000000041959.jpg
+💾 Salvo: selected_images_clustering/images/000000041962.jpg
+💾 Salvo: selected_images_clustering/images/000000041984.jpg
+💾 Salvo: selected_images_clustering/images/000000041988.jpg
+💾 Salvo: selected_images_clustering/images/000000041993.jpg
+💾 Salvo: selected_images_clustering/images/000000041997.jpg
+💾 Salvo: selected_images_clustering/images/000000041998.jpg
+💾 Salvo: selected_images_clustering/images/000000042003.jpg
+💾 Salvo: selected_images_clustering/images/000000042010.jpg
+💾 Salvo: selected_images_clustering/images/000000042042.jpg
+💾 Salvo: selected_images_clustering/images/000000042044.jpg
+💾 Salvo: selected_images_clustering/images/000000042050.jpg
+💾 Salvo: selected_images_clustering/images/000000042055.jpg
+💾 Salvo: selected_images_clustering/images/000000042057.jpg
+💾 Salvo: selected_images_clustering/images/000000042060.jpg
+💾 Salvo: selected_images_clustering/images/000000042069.jpg
+💾 Salvo: selected_images_clustering/images/000000042079.jpg
+💾 Salvo: selected_images_clustering/images/000000042081.jpg
+💾 Salvo: selected_images_clustering/images/000000042085.jpg
+💾 Salvo: selected_images_clustering/images/000000042086.jpg
+💾 Salvo: selected_images_clustering/images/000000042091.jpg
+💾 Salvo: selected_images_clustering/images/000000042105.jpg
+💾 Salvo: selected_images_clustering/images/000000042109.jpg
+💾 Salvo: selected_images_clustering/images/000000042122.jpg
+💾 Salvo: selected_images_clustering/images/000000042124.jpg
+💾 Salvo: selected_images_clustering/images/000000042137.jpg
+💾 Salvo: selected_images_clustering/images/000000042144.jpg
+💾 Salvo: selected_images_clustering/images/000000042147.jpg
+💾 Salvo: selected_images_clustering/images/000000042156.jpg
+💾 Salvo: selected_images_clustering/images/000000042161.jpg
+💾 Salvo: selected_images_clustering/images/000000042165.jpg
+💾 Salvo: selected_images_clustering/images/000000042166.jpg
+💾 Salvo: selected_images_clustering/images/000000042173.jpg
+💾 Salvo: selected_images_clustering/images/000000042182.jpg
+💾 Salvo: selected_images_clustering/images/000000042196.jpg
+💾 Salvo: selected_images_clustering/images/000000042201.jpg
+💾 Salvo: selected_images_clustering/images/000000042204.jpg
+💾 Salvo: selected_images_clustering/images/000000042209.jpg
+💾 Salvo: selected_images_clustering/images/000000042215.jpg
+💾 Salvo: selected_images_clustering/images/000000042222.jpg
+💾 Salvo: selected_images_clustering/images/000000042225.jpg
+💾 Salvo: selected_images_clustering/images/000000042228.jpg
+💾 Salvo: selected_images_clustering/images/000000042245.jpg
+💾 Salvo: selected_images_clustering/images/000000042260.jpg
+💾 Salvo: selected_images_clustering/images/000000042267.jpg
+💾 Salvo: selected_images_clustering/images/000000042277.jpg
+💾 Salvo: selected_images_clustering/images/000000042278.jpg
+💾 Salvo: selected_images_clustering/images/000000042288.jpg
+💾 Salvo: selected_images_clustering/images/000000042308.jpg
+💾 Salvo: selected_images_clustering/images/000000042312.jpg
+💾 Salvo: selected_images_clustering/images/000000042314.jpg
+💾 Salvo: selected_images_clustering/images/000000042320.jpg
+💾 Salvo: selected_images_clustering/images/000000042321.jpg
+💾 Salvo: selected_images_clustering/images/000000042333.jpg
+💾 Salvo: selected_images_clustering/images/000000042336.jpg
+💾 Salvo: selected_images_clustering/images/000000042339.jpg
+💾 Salvo: selected_images_clustering/images/000000042341.jpg
+💾 Salvo: selected_images_clustering/images/000000042342.jpg
+💾 Salvo: selected_images_clustering/images/000000042345.jpg
+💾 Salvo: selected_images_clustering/images/000000042347.jpg
+💾 Salvo: selected_images_clustering/images/000000042349.jpg
+💾 Salvo: selected_images_clustering/images/000000042355.jpg
+💾 Salvo: selected_images_clustering/images/000000042366.jpg
+💾 Salvo: selected_images_clustering/images/000000042383.jpg
+💾 Salvo: selected_images_clustering/images/000000042384.jpg
+💾 Salvo: selected_images_clustering/images/000000042385.jpg
+💾 Salvo: selected_images_clustering/images/000000042387.jpg
+💾 Salvo: selected_images_clustering/images/000000042399.jpg
+💾 Salvo: selected_images_clustering/images/000000042406.jpg
+💾 Salvo: selected_images_clustering/images/000000042407.jpg
+💾 Salvo: selected_images_clustering/images/000000042408.jpg
+💾 Salvo: selected_images_clustering/images/000000042413.jpg
+💾 Salvo: selected_images_clustering/images/000000042415.jpg
+💾 Salvo: selected_images_clustering/images/000000042418.jpg
+💾 Salvo: selected_images_clustering/images/000000042421.jpg
+💾 Salvo: selected_images_clustering/images/000000042422.jpg
+💾 Salvo: selected_images_clustering/images/000000042427.jpg
+💾 Salvo: selected_images_clustering/images/000000042429.jpg
+💾 Salvo: selected_images_clustering/images/000000042433.jpg
+💾 Salvo: selected_images_clustering/images/000000042439.jpg
+💾 Salvo: selected_images_clustering/images/000000042441.jpg
+💾 Salvo: selected_images_clustering/images/000000042453.jpg
+💾 Salvo: selected_images_clustering/images/000000042463.jpg
+💾 Salvo: selected_images_clustering/images/000000042469.jpg
+💾 Salvo: selected_images_clustering/images/000000042471.jpg
+💾 Salvo: selected_images_clustering/images/000000042472.jpg
+💾 Salvo: selected_images_clustering/images/000000042476.jpg
+💾 Salvo: selected_images_clustering/images/000000042482.jpg
+💾 Salvo: selected_images_clustering/images/000000042493.jpg
+💾 Salvo: selected_images_clustering/images/000000042499.jpg
+💾 Salvo: selected_images_clustering/images/000000042501.jpg
+💾 Salvo: selected_images_clustering/images/000000042513.jpg
+💾 Salvo: selected_images_clustering/images/000000042529.jpg
+💾 Salvo: selected_images_clustering/images/000000042534.jpg
+💾 Salvo: selected_images_clustering/images/000000042540.jpg
+💾 Salvo: selected_images_clustering/images/000000042541.jpg
+💾 Salvo: selected_images_clustering/images/000000042551.jpg
+💾 Salvo: selected_images_clustering/images/000000042553.jpg
+💾 Salvo: selected_images_clustering/images/000000042568.jpg
+💾 Salvo: selected_images_clustering/images/000000042576.jpg
+💾 Salvo: selected_images_clustering/images/000000042578.jpg
+💾 Salvo: selected_images_clustering/images/000000042585.jpg
+💾 Salvo: selected_images_clustering/images/000000042591.jpg
+💾 Salvo: selected_images_clustering/images/000000042614.jpg
+💾 Salvo: selected_images_clustering/images/000000042619.jpg
+💾 Salvo: selected_images_clustering/images/000000042620.jpg
+💾 Salvo: selected_images_clustering/images/000000042622.jpg
+💾 Salvo: selected_images_clustering/images/000000042634.jpg
+💾 Salvo: selected_images_clustering/images/000000042641.jpg
+💾 Salvo: selected_images_clustering/images/000000042659.jpg
+💾 Salvo: selected_images_clustering/images/000000042661.jpg
+💾 Salvo: selected_images_clustering/images/000000042667.jpg
+💾 Salvo: selected_images_clustering/images/000000042671.jpg
+💾 Salvo: selected_images_clustering/images/000000042675.jpg
+💾 Salvo: selected_images_clustering/images/000000042680.jpg
+💾 Salvo: selected_images_clustering/images/000000042682.jpg
+💾 Salvo: selected_images_clustering/images/000000042683.jpg
+💾 Salvo: selected_images_clustering/images/000000042690.jpg
+💾 Salvo: selected_images_clustering/images/000000042694.jpg
+💾 Salvo: selected_images_clustering/images/000000042696.jpg
+💾 Salvo: selected_images_clustering/images/000000042697.jpg
+💾 Salvo: selected_images_clustering/images/000000042698.jpg
+💾 Salvo: selected_images_clustering/images/000000042700.jpg
+💾 Salvo: selected_images_clustering/images/000000042701.jpg
+💾 Salvo: selected_images_clustering/images/000000042704.jpg
+💾 Salvo: selected_images_clustering/images/000000042711.jpg
+💾 Salvo: selected_images_clustering/images/000000042725.jpg
+💾 Salvo: selected_images_clustering/images/000000042735.jpg
+💾 Salvo: selected_images_clustering/images/000000042740.jpg
+💾 Salvo: selected_images_clustering/images/000000042741.jpg
+💾 Salvo: selected_images_clustering/images/000000042748.jpg
+💾 Salvo: selected_images_clustering/images/000000042752.jpg
+💾 Salvo: selected_images_clustering/images/000000042756.jpg
+💾 Salvo: selected_images_clustering/images/000000042760.jpg
+💾 Salvo: selected_images_clustering/images/000000042763.jpg
+💾 Salvo: selected_images_clustering/images/000000042785.jpg
+💾 Salvo: selected_images_clustering/images/000000042790.jpg
+💾 Salvo: selected_images_clustering/images/000000042793.jpg
+💾 Salvo: selected_images_clustering/images/000000042799.jpg
+💾 Salvo: selected_images_clustering/images/000000042800.jpg
+💾 Salvo: selected_images_clustering/images/000000042804.jpg
+💾 Salvo: selected_images_clustering/images/000000042805.jpg
+💾 Salvo: selected_images_clustering/images/000000042808.jpg
+💾 Salvo: selected_images_clustering/images/000000042810.jpg
+💾 Salvo: selected_images_clustering/images/000000042818.jpg
+💾 Salvo: selected_images_clustering/images/000000042819.jpg
+💾 Salvo: selected_images_clustering/images/000000042820.jpg
+💾 Salvo: selected_images_clustering/images/000000042828.jpg
+💾 Salvo: selected_images_clustering/images/000000042834.jpg
+💾 Salvo: selected_images_clustering/images/000000042837.jpg
+💾 Salvo: selected_images_clustering/images/000000042844.jpg
+💾 Salvo: selected_images_clustering/images/000000042849.jpg
+💾 Salvo: selected_images_clustering/images/000000042853.jpg
+💾 Salvo: selected_images_clustering/images/000000042855.jpg
+💾 Salvo: selected_images_clustering/images/000000042858.jpg
+💾 Salvo: selected_images_clustering/images/000000042862.jpg
+💾 Salvo: selected_images_clustering/images/000000042867.jpg
+💾 Salvo: selected_images_clustering/images/000000042868.jpg
+💾 Salvo: selected_images_clustering/images/000000042871.jpg
+💾 Salvo: selected_images_clustering/images/000000042876.jpg
+💾 Salvo: selected_images_clustering/images/000000042893.jpg
+💾 Salvo: selected_images_clustering/images/000000042919.jpg
+💾 Salvo: selected_images_clustering/images/000000042921.jpg
+💾 Salvo: selected_images_clustering/images/000000042929.jpg
+💾 Salvo: selected_images_clustering/images/000000042931.jpg
+💾 Salvo: selected_images_clustering/images/000000042944.jpg
+💾 Salvo: selected_images_clustering/images/000000042947.jpg
+💾 Salvo: selected_images_clustering/images/000000042953.jpg
+💾 Salvo: selected_images_clustering/images/000000042956.jpg
+💾 Salvo: selected_images_clustering/images/000000042960.jpg
+💾 Salvo: selected_images_clustering/images/000000042967.jpg
+💾 Salvo: selected_images_clustering/images/000000042968.jpg
+💾 Salvo: selected_images_clustering/images/000000042970.jpg
+💾 Salvo: selected_images_clustering/images/000000042972.jpg
+💾 Salvo: selected_images_clustering/images/000000042975.jpg
+💾 Salvo: selected_images_clustering/images/000000042977.jpg
+💾 Salvo: selected_images_clustering/images/000000042979.jpg
+💾 Salvo: selected_images_clustering/images/000000043001.jpg
+💾 Salvo: selected_images_clustering/images/000000043007.jpg
+💾 Salvo: selected_images_clustering/images/000000043016.jpg
+💾 Salvo: selected_images_clustering/images/000000043024.jpg
+💾 Salvo: selected_images_clustering/images/000000043049.jpg
+💾 Salvo: selected_images_clustering/images/000000043071.jpg
+💾 Salvo: selected_images_clustering/images/000000043073.jpg
+💾 Salvo: selected_images_clustering/images/000000043077.jpg
+💾 Salvo: selected_images_clustering/images/000000043092.jpg
+💾 Salvo: selected_images_clustering/images/000000043093.jpg
+💾 Salvo: selected_images_clustering/images/000000043098.jpg
+💾 Salvo: selected_images_clustering/images/000000043099.jpg
+💾 Salvo: selected_images_clustering/images/000000043110.jpg
+💾 Salvo: selected_images_clustering/images/000000043128.jpg
+💾 Salvo: selected_images_clustering/images/000000043133.jpg
+💾 Salvo: selected_images_clustering/images/000000043150.jpg
+💾 Salvo: selected_images_clustering/images/000000043161.jpg
+💾 Salvo: selected_images_clustering/images/000000043163.jpg
+💾 Salvo: selected_images_clustering/images/000000043165.jpg
+💾 Salvo: selected_images_clustering/images/000000043170.jpg
+💾 Salvo: selected_images_clustering/images/000000043171.jpg
+💾 Salvo: selected_images_clustering/images/000000043176.jpg
+💾 Salvo: selected_images_clustering/images/000000043193.jpg
+💾 Salvo: selected_images_clustering/images/000000043202.jpg
+💾 Salvo: selected_images_clustering/images/000000043203.jpg
+💾 Salvo: selected_images_clustering/images/000000043206.jpg
+💾 Salvo: selected_images_clustering/images/000000043210.jpg
+💾 Salvo: selected_images_clustering/images/000000043220.jpg
+💾 Salvo: selected_images_clustering/images/000000043226.jpg
+💾 Salvo: selected_images_clustering/images/000000043227.jpg
+💾 Salvo: selected_images_clustering/images/000000043232.jpg
+💾 Salvo: selected_images_clustering/images/000000043243.jpg
+💾 Salvo: selected_images_clustering/images/000000043248.jpg
+💾 Salvo: selected_images_clustering/images/000000043251.jpg
+💾 Salvo: selected_images_clustering/images/000000043256.jpg
+💾 Salvo: selected_images_clustering/images/000000043261.jpg
+💾 Salvo: selected_images_clustering/images/000000043264.jpg
+💾 Salvo: selected_images_clustering/images/000000043266.jpg
+💾 Salvo: selected_images_clustering/images/000000043269.jpg
+💾 Salvo: selected_images_clustering/images/000000043270.jpg
+💾 Salvo: selected_images_clustering/images/000000043279.jpg
+💾 Salvo: selected_images_clustering/images/000000043286.jpg
+💾 Salvo: selected_images_clustering/images/000000043288.jpg
+💾 Salvo: selected_images_clustering/images/000000043289.jpg
+💾 Salvo: selected_images_clustering/images/000000043305.jpg
+💾 Salvo: selected_images_clustering/images/000000043308.jpg
+💾 Salvo: selected_images_clustering/images/000000043324.jpg
+💾 Salvo: selected_images_clustering/images/000000043331.jpg
+💾 Salvo: selected_images_clustering/images/000000043333.jpg
+💾 Salvo: selected_images_clustering/images/000000043338.jpg
+💾 Salvo: selected_images_clustering/images/000000043340.jpg
+💾 Salvo: selected_images_clustering/images/000000043344.jpg
+💾 Salvo: selected_images_clustering/images/000000043345.jpg
+💾 Salvo: selected_images_clustering/images/000000043347.jpg
+💾 Salvo: selected_images_clustering/images/000000043350.jpg
+💾 Salvo: selected_images_clustering/images/000000043353.jpg
+💾 Salvo: selected_images_clustering/images/000000043354.jpg
+💾 Salvo: selected_images_clustering/images/000000043367.jpg
+💾 Salvo: selected_images_clustering/images/000000043376.jpg
+💾 Salvo: selected_images_clustering/images/000000043383.jpg
+💾 Salvo: selected_images_clustering/images/000000043388.jpg
+💾 Salvo: selected_images_clustering/images/000000043392.jpg
+💾 Salvo: selected_images_clustering/images/000000043393.jpg
+💾 Salvo: selected_images_clustering/images/000000043404.jpg
+💾 Salvo: selected_images_clustering/images/000000043407.jpg
+💾 Salvo: selected_images_clustering/images/000000043411.jpg
+💾 Salvo: selected_images_clustering/images/000000043417.jpg
+💾 Salvo: selected_images_clustering/images/000000043431.jpg
+💾 Salvo: selected_images_clustering/images/000000043433.jpg
+💾 Salvo: selected_images_clustering/images/000000043438.jpg
+💾 Salvo: selected_images_clustering/images/000000043439.jpg
+💾 Salvo: selected_images_clustering/images/000000043444.jpg
+💾 Salvo: selected_images_clustering/images/000000043448.jpg
+💾 Salvo: selected_images_clustering/images/000000043451.jpg
+💾 Salvo: selected_images_clustering/images/000000043455.jpg
+💾 Salvo: selected_images_clustering/images/000000043464.jpg
+💾 Salvo: selected_images_clustering/images/000000043477.jpg
+💾 Salvo: selected_images_clustering/images/000000043479.jpg
+💾 Salvo: selected_images_clustering/images/000000043486.jpg
+💾 Salvo: selected_images_clustering/images/000000043494.jpg
+💾 Salvo: selected_images_clustering/images/000000043510.jpg
+💾 Salvo: selected_images_clustering/images/000000043511.jpg
+💾 Salvo: selected_images_clustering/images/000000043513.jpg
+💾 Salvo: selected_images_clustering/images/000000043522.jpg
+💾 Salvo: selected_images_clustering/images/000000043530.jpg
+💾 Salvo: selected_images_clustering/images/000000043535.jpg
+💾 Salvo: selected_images_clustering/images/000000043545.jpg
+💾 Salvo: selected_images_clustering/images/000000043560.jpg
+💾 Salvo: selected_images_clustering/images/000000043561.jpg
+💾 Salvo: selected_images_clustering/images/000000043576.jpg
+💾 Salvo: selected_images_clustering/images/000000043579.jpg
+💾 Salvo: selected_images_clustering/images/000000043580.jpg
+💾 Salvo: selected_images_clustering/images/000000043583.jpg
+💾 Salvo: selected_images_clustering/images/000000043585.jpg
+💾 Salvo: selected_images_clustering/images/000000043601.jpg
+💾 Salvo: selected_images_clustering/images/000000043605.jpg
+💾 Salvo: selected_images_clustering/images/000000043606.jpg
+💾 Salvo: selected_images_clustering/images/000000043609.jpg
+💾 Salvo: selected_images_clustering/images/000000043610.jpg
+💾 Salvo: selected_images_clustering/images/000000043614.jpg
+💾 Salvo: selected_images_clustering/images/000000043625.jpg
+💾 Salvo: selected_images_clustering/images/000000043629.jpg
+💾 Salvo: selected_images_clustering/images/000000043645.jpg
+💾 Salvo: selected_images_clustering/images/000000043655.jpg
+💾 Salvo: selected_images_clustering/images/000000043670.jpg
+💾 Salvo: selected_images_clustering/images/000000043673.jpg
+💾 Salvo: selected_images_clustering/images/000000043678.jpg
+💾 Salvo: selected_images_clustering/images/000000043680.jpg
+💾 Salvo: selected_images_clustering/images/000000043683.jpg
+💾 Salvo: selected_images_clustering/images/000000043693.jpg
+💾 Salvo: selected_images_clustering/images/000000043697.jpg
+💾 Salvo: selected_images_clustering/images/000000043704.jpg
+💾 Salvo: selected_images_clustering/images/000000043712.jpg
+💾 Salvo: selected_images_clustering/images/000000043719.jpg
+💾 Salvo: selected_images_clustering/images/000000043724.jpg
+💾 Salvo: selected_images_clustering/images/000000043739.jpg
+💾 Salvo: selected_images_clustering/images/000000043742.jpg
+💾 Salvo: selected_images_clustering/images/000000043750.jpg
+💾 Salvo: selected_images_clustering/images/000000043753.jpg
+💾 Salvo: selected_images_clustering/images/000000043758.jpg
+💾 Salvo: selected_images_clustering/images/000000043764.jpg
+💾 Salvo: selected_images_clustering/images/000000043771.jpg
+💾 Salvo: selected_images_clustering/images/000000043773.jpg
+💾 Salvo: selected_images_clustering/images/000000043776.jpg
+💾 Salvo: selected_images_clustering/images/000000043780.jpg
+💾 Salvo: selected_images_clustering/images/000000043795.jpg
+💾 Salvo: selected_images_clustering/images/000000043806.jpg
+💾 Salvo: selected_images_clustering/images/000000043809.jpg
+💾 Salvo: selected_images_clustering/images/000000043813.jpg
+💾 Salvo: selected_images_clustering/images/000000043815.jpg
+💾 Salvo: selected_images_clustering/images/000000043838.jpg
+💾 Salvo: selected_images_clustering/images/000000043850.jpg
+💾 Salvo: selected_images_clustering/images/000000043851.jpg
+💾 Salvo: selected_images_clustering/images/000000043854.jpg
+💾 Salvo: selected_images_clustering/images/000000043856.jpg
+💾 Salvo: selected_images_clustering/images/000000043873.jpg
+💾 Salvo: selected_images_clustering/images/000000043876.jpg
+💾 Salvo: selected_images_clustering/images/000000043882.jpg
+💾 Salvo: selected_images_clustering/images/000000043883.jpg
+💾 Salvo: selected_images_clustering/images/000000043892.jpg
+💾 Salvo: selected_images_clustering/images/000000043893.jpg
+💾 Salvo: selected_images_clustering/images/000000043895.jpg
+💾 Salvo: selected_images_clustering/images/000000043912.jpg
+💾 Salvo: selected_images_clustering/images/000000043917.jpg
+💾 Salvo: selected_images_clustering/images/000000043919.jpg
+💾 Salvo: selected_images_clustering/images/000000043921.jpg
+💾 Salvo: selected_images_clustering/images/000000043922.jpg
+💾 Salvo: selected_images_clustering/images/000000043931.jpg
+💾 Salvo: selected_images_clustering/images/000000043933.jpg
+💾 Salvo: selected_images_clustering/images/000000043939.jpg
+💾 Salvo: selected_images_clustering/images/000000043944.jpg
+💾 Salvo: selected_images_clustering/images/000000043947.jpg
+💾 Salvo: selected_images_clustering/images/000000043961.jpg
+💾 Salvo: selected_images_clustering/images/000000043966.jpg
+💾 Salvo: selected_images_clustering/images/000000043968.jpg
+💾 Salvo: selected_images_clustering/images/000000043971.jpg
+💾 Salvo: selected_images_clustering/images/000000043979.jpg
+💾 Salvo: selected_images_clustering/images/000000043998.jpg
+💾 Salvo: selected_images_clustering/images/000000044003.jpg
+💾 Salvo: selected_images_clustering/images/000000044017.jpg
+💾 Salvo: selected_images_clustering/images/000000044029.jpg
+💾 Salvo: selected_images_clustering/images/000000044038.jpg
+💾 Salvo: selected_images_clustering/images/000000044039.jpg
+💾 Salvo: selected_images_clustering/images/000000044040.jpg
+💾 Salvo: selected_images_clustering/images/000000044054.jpg
+💾 Salvo: selected_images_clustering/images/000000044057.jpg
+💾 Salvo: selected_images_clustering/images/000000044060.jpg
+💾 Salvo: selected_images_clustering/images/000000044061.jpg
+💾 Salvo: selected_images_clustering/images/000000044065.jpg
+💾 Salvo: selected_images_clustering/images/000000044075.jpg
+💾 Salvo: selected_images_clustering/images/000000044080.jpg
+💾 Salvo: selected_images_clustering/images/000000044081.jpg
+💾 Salvo: selected_images_clustering/images/000000044083.jpg
+💾 Salvo: selected_images_clustering/images/000000044093.jpg
+💾 Salvo: selected_images_clustering/images/000000044112.jpg
+💾 Salvo: selected_images_clustering/images/000000044117.jpg
+💾 Salvo: selected_images_clustering/images/000000044123.jpg
+💾 Salvo: selected_images_clustering/images/000000044129.jpg
+💾 Salvo: selected_images_clustering/images/000000044132.jpg
+💾 Salvo: selected_images_clustering/images/000000044135.jpg
+💾 Salvo: selected_images_clustering/images/000000044136.jpg
+💾 Salvo: selected_images_clustering/images/000000044138.jpg
+💾 Salvo: selected_images_clustering/images/000000044147.jpg
+💾 Salvo: selected_images_clustering/images/000000044151.jpg
+💾 Salvo: selected_images_clustering/images/000000044160.jpg
+💾 Salvo: selected_images_clustering/images/000000044165.jpg
+💾 Salvo: selected_images_clustering/images/000000044167.jpg
+💾 Salvo: selected_images_clustering/images/000000044170.jpg
+💾 Salvo: selected_images_clustering/images/000000044171.jpg
+💾 Salvo: selected_images_clustering/images/000000044178.jpg
+💾 Salvo: selected_images_clustering/images/000000044204.jpg
+💾 Salvo: selected_images_clustering/images/000000044215.jpg
+💾 Salvo: selected_images_clustering/images/000000044220.jpg
+💾 Salvo: selected_images_clustering/images/000000044227.jpg
+💾 Salvo: selected_images_clustering/images/000000044228.jpg
+💾 Salvo: selected_images_clustering/images/000000044240.jpg
+💾 Salvo: selected_images_clustering/images/000000044244.jpg
+💾 Salvo: selected_images_clustering/images/000000044247.jpg
+💾 Salvo: selected_images_clustering/images/000000044250.jpg
+💾 Salvo: selected_images_clustering/images/000000044251.jpg
+💾 Salvo: selected_images_clustering/images/000000044261.jpg
+💾 Salvo: selected_images_clustering/images/000000044267.jpg
+💾 Salvo: selected_images_clustering/images/000000044277.jpg
+💾 Salvo: selected_images_clustering/images/000000044291.jpg
+💾 Salvo: selected_images_clustering/images/000000044294.jpg
+💾 Salvo: selected_images_clustering/images/000000044298.jpg
+💾 Salvo: selected_images_clustering/images/000000044309.jpg
+💾 Salvo: selected_images_clustering/images/000000044312.jpg
+💾 Salvo: selected_images_clustering/images/000000044327.jpg
+💾 Salvo: selected_images_clustering/images/000000044328.jpg
+💾 Salvo: selected_images_clustering/images/000000044332.jpg
+💾 Salvo: selected_images_clustering/images/000000044341.jpg
+💾 Salvo: selected_images_clustering/images/000000044347.jpg
+💾 Salvo: selected_images_clustering/images/000000044352.jpg
+💾 Salvo: selected_images_clustering/images/000000044353.jpg
+💾 Salvo: selected_images_clustering/images/000000044358.jpg
+💾 Salvo: selected_images_clustering/images/000000044360.jpg
+💾 Salvo: selected_images_clustering/images/000000044372.jpg
+💾 Salvo: selected_images_clustering/images/000000044385.jpg
+💾 Salvo: selected_images_clustering/images/000000044389.jpg
+💾 Salvo: selected_images_clustering/images/000000044404.jpg
+💾 Salvo: selected_images_clustering/images/000000044414.jpg
+💾 Salvo: selected_images_clustering/images/000000044420.jpg
+💾 Salvo: selected_images_clustering/images/000000044421.jpg
+💾 Salvo: selected_images_clustering/images/000000044432.jpg
+💾 Salvo: selected_images_clustering/images/000000044436.jpg
+💾 Salvo: selected_images_clustering/images/000000044446.jpg
+💾 Salvo: selected_images_clustering/images/000000044454.jpg
+💾 Salvo: selected_images_clustering/images/000000044463.jpg
+💾 Salvo: selected_images_clustering/images/000000044464.jpg
+💾 Salvo: selected_images_clustering/images/000000044471.jpg
+💾 Salvo: selected_images_clustering/images/000000044472.jpg
+💾 Salvo: selected_images_clustering/images/000000044476.jpg
+💾 Salvo: selected_images_clustering/images/000000044478.jpg
+💾 Salvo: selected_images_clustering/images/000000044483.jpg
+💾 Salvo: selected_images_clustering/images/000000044488.jpg
+💾 Salvo: selected_images_clustering/images/000000044491.jpg
+💾 Salvo: selected_images_clustering/images/000000044500.jpg
+💾 Salvo: selected_images_clustering/images/000000044504.jpg
+💾 Salvo: selected_images_clustering/images/000000044508.jpg
+💾 Salvo: selected_images_clustering/images/000000044509.jpg
+💾 Salvo: selected_images_clustering/images/000000044520.jpg
+💾 Salvo: selected_images_clustering/images/000000044524.jpg
+💾 Salvo: selected_images_clustering/images/000000044540.jpg
+💾 Salvo: selected_images_clustering/images/000000044544.jpg
+💾 Salvo: selected_images_clustering/images/000000044545.jpg
+💾 Salvo: selected_images_clustering/images/000000044559.jpg
+💾 Salvo: selected_images_clustering/images/000000044569.jpg
+💾 Salvo: selected_images_clustering/images/000000044575.jpg
+💾 Salvo: selected_images_clustering/images/000000044580.jpg
+💾 Salvo: selected_images_clustering/images/000000044583.jpg
+💾 Salvo: selected_images_clustering/images/000000044592.jpg
+💾 Salvo: selected_images_clustering/images/000000044594.jpg
+💾 Salvo: selected_images_clustering/images/000000044600.jpg
+💾 Salvo: selected_images_clustering/images/000000044603.jpg
+💾 Salvo: selected_images_clustering/images/000000044604.jpg
+💾 Salvo: selected_images_clustering/images/000000044606.jpg
+💾 Salvo: selected_images_clustering/images/000000044609.jpg
+💾 Salvo: selected_images_clustering/images/000000044611.jpg
+💾 Salvo: selected_images_clustering/images/000000044612.jpg
+💾 Salvo: selected_images_clustering/images/000000044613.jpg
+💾 Salvo: selected_images_clustering/images/000000044616.jpg
+💾 Salvo: selected_images_clustering/images/000000044621.jpg
+💾 Salvo: selected_images_clustering/images/000000044625.jpg
+💾 Salvo: selected_images_clustering/images/000000044627.jpg
+💾 Salvo: selected_images_clustering/images/000000044637.jpg
+💾 Salvo: selected_images_clustering/images/000000044642.jpg
+💾 Salvo: selected_images_clustering/images/000000044644.jpg
+💾 Salvo: selected_images_clustering/images/000000044663.jpg
+💾 Salvo: selected_images_clustering/images/000000044668.jpg
+💾 Salvo: selected_images_clustering/images/000000044670.jpg
+💾 Salvo: selected_images_clustering/images/000000044671.jpg
+💾 Salvo: selected_images_clustering/images/000000044672.jpg
+💾 Salvo: selected_images_clustering/images/000000044675.jpg
+💾 Salvo: selected_images_clustering/images/000000044679.jpg
+💾 Salvo: selected_images_clustering/images/000000044682.jpg
+💾 Salvo: selected_images_clustering/images/000000044702.jpg
+💾 Salvo: selected_images_clustering/images/000000044704.jpg
+💾 Salvo: selected_images_clustering/images/000000044718.jpg
+💾 Salvo: selected_images_clustering/images/000000044719.jpg
+💾 Salvo: selected_images_clustering/images/000000044723.jpg
+💾 Salvo: selected_images_clustering/images/000000044732.jpg
+💾 Salvo: selected_images_clustering/images/000000044734.jpg
+💾 Salvo: selected_images_clustering/images/000000044739.jpg
+💾 Salvo: selected_images_clustering/images/000000044741.jpg
+💾 Salvo: selected_images_clustering/images/000000044743.jpg
+💾 Salvo: selected_images_clustering/images/000000044749.jpg
+💾 Salvo: selected_images_clustering/images/000000044751.jpg
+💾 Salvo: selected_images_clustering/images/000000044767.jpg
+💾 Salvo: selected_images_clustering/images/000000044774.jpg
+💾 Salvo: selected_images_clustering/images/000000044776.jpg
+💾 Salvo: selected_images_clustering/images/000000044780.jpg
+💾 Salvo: selected_images_clustering/images/000000044781.jpg
+💾 Salvo: selected_images_clustering/images/000000044782.jpg
+💾 Salvo: selected_images_clustering/images/000000044788.jpg
+💾 Salvo: selected_images_clustering/images/000000044792.jpg
+💾 Salvo: selected_images_clustering/images/000000044795.jpg
+💾 Salvo: selected_images_clustering/images/000000044800.jpg
+💾 Salvo: selected_images_clustering/images/000000044801.jpg
+💾 Salvo: selected_images_clustering/images/000000044810.jpg
+💾 Salvo: selected_images_clustering/images/000000044813.jpg
+💾 Salvo: selected_images_clustering/images/000000044814.jpg
+💾 Salvo: selected_images_clustering/images/000000044815.jpg
+💾 Salvo: selected_images_clustering/images/000000044816.jpg
+💾 Salvo: selected_images_clustering/images/000000044818.jpg
+💾 Salvo: selected_images_clustering/images/000000044820.jpg
+💾 Salvo: selected_images_clustering/images/000000044823.jpg
+💾 Salvo: selected_images_clustering/images/000000044825.jpg
+💾 Salvo: selected_images_clustering/images/000000044827.jpg
+💾 Salvo: selected_images_clustering/images/000000044831.jpg
+💾 Salvo: selected_images_clustering/images/000000044839.jpg
+💾 Salvo: selected_images_clustering/images/000000044840.jpg
+💾 Salvo: selected_images_clustering/images/000000044842.jpg
+💾 Salvo: selected_images_clustering/images/000000044856.jpg
+💾 Salvo: selected_images_clustering/images/000000044858.jpg
+💾 Salvo: selected_images_clustering/images/000000044860.jpg
+💾 Salvo: selected_images_clustering/images/000000044878.jpg
+💾 Salvo: selected_images_clustering/images/000000044910.jpg
+💾 Salvo: selected_images_clustering/images/000000044913.jpg
+💾 Salvo: selected_images_clustering/images/000000044922.jpg
+💾 Salvo: selected_images_clustering/images/000000044923.jpg
+💾 Salvo: selected_images_clustering/images/000000044928.jpg
+💾 Salvo: selected_images_clustering/images/000000044934.jpg
+💾 Salvo: selected_images_clustering/images/000000044937.jpg
+💾 Salvo: selected_images_clustering/images/000000044943.jpg
+💾 Salvo: selected_images_clustering/images/000000044946.jpg
+💾 Salvo: selected_images_clustering/images/000000044950.jpg
+💾 Salvo: selected_images_clustering/images/000000044952.jpg
+💾 Salvo: selected_images_clustering/images/000000044953.jpg
+💾 Salvo: selected_images_clustering/images/000000044954.jpg
+💾 Salvo: selected_images_clustering/images/000000044958.jpg
+💾 Salvo: selected_images_clustering/images/000000044962.jpg
+💾 Salvo: selected_images_clustering/images/000000044964.jpg
+💾 Salvo: selected_images_clustering/images/000000044989.jpg
+💾 Salvo: selected_images_clustering/images/000000044993.jpg
+💾 Salvo: selected_images_clustering/images/000000044995.jpg
+💾 Salvo: selected_images_clustering/images/000000044996.jpg
+💾 Salvo: selected_images_clustering/images/000000044998.jpg
+💾 Salvo: selected_images_clustering/images/000000045004.jpg
+💾 Salvo: selected_images_clustering/images/000000045007.jpg
+💾 Salvo: selected_images_clustering/images/000000045016.jpg
+💾 Salvo: selected_images_clustering/images/000000045031.jpg
+💾 Salvo: selected_images_clustering/images/000000045040.jpg
+💾 Salvo: selected_images_clustering/images/000000045049.jpg
+💾 Salvo: selected_images_clustering/images/000000045057.jpg
+💾 Salvo: selected_images_clustering/images/000000045058.jpg
+💾 Salvo: selected_images_clustering/images/000000045063.jpg
+💾 Salvo: selected_images_clustering/images/000000045071.jpg
+💾 Salvo: selected_images_clustering/images/000000045075.jpg
+💾 Salvo: selected_images_clustering/images/000000045084.jpg
+💾 Salvo: selected_images_clustering/images/000000045094.jpg
+💾 Salvo: selected_images_clustering/images/000000045097.jpg
+💾 Salvo: selected_images_clustering/images/000000045099.jpg
+💾 Salvo: selected_images_clustering/images/000000045105.jpg
+💾 Salvo: selected_images_clustering/images/000000045108.jpg
+💾 Salvo: selected_images_clustering/images/000000045110.jpg
+💾 Salvo: selected_images_clustering/images/000000045124.jpg
+💾 Salvo: selected_images_clustering/images/000000045128.jpg
+💾 Salvo: selected_images_clustering/images/000000045131.jpg
+💾 Salvo: selected_images_clustering/images/000000045138.jpg
+💾 Salvo: selected_images_clustering/images/000000045146.jpg
+💾 Salvo: selected_images_clustering/images/000000045148.jpg
+💾 Salvo: selected_images_clustering/images/000000045165.jpg
+💾 Salvo: selected_images_clustering/images/000000045173.jpg
+💾 Salvo: selected_images_clustering/images/000000045175.jpg
+💾 Salvo: selected_images_clustering/images/000000045176.jpg
+💾 Salvo: selected_images_clustering/images/000000045180.jpg
+💾 Salvo: selected_images_clustering/images/000000045181.jpg
+💾 Salvo: selected_images_clustering/images/000000045186.jpg
+💾 Salvo: selected_images_clustering/images/000000045193.jpg
+💾 Salvo: selected_images_clustering/images/000000045195.jpg
+💾 Salvo: selected_images_clustering/images/000000045197.jpg
+💾 Salvo: selected_images_clustering/images/000000045204.jpg
+💾 Salvo: selected_images_clustering/images/000000045215.jpg
+💾 Salvo: selected_images_clustering/images/000000045222.jpg
+💾 Salvo: selected_images_clustering/images/000000045226.jpg
+💾 Salvo: selected_images_clustering/images/000000045230.jpg
+💾 Salvo: selected_images_clustering/images/000000045237.jpg
+💾 Salvo: selected_images_clustering/images/000000045240.jpg
+💾 Salvo: selected_images_clustering/images/000000045247.jpg
+💾 Salvo: selected_images_clustering/images/000000045248.jpg
+💾 Salvo: selected_images_clustering/images/000000045259.jpg
+💾 Salvo: selected_images_clustering/images/000000045270.jpg
+💾 Salvo: selected_images_clustering/images/000000045280.jpg
+💾 Salvo: selected_images_clustering/images/000000045281.jpg
+💾 Salvo: selected_images_clustering/images/000000045282.jpg
+💾 Salvo: selected_images_clustering/images/000000045283.jpg
+💾 Salvo: selected_images_clustering/images/000000045284.jpg
+💾 Salvo: selected_images_clustering/images/000000045292.jpg
+💾 Salvo: selected_images_clustering/images/000000045299.jpg
+💾 Salvo: selected_images_clustering/images/000000045306.jpg
+💾 Salvo: selected_images_clustering/images/000000045314.jpg
+💾 Salvo: selected_images_clustering/images/000000045325.jpg
+💾 Salvo: selected_images_clustering/images/000000045335.jpg
+💾 Salvo: selected_images_clustering/images/000000045339.jpg
+💾 Salvo: selected_images_clustering/images/000000045343.jpg
+💾 Salvo: selected_images_clustering/images/000000045351.jpg
+💾 Salvo: selected_images_clustering/images/000000045356.jpg
+💾 Salvo: selected_images_clustering/images/000000045359.jpg
+💾 Salvo: selected_images_clustering/images/000000045360.jpg
+💾 Salvo: selected_images_clustering/images/000000045361.jpg
+💾 Salvo: selected_images_clustering/images/000000045366.jpg
+💾 Salvo: selected_images_clustering/images/000000045374.jpg
+💾 Salvo: selected_images_clustering/images/000000045383.jpg
+💾 Salvo: selected_images_clustering/images/000000045387.jpg
+💾 Salvo: selected_images_clustering/images/000000045388.jpg
+💾 Salvo: selected_images_clustering/images/000000045392.jpg
+💾 Salvo: selected_images_clustering/images/000000045396.jpg
+💾 Salvo: selected_images_clustering/images/000000045404.jpg
+💾 Salvo: selected_images_clustering/images/000000045406.jpg
+💾 Salvo: selected_images_clustering/images/000000045419.jpg
+💾 Salvo: selected_images_clustering/images/000000045422.jpg
+💾 Salvo: selected_images_clustering/images/000000045425.jpg
+💾 Salvo: selected_images_clustering/images/000000045433.jpg
+💾 Salvo: selected_images_clustering/images/000000045434.jpg
+💾 Salvo: selected_images_clustering/images/000000045435.jpg
+💾 Salvo: selected_images_clustering/images/000000045437.jpg
+💾 Salvo: selected_images_clustering/images/000000045446.jpg
+💾 Salvo: selected_images_clustering/images/000000045455.jpg
+💾 Salvo: selected_images_clustering/images/000000045459.jpg
+💾 Salvo: selected_images_clustering/images/000000045463.jpg
+💾 Salvo: selected_images_clustering/images/000000045464.jpg
+💾 Salvo: selected_images_clustering/images/000000045467.jpg
+💾 Salvo: selected_images_clustering/images/000000045468.jpg
+💾 Salvo: selected_images_clustering/images/000000045471.jpg
+💾 Salvo: selected_images_clustering/images/000000045475.jpg
+💾 Salvo: selected_images_clustering/images/000000045478.jpg
+💾 Salvo: selected_images_clustering/images/000000045479.jpg
+💾 Salvo: selected_images_clustering/images/000000045481.jpg
+💾 Salvo: selected_images_clustering/images/000000045487.jpg
+💾 Salvo: selected_images_clustering/images/000000045490.jpg
+💾 Salvo: selected_images_clustering/images/000000045494.jpg
+💾 Salvo: selected_images_clustering/images/000000045496.jpg
+💾 Salvo: selected_images_clustering/images/000000045516.jpg
+💾 Salvo: selected_images_clustering/images/000000045524.jpg
+💾 Salvo: selected_images_clustering/images/000000045526.jpg
+💾 Salvo: selected_images_clustering/images/000000045528.jpg
+💾 Salvo: selected_images_clustering/images/000000045535.jpg
+💾 Salvo: selected_images_clustering/images/000000045536.jpg
+💾 Salvo: selected_images_clustering/images/000000045537.jpg
+💾 Salvo: selected_images_clustering/images/000000045543.jpg
+💾 Salvo: selected_images_clustering/images/000000045552.jpg
+💾 Salvo: selected_images_clustering/images/000000045554.jpg
+💾 Salvo: selected_images_clustering/images/000000045564.jpg
+💾 Salvo: selected_images_clustering/images/000000045573.jpg
+💾 Salvo: selected_images_clustering/images/000000045574.jpg
+💾 Salvo: selected_images_clustering/images/000000045580.jpg
+💾 Salvo: selected_images_clustering/images/000000045582.jpg
+💾 Salvo: selected_images_clustering/images/000000045586.jpg
+💾 Salvo: selected_images_clustering/images/000000045587.jpg
+💾 Salvo: selected_images_clustering/images/000000045594.jpg
+💾 Salvo: selected_images_clustering/images/000000045599.jpg
+💾 Salvo: selected_images_clustering/images/000000045600.jpg
+💾 Salvo: selected_images_clustering/images/000000045621.jpg
+💾 Salvo: selected_images_clustering/images/000000045622.jpg
+💾 Salvo: selected_images_clustering/images/000000045624.jpg
+💾 Salvo: selected_images_clustering/images/000000045625.jpg
+💾 Salvo: selected_images_clustering/images/000000045626.jpg
+💾 Salvo: selected_images_clustering/images/000000045627.jpg
+💾 Salvo: selected_images_clustering/images/000000045633.jpg
+💾 Salvo: selected_images_clustering/images/000000045634.jpg
+💾 Salvo: selected_images_clustering/images/000000045644.jpg
+💾 Salvo: selected_images_clustering/images/000000045648.jpg
+💾 Salvo: selected_images_clustering/images/000000045653.jpg
+💾 Salvo: selected_images_clustering/images/000000045655.jpg
+💾 Salvo: selected_images_clustering/images/000000045659.jpg
+💾 Salvo: selected_images_clustering/images/000000045663.jpg
+💾 Salvo: selected_images_clustering/images/000000045668.jpg
+💾 Salvo: selected_images_clustering/images/000000045672.jpg
+💾 Salvo: selected_images_clustering/images/000000045677.jpg
+💾 Salvo: selected_images_clustering/images/000000045678.jpg
+💾 Salvo: selected_images_clustering/images/000000045680.jpg
+💾 Salvo: selected_images_clustering/images/000000045685.jpg
+💾 Salvo: selected_images_clustering/images/000000045687.jpg
+💾 Salvo: selected_images_clustering/images/000000045693.jpg
+💾 Salvo: selected_images_clustering/images/000000045701.jpg
+💾 Salvo: selected_images_clustering/images/000000045729.jpg
+💾 Salvo: selected_images_clustering/images/000000045741.jpg
+💾 Salvo: selected_images_clustering/images/000000045746.jpg
+💾 Salvo: selected_images_clustering/images/000000045770.jpg
+💾 Salvo: selected_images_clustering/images/000000045771.jpg
+💾 Salvo: selected_images_clustering/images/000000045808.jpg
+💾 Salvo: selected_images_clustering/images/000000045809.jpg
+💾 Salvo: selected_images_clustering/images/000000045828.jpg
+💾 Salvo: selected_images_clustering/images/000000045829.jpg
+💾 Salvo: selected_images_clustering/images/000000045830.jpg
+💾 Salvo: selected_images_clustering/images/000000045835.jpg
+💾 Salvo: selected_images_clustering/images/000000045836.jpg
+💾 Salvo: selected_images_clustering/images/000000045840.jpg
+💾 Salvo: selected_images_clustering/images/000000045842.jpg
+💾 Salvo: selected_images_clustering/images/000000045844.jpg
+💾 Salvo: selected_images_clustering/images/000000045854.jpg
+💾 Salvo: selected_images_clustering/images/000000045859.jpg
+💾 Salvo: selected_images_clustering/images/000000045864.jpg
+💾 Salvo: selected_images_clustering/images/000000045882.jpg
+💾 Salvo: selected_images_clustering/images/000000045885.jpg
+💾 Salvo: selected_images_clustering/images/000000045912.jpg
+💾 Salvo: selected_images_clustering/images/000000045920.jpg
+💾 Salvo: selected_images_clustering/images/000000045926.jpg
+💾 Salvo: selected_images_clustering/images/000000045942.jpg
+💾 Salvo: selected_images_clustering/images/000000045949.jpg
+💾 Salvo: selected_images_clustering/images/000000045954.jpg
+💾 Salvo: selected_images_clustering/images/000000045959.jpg
+💾 Salvo: selected_images_clustering/images/000000045962.jpg
+💾 Salvo: selected_images_clustering/images/000000045966.jpg
+💾 Salvo: selected_images_clustering/images/000000045974.jpg
+💾 Salvo: selected_images_clustering/images/000000045989.jpg
+💾 Salvo: selected_images_clustering/images/000000045994.jpg
+💾 Salvo: selected_images_clustering/images/000000045999.jpg
+💾 Salvo: selected_images_clustering/images/000000046002.jpg
+💾 Salvo: selected_images_clustering/images/000000046003.jpg
+💾 Salvo: selected_images_clustering/images/000000046004.jpg
+💾 Salvo: selected_images_clustering/images/000000046009.jpg
+💾 Salvo: selected_images_clustering/images/000000046013.jpg
+💾 Salvo: selected_images_clustering/images/000000046014.jpg
+💾 Salvo: selected_images_clustering/images/000000046024.jpg
+💾 Salvo: selected_images_clustering/images/000000046025.jpg
+💾 Salvo: selected_images_clustering/images/000000046029.jpg
+💾 Salvo: selected_images_clustering/images/000000046038.jpg
+💾 Salvo: selected_images_clustering/images/000000046042.jpg
+💾 Salvo: selected_images_clustering/images/000000046056.jpg
+💾 Salvo: selected_images_clustering/images/000000046059.jpg
+💾 Salvo: selected_images_clustering/images/000000046065.jpg
+💾 Salvo: selected_images_clustering/images/000000046071.jpg
+💾 Salvo: selected_images_clustering/images/000000046077.jpg
+💾 Salvo: selected_images_clustering/images/000000046078.jpg
+💾 Salvo: selected_images_clustering/images/000000046085.jpg
+💾 Salvo: selected_images_clustering/images/000000046090.jpg
+💾 Salvo: selected_images_clustering/images/000000046099.jpg
+💾 Salvo: selected_images_clustering/images/000000046101.jpg
+💾 Salvo: selected_images_clustering/images/000000046114.jpg
+💾 Salvo: selected_images_clustering/images/000000046118.jpg
+💾 Salvo: selected_images_clustering/images/000000046149.jpg
+💾 Salvo: selected_images_clustering/images/000000046152.jpg
+💾 Salvo: selected_images_clustering/images/000000046155.jpg
+💾 Salvo: selected_images_clustering/images/000000046162.jpg
+💾 Salvo: selected_images_clustering/images/000000046168.jpg
+💾 Salvo: selected_images_clustering/images/000000046169.jpg
+💾 Salvo: selected_images_clustering/images/000000046170.jpg
+💾 Salvo: selected_images_clustering/images/000000046171.jpg
+💾 Salvo: selected_images_clustering/images/000000046173.jpg
+💾 Salvo: selected_images_clustering/images/000000046185.jpg
+💾 Salvo: selected_images_clustering/images/000000046189.jpg
+💾 Salvo: selected_images_clustering/images/000000046207.jpg
+💾 Salvo: selected_images_clustering/images/000000046211.jpg
+💾 Salvo: selected_images_clustering/images/000000046212.jpg
+💾 Salvo: selected_images_clustering/images/000000046223.jpg
+💾 Salvo: selected_images_clustering/images/000000046230.jpg
+💾 Salvo: selected_images_clustering/images/000000046245.jpg
+💾 Salvo: selected_images_clustering/images/000000046250.jpg
+💾 Salvo: selected_images_clustering/images/000000046255.jpg
+💾 Salvo: selected_images_clustering/images/000000046258.jpg
+💾 Salvo: selected_images_clustering/images/000000046260.jpg
+💾 Salvo: selected_images_clustering/images/000000046263.jpg
+💾 Salvo: selected_images_clustering/images/000000046265.jpg
+💾 Salvo: selected_images_clustering/images/000000046276.jpg
+💾 Salvo: selected_images_clustering/images/000000046298.jpg
+💾 Salvo: selected_images_clustering/images/000000046303.jpg
+💾 Salvo: selected_images_clustering/images/000000046306.jpg
+💾 Salvo: selected_images_clustering/images/000000046310.jpg
+💾 Salvo: selected_images_clustering/images/000000046323.jpg
+💾 Salvo: selected_images_clustering/images/000000046327.jpg
+💾 Salvo: selected_images_clustering/images/000000046329.jpg
+💾 Salvo: selected_images_clustering/images/000000046331.jpg
+💾 Salvo: selected_images_clustering/images/000000046339.jpg
+💾 Salvo: selected_images_clustering/images/000000046345.jpg
+💾 Salvo: selected_images_clustering/images/000000046349.jpg
+💾 Salvo: selected_images_clustering/images/000000046356.jpg
+💾 Salvo: selected_images_clustering/images/000000046359.jpg
+💾 Salvo: selected_images_clustering/images/000000046372.jpg
+💾 Salvo: selected_images_clustering/images/000000046373.jpg
+💾 Salvo: selected_images_clustering/images/000000046382.jpg
+💾 Salvo: selected_images_clustering/images/000000046385.jpg
+💾 Salvo: selected_images_clustering/images/000000046405.jpg
+💾 Salvo: selected_images_clustering/images/000000046408.jpg
+💾 Salvo: selected_images_clustering/images/000000046418.jpg
+💾 Salvo: selected_images_clustering/images/000000046419.jpg
+💾 Salvo: selected_images_clustering/images/000000046422.jpg
+💾 Salvo: selected_images_clustering/images/000000046426.jpg
+💾 Salvo: selected_images_clustering/images/000000046428.jpg
+💾 Salvo: selected_images_clustering/images/000000046429.jpg
+💾 Salvo: selected_images_clustering/images/000000046506.jpg
+💾 Salvo: selected_images_clustering/images/000000046571.jpg
+
+📊 Relatório Final:
+- Total de imagens no pool: 87969
+- Imagens selecionadas: 945
+- Orçamento restante: 0
+- Log de seleção salvo em: selection_clusterSamples_log.json
+- Imagens selecionadas salvas em: selected_images_clustering/images/
+
+📈 Estatísticas das imagens selecionadas:
+- Entropia média: 0.7486 (Pool: 0.7500)
+- Confiança média: 0.6069 (Pool: 0.6068)
+⏱️ Tempo total de execução: 53.87 segundos
+🏁 Fim do processo: 2025-07-25 18:03:47
