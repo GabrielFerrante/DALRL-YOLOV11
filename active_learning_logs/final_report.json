@@ -1,0 +1,60 @@
+{
+  "total_cycles": 10,
+  "execution_details": [
+    {
+      "cycle": 10,
+      "script": "agentTraining-WithRandomPool.py",
+      "status": "success",
+      "return_code": 0,
+      "duration": 8820.184850931168,
+      "log_file": "active_learning_logs\\cycle_10_agentTraining-WithRandomPool.log",
+      "timestamp": "2025-08-03T05:28:59.885291"
+    },
+    {
+      "cycle": 10,
+      "script": "agentTraining-WithClusteringPool.py",
+      "status": "success",
+      "return_code": 0,
+      "duration": 8800.633192300797,
+      "log_file": "active_learning_logs\\cycle_10_agentTraining-WithClusteringPool.log",
+      "timestamp": "2025-08-03T07:55:50.521407"
+    },
+    {
+      "cycle": 10,
+      "script": "agentSelection-WithRandomPool.py",
+      "status": "success",
+      "return_code": 0,
+      "duration": 73.8722620010376,
+      "log_file": "active_learning_logs\\cycle_10_agentSelection-WithRandomPool.log",
+      "timestamp": "2025-08-03T07:57:14.397015"
+    },
+    {
+      "cycle": 10,
+      "script": "agentSelection-WithClusteringPool.py",
+      "status": "success",
+      "return_code": 0,
+      "duration": 53.40484046936035,
+      "log_file": "active_learning_logs\\cycle_10_agentSelection-WithClusteringPool.log",
+      "timestamp": "2025-08-03T07:58:17.804777"
+    },
+    {
+      "cycle": 10,
+      "script": "trainYoloForRandom-Cycle.py",
+      "status": "success",
+      "return_code": 0,
+      "duration": 84359.74263167381,
+      "log_file": "active_learning_logs\\cycle_10_trainYoloForRandom-Cycle.log",
+      "timestamp": "2025-08-04T07:24:27.553793"
+    },
+    {
+      "cycle": 10,
+      "script": "trainYoloForClustering-Cycle.py",
+      "status": "success",
+      "return_code": 0,
+      "duration": 85793.94017291069,
+      "log_file": "active_learning_logs\\cycle_10_trainYoloForClustering-Cycle.log",
+      "timestamp": "2025-08-05T07:14:31.522044"
+    }
+  ],
+  "end_time": "2025-08-05T07:15:11.537754"
+}
