@@ -11,6 +11,7 @@ plt.rcParams['figure.figsize'] = [16, 12]
 plt.rcParams['font.size'] = 13
 
 # 1. Carregar todos os CSVs - ATUALIZE COM SEUS ARQUIVOS
+"""
 csv_files = [
     '../logs-Random/active_learning_20250706_135859/progress.csv',
     '../logs-Random/active_learning_20250708_083624/progress.csv',
@@ -36,7 +37,7 @@ csv_files = [
     '../logs-clustering/active_learning_20250729_210258/progress.csv',
     '../logs-clustering/active_learning_20250803_052920/progress.csv'
 ]  
-"""
+
 # Se estiverem em outro diretório:
 # csv_files = glob.glob('caminho/para/pasta/*.csv')[:10]
 
