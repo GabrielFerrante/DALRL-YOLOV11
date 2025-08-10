@@ -347,7 +347,7 @@ def main():
             policy_kwargs=policy_kwargs,
             verbose=1,
             device=DEVICE,
-            learning_rate=1e-4,
+            learning_rate=1e-4,# 0.0001
             n_steps= 512,
             batch_size=16,
             max_grad_norm=0.5,
@@ -357,7 +357,8 @@ def main():
             gae_lambda=0.95,
             clip_range=0.2,
             ent_coef=0.02,
-            tensorboard_log=log_path
+            tensorboard_log=log_path,
+            #target_kl= None #, # Defina um valor se quiser limitar o KL
     )
     
     # Configurar logger personalizado

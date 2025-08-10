@@ -11,7 +11,7 @@ def preProcessing():
     DATA_DIR = "F:/COCO-Dataset/"
     os.makedirs(DATA_DIR, exist_ok=True)
 
-    img_dir = os.path.join("F:/COCO-Dataset/", "CocoTrainFull/train2017")
+    img_dir = os.path.join("F:/COCO-Dataset/", "CocoTrainFull/images")
     ann_file = os.path.join("F:/COCO-Dataset/","annotations2017/annotations2017/instances_train2017.json")
 
     # Carregar anotações
@@ -65,6 +65,8 @@ def preProcessing():
 
 if __name__ == '__main__':
 
+    preProcessing()
+
     # Limpeza do cache da GPU (se disponível)
     if torch.cuda.is_available():
         torch.cuda.empty_cache()
@@ -88,8 +90,7 @@ if __name__ == '__main__':
         workers= 8,
         device = 0,
         dnn = True,
-        project = "Yolov11-BASELINE",
+        project = "Yolov11-BASELINE-118k",
         plots = True,
-        
         
     )

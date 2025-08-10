@@ -42,19 +42,23 @@ csv_files = [
 # csv_files = glob.glob('caminho/para/pasta/*.csv')[:10]
 
 agents_data = {}
-for file in csv_files:
+for idx, file in enumerate(csv_files):
+    # Extrair nome significativo do caminho do arquivo
+    agent_name = f"Agent {idx+1}"  # Ou use: os.path.basename(file).replace('.csv', '')
     try:
-        agent_name = os.path.splitext(os.path.basename(file))[0]
-        df = pd.read_csv(file)
-        df['Agent'] = agent_name
-        agents_data[agent_name] = df
-        print(f"Arquivo {file} carregado com sucesso!")
+        agents_data[agent_name] = pd.read_csv(file)
+        agents_data[agent_name]['Agent'] = agent_name
     except Exception as e:
-        print(f"Erro ao carregar {file}: {str(e)}")
+        print(f"Erro ao ler {file}: {str(e)}")
+        continue
 
-if not agents_data:
-    print("Nenhum arquivo carregado. Verifique os caminhos.")
-    exit()
+for idx, file in enumerate(csv_files):
+    agent_name = f"Agent {idx+1}"
+    agents_data[agent_name] = pd.read_csv(file)
+    
+    # Adicionar coluna de identificação do agente
+    agents_data[agent_name]['Agent'] = agent_name
+
 
 # 2. Combinar dados
 combined_df = pd.concat(agents_data.values())
@@ -76,14 +80,14 @@ train_metrics = [
 
 # 4. Filtrar e pré-processar
 train_df = combined_df[train_metrics].copy()
-train_df.dropna(subset=train_metrics[:-2], how='all', inplace=True)  # Mantém linhas com pelo menos 1 métrica
+train_df.dropna(inplace=True) # Mantém linhas com pelo menos 1 métrica
 
 # 5. Criar visualizações
 # =============================================================================
 # Gráfico 1: Métricas de Loss (4 principais)
 # =============================================================================
 fig, axes = plt.subplots(2, 2, figsize=(16, 12))
-fig.suptitle('Métricas de Loss Durante o Treinamento', fontsize=20)
+fig.suptitle('LOSS metrics during training', fontsize=20)
 
 # Value Loss
 sns.lineplot(
@@ -95,9 +99,9 @@ sns.lineplot(
     errorbar=None,
     linewidth=1.5
 )
-axes[0, 0].set_title('Perda da Função de Valor')
+axes[0, 0].set_title('Loss of value function')
 axes[0, 0].set_ylabel('Value Loss')
-axes[0, 0].set_xlabel('Iterações')
+axes[0, 0].set_xlabel('Iterations')
 
 # Entropy Loss
 sns.lineplot(
@@ -109,9 +113,9 @@ sns.lineplot(
     errorbar=None,
     linewidth=1.5
 )
-axes[0, 1].set_title('Perda de Entropia')
+axes[0, 1].set_title('Entropy loss')
 axes[0, 1].set_ylabel('Entropy Loss')
-axes[0, 1].set_xlabel('Iterações')
+axes[0, 1].set_xlabel('Iterations')
 
 # Total Loss
 sns.lineplot(
@@ -123,9 +127,9 @@ sns.lineplot(
     errorbar=None,
     linewidth=1.5
 )
-axes[1, 0].set_title('Perda Total')
+axes[1, 0].set_title('Total Loss')
 axes[1, 0].set_ylabel('Total Loss')
-axes[1, 0].set_xlabel('Iterações')
+axes[1, 0].set_xlabel('Iterations')
 
 # Policy Gradient Loss
 sns.lineplot(
@@ -137,9 +141,9 @@ sns.lineplot(
     errorbar=None,
     linewidth=1.5
 )
-axes[1, 1].set_title('Perda do Gradiente da Política')
+axes[1, 1].set_title('Loss of Politics Gradient')
 axes[1, 1].set_ylabel('Policy Loss')
-axes[1, 1].set_xlabel('Iterações')
+axes[1, 1].set_xlabel('Iterations')
 
 plt.tight_layout()
 plt.subplots_adjust(top=0.92)
@@ -149,7 +153,7 @@ plt.savefig('training_losses_comparison.png', dpi=300)
 # Gráfico 2: Métricas de Estabilidade e Desempenho
 # =============================================================================
 fig, axes = plt.subplots(2, 2, figsize=(16, 12))
-fig.suptitle('Métricas de Estabilidade e Desempenho', fontsize=20)
+fig.suptitle('Stability and performance metrics', fontsize=20)
 
 # Explained Variance
 sns.lineplot(
@@ -161,10 +165,10 @@ sns.lineplot(
     errorbar=None,
     linewidth=1.5
 )
-axes[0, 0].set_title('Variância Explicada')
+axes[0, 0].set_title('Explained Variance')
 axes[0, 0].set_ylabel('Explained Variance')
 axes[0, 0].set_ylim(-0.1, 1.1)
-axes[0, 0].set_xlabel('Iterações')
+axes[0, 0].set_xlabel('Iterations')
 
 # Approx KL
 sns.lineplot(
@@ -176,10 +180,10 @@ sns.lineplot(
     errorbar=None,
     linewidth=1.5
 )
-axes[0, 1].set_title('Divergência KL Aproximada')
+axes[0, 1].set_title('Approximate KL divergence')
 axes[0, 1].set_ylabel('KL Divergence')
 axes[0, 1].set_yscale('log')  # Escala log para melhor visualização
-axes[0, 1].set_xlabel('Iterações')
+axes[0, 1].set_xlabel('Iterations')
 
 # Clip Fraction
 sns.lineplot(
@@ -191,10 +195,10 @@ sns.lineplot(
     errorbar=None,
     linewidth=1.5
 )
-axes[1, 0].set_title('Fração de Clipping')
+axes[1, 0].set_title('Clip Fraction')
 axes[1, 0].set_ylabel('Clip Fraction')
 axes[1, 0].set_ylim(0, 1)
-axes[1, 0].set_xlabel('Iterações')
+axes[1, 0].set_xlabel('Iterations')
 
 # Learning Rate
 sns.lineplot(
@@ -206,9 +210,9 @@ sns.lineplot(
     errorbar=None,
     linewidth=1.5
 )
-axes[1, 1].set_title('Taxa de Aprendizado')
+axes[1, 1].set_title('Learning Rate')
 axes[1, 1].set_ylabel('Learning Rate')
-axes[1, 1].set_xlabel('Iterações')
+axes[1, 1].set_xlabel('Iterations')
 
 plt.tight_layout()
 plt.subplots_adjust(top=0.92)
@@ -228,7 +232,7 @@ print(last_iterations.columns)
 if 'rollout/ep_rew_mean' in combined_df.columns and 'train/value_loss' in combined_df.columns:
     corr_df = last_iterations[['train/value_loss', 'rollout/ep_rew_mean']].corr()
     sns.heatmap(corr_df, annot=True, cmap='coolwarm', center=0)
-    plt.title('Correlação entre Value Loss e Recompensa Média (Últimas 50 iterações)', pad=20)
+    plt.title('Correlation between Value Loss and average reward (last 50 iterations)', pad=20)
     plt.savefig('value_loss_reward_correlation.png', dpi=300)
 
 plt.show()

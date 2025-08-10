@@ -1,6 +1,6 @@
 # coco.yaml
 path: coco
-train: F:/COCO-Dataset/CocoTrainFull/train2017  # Usaremos o mesmo diretório para treino inicial
+train: F:/COCO-Dataset/CocoTrainFull/images  # Usaremos o mesmo diretório para treino inicial
 val: F:/COCO-Dataset/val2017/images/
 
 

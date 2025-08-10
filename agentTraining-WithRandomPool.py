@@ -321,7 +321,8 @@ def main():
             gae_lambda=0.95,
             clip_range=0.2,
             ent_coef=0.02,
-            tensorboard_log=log_path
+            tensorboard_log=log_path,
+            #target_kl= None #, # Defina um valor se quiser limitar o KL IMPORTANTE
     )
     
     # Configurar logger personalizado
