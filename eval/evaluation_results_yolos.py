@@ -26,7 +26,7 @@ arquivos = [
     "../Yolov11-WithRandomSamples/train11/results.csv",
 
 ]
-"""
+
 arquivos = [
     "../Yolov11-WithClustersSamples/train/results.csv",
     "../Yolov11-WithClustersSamples/train2/results.csv",
@@ -41,7 +41,10 @@ arquivos = [
     "../Yolov11-WithClustersSamples/train11/results.csv",
     
 ]
-
+"""
+arquivos = [
+    "../Yolov11-BASELINE-118k/train/results.csv"
+]
 
 # Verificar se encontrou arquivos
 if not arquivos:
