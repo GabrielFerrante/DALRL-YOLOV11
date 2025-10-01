@@ -39,9 +39,37 @@ csv_files = [
     
     
 ]
-"""
+
 csv_files = [
     "../Yolov11-BASELINE-118k/train/results.csv"
+]
+"""
+csv_files = [
+    "../Yolov11-WithRandomSamples/train/results.csv",
+    "../Yolov11-WithClustersSamples/train/results.csv",
+    "../Yolov11-WithRandomSamples/train2/results.csv",
+     "../Yolov11-WithClustersSamples/train2/results.csv",
+    "../Yolov11-WithRandomSamples/train3/results.csv",
+     "../Yolov11-WithClustersSamples/train3/results.csv",
+    "../Yolov11-WithRandomSamples/train4/results.csv",
+    "../Yolov11-WithClustersSamples/train4/results.csv",
+    "../Yolov11-WithRandomSamples/train5/results.csv",
+    "../Yolov11-WithClustersSamples/train5/results.csv",
+    "../Yolov11-WithRandomSamples/train6/results.csv",
+     "../Yolov11-WithClustersSamples/train6/results.csv",
+    "../Yolov11-WithRandomSamples/train7/results.csv",
+    "../Yolov11-WithClustersSamples/train7/results.csv",
+    "../Yolov11-WithRandomSamples/train8/results.csv",
+    "../Yolov11-WithClustersSamples/train8/results.csv",
+    "../Yolov11-WithRandomSamples/train9/results.csv",
+    "../Yolov11-WithClustersSamples/train9/results.csv",
+    "../Yolov11-WithRandomSamples/train10/results.csv",
+    "../Yolov11-WithClustersSamples/train10/results.csv",
+    "../Yolov11-WithRandomSamples/train11/results.csv",
+    "../Yolov11-WithClustersSamples/train11/results.csv",
+    "../Yolov11-BASELINE-118k/train/results.csv"
+    
+
 ]
 
 
@@ -57,7 +85,7 @@ results = {
     'mAP50-95': []
 }
 
-i = 0
+i = 1
 # Processa cada arquivo CSV
 for file in csv_files:
     df = pd.read_csv(file)
@@ -79,11 +107,21 @@ for file in csv_files:
     
     # Obtém o nome do modelo sem a extensão
     model_name = os.path.splitext(os.path.basename(file))[0]
+    
+    
+    if file.split('/').count("Yolov11-WithRandomSamples") == 1 and i < 3:
+        model_name = "base (R)"
+    if file.split('/').count("Yolov11-WithClustersSamples") == 1 and i < 3:
+        model_name = "base (C)"
 
-    if i == 0:
-        model_name = "base"
-    else:
-        model_name = f"cycle_{i}"
+    elif file.split('/').count("Yolov11-WithRandomSamples") == 1 and i % 2 != 0 and i >=3:
+        model_name = f"{(i//2)} (R)"
+    elif file.split('/').count("Yolov11-WithClustersSamples") == 1 and i % 2 == 0 and i >=3:
+        model_name = f"{(i//2) - 1} (C)"
+    elif i ==  len(csv_files):
+        model_name = "Full"
+    
+    i = i+1
     
     # Armazena os valores máximos
     results['Modelo'].append(model_name)
@@ -92,7 +130,9 @@ for file in csv_files:
     results['mAP50'].append(df['metrics/mAP50(B)'].max())
     results['mAP50-95'].append(df['metrics/mAP50-95(B)'].max())
 
-    i = i+ 1
+    
+    
+
 
 # Cria DataFrame com os resultados
 results_df = pd.DataFrame(results)
