@@ -5,6 +5,9 @@ import numpy as np
 import glob
 import os
 
+# Definir uma lista de 10 marcadores geométricos diferentes
+markers = ['o', 's', 'D', '^', 'v', '<', '>', 'p', '*', 'X']
+
 # Configurações estéticas
 sns.set(style="whitegrid", palette="muted")
 plt.rcParams['figure.figsize'] = [14, 10]
@@ -78,10 +81,13 @@ sns.lineplot(
     x='time/iterations',
     y='rollout/ep_rew_mean',
     hue='Agent',
+    style='Agent',
     data=rollout_df,
     ax=ax[0],
     errorbar=('ci', 95),  # Intervalo de confiança de 95%
-    linewidth=2
+    linewidth=2,
+    markers=markers,  # Usar os 10 marcadores diferentes
+    dashes=False,  # Remove padrões de linha, mantendo apenas marcadores
 )
 ax[0].set_title('Comparison of average reward by episode (rollout)', fontsize=16, pad=15)
 ax[0].set_ylabel('Average reward', fontsize=14)
@@ -93,10 +99,13 @@ sns.lineplot(
     x='time/iterations',
     y='rollout/ep_len_mean',
     hue='Agent',
+    style='Agent',
     data=rollout_df,
     ax=ax[1],
     errorbar=('ci', 95),
-    linewidth=2
+    linewidth=2,
+    markers=markers,  # Usar os 10 marcadores diferentes
+    dashes=False,  # Remove padrões de linha, mantendo apenas marcadores
 )
 ax[1].set_title('Comparison of average duration of the episodes (rollout)', fontsize=16, pad=15)
 ax[1].set_ylabel('Steps by episode', fontsize=14)

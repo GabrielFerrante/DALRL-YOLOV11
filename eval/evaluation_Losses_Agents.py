@@ -86,6 +86,10 @@ train_df.dropna(inplace=True) # Mantém linhas com pelo menos 1 métrica
 # =============================================================================
 # Gráfico 1: Métricas de Loss (4 principais)
 # =============================================================================
+
+# Definir uma lista de 10 marcadores geométricos diferentes
+markers = ['o', 's', 'D', '^', 'v', '<', '>', 'p', '*', 'X']
+
 fig, axes = plt.subplots(2, 2, figsize=(16, 12))
 fig.suptitle('LOSS metrics during training', fontsize=20)
 
@@ -94,10 +98,13 @@ sns.lineplot(
     x='time/iterations',
     y='train/value_loss',
     hue='Agent',
+     style='Agent',
     data=train_df,
     ax=axes[0, 0],
     errorbar=None,
-    linewidth=1.5
+    linewidth=1.5,
+    markers=markers,  # Usar os 10 marcadores diferentes
+    dashes=False,  # Remove padrões de linha, mantendo apenas marcadores
 )
 axes[0, 0].set_title('Loss of value function')
 axes[0, 0].set_ylabel('Value Loss')
@@ -108,10 +115,13 @@ sns.lineplot(
     x='time/iterations',
     y='train/entropy_loss',
     hue='Agent',
+    style='Agent',
     data=train_df,
     ax=axes[0, 1],
     errorbar=None,
-    linewidth=1.5
+    linewidth=1.5,
+    markers=markers,  # Usar os 10 marcadores diferentes
+    dashes=False,  # Remove padrões de linha, mantendo apenas marcadores
 )
 axes[0, 1].set_title('Entropy loss')
 axes[0, 1].set_ylabel('Entropy Loss')
@@ -122,10 +132,13 @@ sns.lineplot(
     x='time/iterations',
     y='train/loss',
     hue='Agent',
+    style='Agent',
     data=train_df,
     ax=axes[1, 0],
     errorbar=None,
-    linewidth=1.5
+    linewidth=1.5,
+    markers=markers,  # Usar os 10 marcadores diferentes
+    dashes=False,  # Remove padrões de linha, mantendo apenas marcadores
 )
 axes[1, 0].set_title('Total Loss')
 axes[1, 0].set_ylabel('Total Loss')
@@ -136,10 +149,13 @@ sns.lineplot(
     x='time/iterations',
     y='train/policy_gradient_loss',
     hue='Agent',
+    style='Agent',
     data=train_df,
     ax=axes[1, 1],
     errorbar=None,
-    linewidth=1.5
+    linewidth=1.5,
+    markers=markers,  # Usar os 10 marcadores diferentes
+    dashes=False,  # Remove padrões de linha, mantendo apenas marcadores
 )
 axes[1, 1].set_title('Loss of Politics Gradient')
 axes[1, 1].set_ylabel('Policy Loss')
@@ -160,29 +176,36 @@ sns.lineplot(
     x='time/iterations',
     y='train/explained_variance',
     hue='Agent',
+    style='Agent',
     data=train_df,
     ax=axes[0, 0],
     errorbar=None,
-    linewidth=1.5
+    linewidth=1.5,
+    markers=markers,  # Usar os 10 marcadores diferentes
+    dashes=False,  # Remove padrões de linha, mantendo apenas marcadores
 )
 axes[0, 0].set_title('Explained Variance')
 axes[0, 0].set_ylabel('Explained Variance')
 axes[0, 0].set_ylim(-0.1, 1.1)
 axes[0, 0].set_xlabel('Iterations')
 
+
 # Approx KL
 sns.lineplot(
     x='time/iterations',
     y='train/approx_kl',
     hue='Agent',
+    style='Agent',  # Isso criará linhas com estilos diferentes
     data=train_df,
     ax=axes[0, 1],
     errorbar=None,
-    linewidth=1.5
+    linewidth=1.5,
+    markers=markers,  # Usar os 10 marcadores diferentes
+    dashes=False,  # Remove padrões de linha, mantendo apenas marcadores
 )
 axes[0, 1].set_title('Approximate KL divergence')
 axes[0, 1].set_ylabel('KL Divergence')
-axes[0, 1].set_yscale('log')  # Escala log para melhor visualização
+axes[0, 1].set_yscale('log')
 axes[0, 1].set_xlabel('Iterations')
 
 # Clip Fraction
@@ -190,10 +213,13 @@ sns.lineplot(
     x='time/iterations',
     y='train/clip_fraction',
     hue='Agent',
+    style='Agent',
     data=train_df,
     ax=axes[1, 0],
     errorbar=None,
-    linewidth=1.5
+    linewidth=1.5,
+    markers=markers,  # Usar os 10 marcadores diferentes
+    dashes=False,  # Remove padrões de linha, mantendo apenas marcadores
 )
 axes[1, 0].set_title('Clip Fraction')
 axes[1, 0].set_ylabel('Clip Fraction')
@@ -205,10 +231,13 @@ sns.lineplot(
     x='time/iterations',
     y='train/learning_rate',
     hue='Agent',
+    style='Agent',
     data=train_df,
     ax=axes[1, 1],
     errorbar=None,
-    linewidth=1.5
+    linewidth=1.5,
+    markers=markers,  # Usar os 10 marcadores diferentes
+    dashes=False,  # Remove padrões de linha, mantendo apenas marcadores
 )
 axes[1, 1].set_title('Learning Rate')
 axes[1, 1].set_ylabel('Learning Rate')
